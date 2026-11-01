@@ -1,0 +1,75 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "743b054a444f",
+      "execution_skill": "prepared_cartesian_step",
+      "observation_id": "3729252385b0",
+      "instruction": "高い方のブロックを箱へ、低い方を机の空いた場所へ移して。画像から高さを測って選び、各段階で確認する。",
+      "visual_reason": "青の側面を閉じた指が挟んでいる。14mmだけ持ち上げて保持を画像確認。",
+      "expected_visual_change": "青が指とともに机から離れる。赤は動かない。",
+      "target_xyz_m": [
+        0.2248,
+        0.043,
+        0.04
+      ],
+      "target_gripper_open": null,
+      "automatic_next_step": false,
+      "maintained_gripper_command": 0.020000000000000018,
+      "planned_duration_s": 0.8,
+      "generator": "host selects ONE next action; robot-only IK and Python exporter",
+      "trajectory": [
+        {
+          "phase": "cartesian_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -13.31351620434024,
+              "shoulder_lift": -3.3131417347455105,
+              "elbow_flex": 25.25425169459998,
+              "wrist_flex": 68.14589886337679,
+              "wrist_roll": -8.757216170101289e-07
+            },
+            "gripper_open": 0.020000000000000018
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -13.313516204332135,
+              "shoulder_lift": -5.36199965986198,
+              "elbow_flex": 21.31045411163463,
+              "wrist_flex": 74.05154554822487,
+              "wrist_roll": 1.0993720015870501e-13
+            },
+            "gripper_open": 0.020000000000000018
+          },
+          "duration_s": 0.8
+        }
+      ],
+      "validation": [
+        "fresh RGB",
+        "workspace",
+        "step displacement",
+        "joint limits",
+        "speed",
+        "duration",
+        "separate arm/gripper"
+      ],
+      "not_validated": [
+        "general obstacle avoidance",
+        "vision correctness",
+        "contact",
+        "task success"
+      ],
+      "script_sha256": "d9f9289b492783ff8000b6941e51393e7b2b8e172b16f934d9229497adb57d8f",
+      "files_relative_to_run_dir": {
+        "script": "programs/743b054a444f.py",
+        "plan": "programs/743b054a444f.json",
+        "preview": "programs/743b054a444f_preview.png",
+        "script_sha256": "d9f9289b492783ff8000b6941e51393e7b2b8e172b16f934d9229497adb57d8f",
+        "plan_sha256": "5f38fa7dc5dcffddc5f32f2b90bce8c92a341db4d85fffb1639725dc9b5ec567"
+      }
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_05/client/008_prepare_cartesian_step_0.png"
+  ]
+}

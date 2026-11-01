@@ -1,0 +1,55 @@
+[
+  {
+    "path": "artifacts/runs/staged_01/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "c417d15c1e2553e7ff15c9bb1bfe594b94cc441a6d8caf5c3ca51268515f821a"
+  },
+  {
+    "path": "artifacts/runs/staged_01b/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "07a66f450bc58ef1a5b6ccd05b603d142380554587b02176c581c854272a0e2c"
+  },
+  {
+    "path": "artifacts/runs/staged_01c/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "a75cfd2694ea03f6a5c8dda0786cdc0e3dd789bd9d836780bf7eaeffab30ee9e"
+  },
+  {
+    "path": "artifacts/runs/staged_02/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "4dedac1887ca3b746f61201127a160c4e3f2b6aaf09b196d20f4cd0fa99aacd6"
+  },
+  {
+    "path": "artifacts/runs/staged_03/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "16b5cd82aaef5867fad6dbf70b006445e11d6b72eceb4d8c7c5df362929aa2c8"
+  },
+  {
+    "path": "artifacts/runs/staged_04/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "6c8e5f4d6df0d36e133dc79d9723327f54ff1c1795bc2655e903ca8ada475dcd"
+  },
+  {
+    "path": "artifacts/runs/staged_05/simulation.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "29e590adc10cac17eb9b2aed78d2799a19a605575ce815858004d3bcec280d46"
+  },
+  {
+    "path": "submission/staged_unknown_height_demo.mp4",
+    "passed": true,
+    "error": "",
+    "sha256": "a8cf3ab41bf104d3f59dede5bf08315f541856bfc3700dccae2924c39706538f",
+    "note": "Updated partial-real-motion captions; simulation source frames and edit timing unchanged",
+    "all_frames_decoded": true,
+    "cut_midpoints": 63,
+    "all_cut_midpoints_visually_checked": true,
+    "visual_review": "63 cut midpoints inspected in three contact sheets; updated sidebar and final summary inspected at full size"
+  }
+]

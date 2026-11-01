@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool prepare_cartesian_step: One-step target is unreachable with downward tool orientation"
+  ],
+  "images": []
+}

@@ -1,0 +1,180 @@
+{
+  "action": {
+    "action_id": "6804e569bbda",
+    "accepted": true,
+    "planned_duration_s": 0.6,
+    "command_status": "running",
+    "task_success": "unverified"
+  },
+  "status": {
+    "backend": "sim",
+    "mode": "simulation",
+    "state": "completed",
+    "connection_verified": true,
+    "last_action": {
+      "action_id": "6804e569bbda",
+      "name": "prepared_step",
+      "args": {
+        "program_id": "021717328a48"
+      },
+      "command_status": "completed",
+      "trajectory_s": 0.6000000000000002,
+      "wall_s": 0.2602862080093473,
+      "task_success": "unverified",
+      "error": null
+    },
+    "task_success": "unverified",
+    "stop_latched": false,
+    "joints_deg": {
+      "shoulder_pan": 0.998990477420328,
+      "shoulder_lift": -59.9832919427106,
+      "elbow_flex": 60.053018148193765,
+      "wrist_flex": 35.01244730209279,
+      "wrist_roll": 0.0006240585726226828
+    },
+    "gripper_open": 0.611764514446345,
+    "active_action": null,
+    "phase": null
+  },
+  "observation": {
+    "observation_id": "24631524e4cf",
+    "captured_utc": "2026-11-01T00:32:35.125451+00:00",
+    "backend": "sim",
+    "camera": "top",
+    "joints_deg": {
+      "shoulder_pan": 0.998990477420328,
+      "shoulder_lift": -59.9832919427106,
+      "elbow_flex": 60.053018148193765,
+      "wrist_flex": 35.01244730209279,
+      "wrist_roll": 0.0006240585726226828
+    },
+    "gripper_open": 0.611764514446345,
+    "status": {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "completed",
+      "connection_verified": true,
+      "last_action": {
+        "action_id": "6804e569bbda",
+        "name": "prepared_step",
+        "args": {
+          "program_id": "021717328a48"
+        },
+        "command_status": "completed",
+        "trajectory_s": 0.6000000000000002,
+        "wall_s": 0.2602862080093473,
+        "task_success": "unverified",
+        "error": null
+      },
+      "task_success": "unverified",
+      "stop_latched": false,
+      "joints_deg": {
+        "shoulder_pan": 0.998990477420328,
+        "shoulder_lift": -59.9832919427106,
+        "elbow_flex": 60.053018148193765,
+        "wrist_flex": 35.01244730209279,
+        "wrist_roll": 0.0006240585726226828
+      },
+      "gripper_open": 0.611764514446345,
+      "active_action": null,
+      "phase": null
+    },
+    "available_skills": {
+      "prepared_pick": {
+        "program_id": "returned by prepare_pick"
+      },
+      "observe_pose": {},
+      "prepared_step": {
+        "program_id": "returned by prepare_step"
+      }
+    },
+    "capabilities": {
+      "continuous_image_pick": true,
+      "known_plane_localization": true,
+      "depth_sampling": false,
+      "incremental_joint_step": true
+    },
+    "sensors": {
+      "rgb": {
+        "available": true,
+        "source": "MuJoCo RGB renderer"
+      },
+      "depth": {
+        "available": false,
+        "reason": "depth_camera not enabled"
+      },
+      "end_effector": {
+        "available": false,
+        "reason": "RGB/common-input profile: real tool-frame calibration is not verified"
+      }
+    },
+    "images": [
+      {
+        "index": 0,
+        "role": "rgb",
+        "mime_type": "image/png"
+      }
+    ],
+    "instruction": "Use image pixels and the user instruction to select the object. State is not proof of task success. Select the TOP FACE CENTER in original image pixels; call prepare_pick, inspect its preview, then execute the generated program. For iterative visual feedback, prepare_step creates ONE bounded joint-relative step. Inspect the new image after each step before choosing the next. Degrees are not Cartesian millimetres; do not infer contact or height from command completion.",
+    "camera_calibration": {
+      "width": 960,
+      "height": 720,
+      "pixel_origin": "top_left_u_right_v_down",
+      "principal_point_px": [
+        479.5,
+        359.5
+      ],
+      "pixel_coordinates": "integer indices denote pixel centres",
+      "focal_px": 623.538290724796,
+      "camera_position_m": [
+        0.19,
+        0.025,
+        0.58
+      ],
+      "camera_to_work_rotation": [
+        [
+          2.220446049250313e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          2.220446049250313e-16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source": "simulator camera calibration, not object pose or depth",
+      "distortion": "none",
+      "work_frame": "robot_base_table_z0"
+    },
+    "simulation_time_s": 0.6000000000000004,
+    "image_pick_constraints": {
+      "object_top_z_m": 0.03,
+      "pixel_tolerance_px": 3,
+      "pick_xy_bounds_m": [
+        [
+          0.215,
+          0.265
+        ],
+        [
+          -0.115,
+          0.06
+        ]
+      ]
+    },
+    "incremental_step_limits": {
+      "enabled": true,
+      "max_joint_delta_deg": 2.0,
+      "max_total_joint_delta_deg": 4.0,
+      "max_gripper_delta": 0.1,
+      "minimum_duration_s": 0.6,
+      "max_duration_s": 3.0
+    }
+  },
+  "task_success": "unverified: host must inspect the new PNG and report_result"
+}

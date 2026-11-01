@@ -1,0 +1,29 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>作業台カメラ · 市松模様で校正</title>
+<style>
+body{margin:0;background:#111827;color:#f8fafc;font:16px system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:22px}h1{font-size:24px;margin:0}header{display:flex;align-items:center;gap:18px;flex-wrap:wrap}header button{margin-left:auto}a{color:#93c5fd}button,input{font:inherit;border-radius:7px;padding:10px;border:1px solid #64748b}button{cursor:pointer;background:#e2e8f0;color:#0f172a}button:disabled{opacity:.4;cursor:default}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0}.primary{background:#38bdf8}img{width:100%;max-height:58vh;object-fit:contain;background:#030712;border-radius:10px;margin-top:16px}.status{color:#7dd3fc}#message{min-height:1.6em;color:#fde68a}p{line-height:1.6;margin:10px 0}input[type=number]{width:80px}small{color:#cbd5e1}.counter{font-size:22px;font-weight:650}.note{background:#1e293b;border-radius:8px;padding:12px}#result{color:#86efac;white-space:pre-wrap}
+</style><main><header><h1>作業台カメラ · 市松模様で校正</h1><span id="live" class="status">接続中…</span><button id="stop">カメラを終了</button></header>
+<section id="reference" hidden><p><strong>保存した台面の基準画像</strong> · A＝紙の原点、A→B＝横方向、A→C＝縦方向</p><img id="reference-image" alt="保存した基準画像のA・B・C。ロボット座標との対応は未確認"><p>紙を傾ける撮影は完了です。カメラと紙を固定し、実測値との照合に進みます。画像のA・B・Cは紙上の点で、ロボットの座標はまだ決まっていません。</p></section>
+<details id="live-view" open><summary>現在のライブ映像</summary><img id="video" src="/stream" alt="市松模様の交点を重ねた作業台カメラの映像"></details>
+<div class="row"><span id="detection" class="status">模様待ち</span><span class="counter" id="count">保存 0 枚</span></div>
+<details id="capture-controls" open><summary>内部校正の撮影・計算</summary>
+<p><a href="/checkerboard.pdf" target="_blank">校正シートPDF</a>をA4横・100%で印刷し、平らな厚紙などに貼ってください。<strong>カメラを固定し、紙だけを動かします。</strong></p>
+<div class="row"><label>実測した1マス <input id="square" type="number" min="5" max="50" step="0.01" value="20"> mm</label><label><input id="measured" type="checkbox"> 定規で印刷寸法を確認した</label></div>
+<div class="row"><button id="capture">1枚撮影</button><button id="auto" class="primary">20枚を自動撮影</button><button id="pause" disabled>撮影を一時停止</button><button id="fit" disabled>校正値を計算</button></div>
+<p id="message" role="status">印刷した模様全体をカメラに向けてください。</p><p id="result"></p>
+<p class="note"><strong>傾ける＝板の片側を机から5〜10cm持ち上げることです。</strong><br>紙を本や板で平らに支え、手前側・奥側・右側・左側をそれぞれ持ち上げ、約2秒静止します。模様全体を映してください。机の上で滑らせるだけでは傾きが不足します。カメラの位置・ピント・ズームは固定します。</p>
+</details>
+<small id="details">カメラのみ接続。画像はローカルに保存します。</small><p><small>ここではカメラの内部校正を行います。ロボットの座標との対応・独立した距離照合は次の段階です。</small></p>
+</main><script>
+const $=id=>document.getElementById(id);let ended=false,busy=false,lastServerMessage='';
+let referenceShown=false;
+async function post(path,data={}){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const s=await r.json();if(!r.ok)throw Error(s.error);return s}
+function settings(){if(!$('measured').checked)throw Error('定規で寸法を確認してからチェックを入れてください。');return {square_mm:Number($('square').value),measured:true}}
+async function action(fn){if(busy)return;busy=true;try{await fn()}catch(e){$('message').textContent=e.message}finally{busy=false}}
+$('capture').onclick=()=>action(async()=>{const s=await post('/capture',settings());$('message').textContent=s.message});
+$('auto').onclick=()=>action(async()=>{await post('/auto',settings());$('message').textContent='自動撮影中です。紙の位置と傾きを変え、約2秒静止してください。'});
+$('pause').onclick=()=>action(async()=>{await post('/pause');$('message').textContent='撮影を一時停止しました。'});
+$('fit').onclick=()=>action(async()=>{$('message').textContent='校正値を計算中…';const s=await post('/fit');$('result').textContent=`内部校正の下書きを保存: ${s.file}\n使用 ${s.selected_captures} 枚・品質上の理由で除外 ${s.excluded_captures} 枚（元画像は保存）。\n再投影RMS ${s.rms_px.toFixed(3)} px。実機で使う精度の確認はこれからです。`;$('message').textContent='次に、台面・ロボット基準との位置合わせを行います。'});
+$('stop').onclick=()=>action(async()=>{await post('/stop');ended=true;clearInterval(timer);$('video').removeAttribute('src');$('live').textContent='終了しました';document.querySelectorAll('button').forEach(b=>b.disabled=true)});
+const timer=setInterval(async()=>{if(ended)return;try{const s=await(await fetch('/state',{cache:'no-store'})).json();const fitted=s.calibration_status==='intrinsics_draft'||(!s.calibration_status&&s.message.startsWith('内部校正の下書きを保存'));if(s.reference_available&&!referenceShown){$('reference-image').src='/reference.png';$('reference').hidden=false;$('live-view').open=false;$('capture-controls').open=false;referenceShown=true}$('live').textContent=s.fresh?'● ライブ':(s.camera_error||'映像待ち');$('detection').textContent=s.detected?'全54交点を検出':'模様全体をカメラに向けてください';$('count').textContent=fitted?`撮影 ${s.views} 枚 · 内部校正の計算済み`:`保存 ${s.views} 枚 / 目標${s.capture_target||20}枚`;$('details').textContent=`カメラ番号 ${s.camera_index} · ${s.width} × ${s.height} · ロボット接続なし`;$('pause').disabled=!s.auto;$('auto').disabled=s.auto;$('auto').textContent=s.views>=20?'5枚を追加撮影':'20枚を自動撮影';$('capture').disabled=s.auto;$('fit').disabled=s.views<15||s.auto||busy;$('square').disabled=s.auto||s.views>0;if((s.views>0||s.auto)&&s.square_mm){$('square').value=s.square_mm;$('measured').checked=true}if(!busy&&(s.auto||s.message!==lastServerMessage)&&s.message)$('message').textContent=s.message;lastServerMessage=s.message}catch{$('live').textContent='接続が切れました'}},800);
+</script></html>

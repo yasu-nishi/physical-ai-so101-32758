@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "3f6f8d7c76e4",
+      "observation_id": "472cd23a78cd",
+      "ai_visual_verdict": "success",
+      "reason": "再撮影で赤は緑の箱の内側にあり、元の左の置き場は空。青は台上の元の位置に残り、指はブロックを離している。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

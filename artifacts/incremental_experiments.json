@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-01",
+  "scope": "incremental visual direction feedback; not a grasp/transport trial",
+  "trials": 1,
+  "steps": [
+    {
+      "program_id": "9f5cff6eb720",
+      "joint_delta_deg": {
+        "shoulder_pan": 2.0
+      },
+      "before_observation_id": "2c0c9d20fd63",
+      "after_observation_id": "3ce7e9ba962b",
+      "before_image": "artifacts/runs/incremental_01/observe_2c0c9d20fd63.png",
+      "after_image": "artifacts/runs/incremental_01/programs/9f5cff6eb720_after.png",
+      "visual_reason": "RGBで赤いブロックが手先の右側に見える。青は左側にある。まず旋回関節だけを小さく正方向へ動かし、画面上で赤との横方向のずれがどう変わるか確認する。",
+      "expected_visual_change": "手先が画像の右へ少し動き、赤いブロックとの横方向のずれが小さくなることを期待する。高さや接触は判定せず、変化が逆または不明なら次は修正か停止を選ぶ。",
+      "observed_feedback": "再撮影では指先が最初より画面左へ動き、赤との横方向のずれが増えた。右へ動くという予想と逆だったため、次は旋回を負方向に修正する。赤と青は元の場所にあり、把持・搬送は未実施。",
+      "verdict_utc": "2026-11-01T00:10:52.313933+00:00",
+      "command_status": "completed",
+      "trajectory_s": 0.6000000000000002,
+      "wall_s": 0.282,
+      "ai_task_verdict": "uncertain"
+    },
+    {
+      "program_id": "a86ffefe6748",
+      "joint_delta_deg": {
+        "shoulder_pan": -2.0
+      },
+      "before_observation_id": "3ce7e9ba962b",
+      "after_observation_id": "4f111743156f",
+      "before_image": "artifacts/runs/incremental_01/observe_3ce7e9ba962b.png",
+      "after_image": "artifacts/runs/incremental_01/programs/a86ffefe6748_after.png",
+      "visual_reason": "直前のRGBで正方向2度の旋回により指先が左へ動いたことを確認した。赤は手先の右側に残っているので、今回の新しい画像に基づいて旋回方向を反転する。",
+      "expected_visual_change": "指先が右へ戻り、赤との横方向のずれが小さくなることを再撮影で確認する。距離・高さ・接触は測ったと扱わない。",
+      "observed_feedback": "負方向へ修正した後のRGBで指先が右に戻ったことを確認した。赤はさらに右にあり、把持・搬送は未実施。次は同じ負方向へ小さく1度だけ動かして再確認する。",
+      "verdict_utc": "2026-11-01T00:11:09.621088+00:00",
+      "command_status": "completed",
+      "trajectory_s": 0.6000000000000002,
+      "wall_s": 0.235,
+      "ai_task_verdict": "uncertain"
+    },
+    {
+      "program_id": "d71ecbeaea4f",
+      "joint_delta_deg": {
+        "shoulder_pan": -1.0
+      },
+      "before_observation_id": "4f111743156f",
+      "after_observation_id": "774eca93bcd9",
+      "before_image": "artifacts/runs/incremental_01/observe_4f111743156f.png",
+      "after_image": "artifacts/runs/incremental_01/programs/d71ecbeaea4f_after.png",
+      "visual_reason": "最新のRGBで負方向への旋回が指先を右へ動かすことを確認した。赤のブロックは引き続き右側にあり、今回はさらに小さい1度の変更にする。",
+      "expected_visual_change": "指先が前の画像から右へ少し移動することを確認する。この方向確認の後で停止し、高さや把持の成否は主張しない。",
+      "observed_feedback": "最新RGBで指先が前の画像より右へ動き、赤との横方向のずれが小さくなった。画像を確認してから次のPythonを生成し、予想と逆の動きを修正する3段階の手順を確認した。ブロックは台上に残り、把持・搬送・高さ推定は未実施。ここで停止する。",
+      "verdict_utc": "2026-11-01T00:11:41.448876+00:00",
+      "command_status": "completed",
+      "trajectory_s": 0.6000000000000002,
+      "wall_s": 0.232,
+      "ai_task_verdict": "uncertain"
+    }
+  ],
+  "commands_completed": 3,
+  "direction_prediction_errors": 1,
+  "correction": "Observed first +2 degree turn moved left; chose -2 then -1 only after new RGB",
+  "height_measured": false,
+  "task_success": "not attempted: no grasp or transport",
+  "included_in_pick_place_success_count": false,
+  "real_motion": "unverified; dry-run adapter uses mock RGB and measured-state fixture",
+  "video": "artifacts/runs/incremental_01/simulation.mp4"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "case_id": "staged_01",
+    "category": "unknown_height_box",
+    "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 231
+  },
+  {
+    "case_id": "staged_01b",
+    "category": "unknown_height_box",
+    "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 231
+  },
+  {
+    "case_id": "staged_01c",
+    "category": "unknown_height_box",
+    "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 231
+  },
+  {
+    "case_id": "staged_02",
+    "category": "relocate_stack_unstack",
+    "instruction": "青を空いている机の場所へ移し、赤を青の上に積んで。その後、赤だけを隣へ降ろして。各段階で画像を確認して進める。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 672
+  },
+  {
+    "case_id": "staged_03",
+    "category": "height_sort",
+    "instruction": "高い方のブロックを箱へ、低い方を机の空いた場所へ移して。画像から高さを測って選び、各段階で確認する。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 915
+  },
+  {
+    "case_id": "staged_04",
+    "category": "unknown_height_unstack",
+    "instruction": "重なった部品のうち上の赤だけを取り外し、机の空いた所へ置いて。下の青は残して。各段階で画像を確認する。",
+    "config": "config/physical_ai/sim_staged_stack.json",
+    "seed": 561
+  },
+  {
+    "case_id": "staged_05",
+    "category": "height_sort",
+    "instruction": "高い方のブロックを箱へ、低い方を机の空いた場所へ移して。画像から高さを測って選び、各段階で確認する。",
+    "config": "config/physical_ai/sim_staged.json",
+    "seed": 136,
+    "note": "staged_03 was ambiguous and stopped without motion; this is an additional scene, not a replacement."
+  }
+]

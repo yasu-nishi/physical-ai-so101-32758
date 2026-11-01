@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "753ded4c9323",
+      "observation_id": "2518c415b367",
+      "visual_reason": "赤の手前中央縦辺の上下が見え、下端は机上。高さ未入力で赤も測り、後の積み上げ高さに使う。",
+      "bottom_pixel": [
+        435.0,
+        539.0
+      ],
+      "top_pixel": [
+        435.0,
+        521.0
+      ],
+      "center_pixel": [
+        437.0,
+        502.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.019391425604430634,
+      "estimated_top_z_m": 0.019391425604430634,
+      "estimated_top_center_m": [
+        0.2242027479512561,
+        -0.09294104092767713,
+        0.019391425604430634
+      ],
+      "height_interval_m": [
+        0.014945400027381872,
+        0.023815587852789866
+      ],
+      "vertical_edge_residual_m": 0.0005429009543293723,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/002_measure_height_0.png"
+  ]
+}

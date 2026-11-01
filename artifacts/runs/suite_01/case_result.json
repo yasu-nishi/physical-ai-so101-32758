@@ -1,0 +1,47 @@
+{
+  "case_id": "suite_01",
+  "category": "pick_place",
+  "instruction": "赤いブロックを箱に入れて",
+  "host_outcome": "success",
+  "host_reason": "赤の箱内移載をRGBで確認。初期旋回-10度。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "3f6f8d7c76e4",
+          "name": "prepared_pick",
+          "args": {
+            "program_id": "ef961b0b6b75"
+          },
+          "command_status": "completed",
+          "trajectory_s": 21.99999999999962,
+          "wall_s": 8.5202900840668,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "success"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": -10.001109157134795,
+          "shoulder_lift": -59.99110629881107,
+          "elbow_flex": 60.02603836558852,
+          "wrist_flex": 35.00664081434505,
+          "wrist_roll": 0.000313087465431764
+        },
+        "gripper_open": 0.6117662529362369,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

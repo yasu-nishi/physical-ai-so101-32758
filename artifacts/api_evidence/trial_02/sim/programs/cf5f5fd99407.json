@@ -1,0 +1,62 @@
+{
+  "program_id": "cf5f5fd99407",
+  "execution_skill": "prepared_cartesian_step",
+  "observation_id": "8efc65976276",
+  "instruction": "赤いブロックを箱に入れて。画像から対象と位置を選び、必要なら高さを測り、一段ずつ実行して結果を確認してください。",
+  "visual_reason": "赤いブロックは空中で保持され、青いブロックから離れている。箱の開口中心の測定位置へ向けて高さを維持し57mm進める。箱の縁は約34mmで、保持物の底はその上に余裕がある。",
+  "expected_visual_change": "赤いブロックが箱の左側上方へ進み、保持を続ける。",
+  "target_xyz_m": [
+    0.183,
+    0.069,
+    0.085
+  ],
+  "target_gripper_open": null,
+  "automatic_next_step": false,
+  "tool_orientation": "down",
+  "locked_joints": [],
+  "maintained_gripper_command": 0.0,
+  "planned_duration_s": 2.46111610654099,
+  "generator": "host selects ONE next action; robot-only IK and Python exporter",
+  "trajectory": [
+    {
+      "phase": "cartesian_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": -4.908911620190905,
+          "shoulder_lift": -26.385194107185047,
+          "elbow_flex": 22.528197091653855,
+          "wrist_flex": 93.89326140482846,
+          "wrist_roll": -2.31831874148841e-07
+        },
+        "gripper_open": 0.0
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": -25.92780235646211,
+          "shoulder_lift": -22.363322822445323,
+          "elbow_flex": 19.100309079203317,
+          "wrist_flex": 93.26301374300701,
+          "wrist_roll": -1.8912215814141695e-12
+        },
+        "gripper_open": 0.0
+      },
+      "duration_s": 2.46111610654099
+    }
+  ],
+  "validation": [
+    "fresh RGB",
+    "workspace",
+    "step displacement",
+    "joint limits",
+    "speed",
+    "duration",
+    "separate arm/gripper"
+  ],
+  "not_validated": [
+    "general obstacle avoidance",
+    "vision correctness",
+    "contact",
+    "task success"
+  ],
+  "script_sha256": "e46e678ef844f5ab790996ce6fabbc51a424345de6b25f179d0b307507db2358"
+}

@@ -1,0 +1,57 @@
+{
+  "program_id": "e24d3700978b",
+  "execution_skill": "prepared_step",
+  "observation_id": "b447313def6e",
+  "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+  "visual_reason": "再撮影から負方向で画面右へ動くことを確認し、変更量を半分の1度にする。青と指の間隔はまだあり、下降は行わない。",
+  "expected_visual_change": "手先が同方向へさらに少し動く。斜め視点の方向確認を終えて停止する。",
+  "joint_delta_deg": {
+    "shoulder_pan": -1.0
+  },
+  "gripper_delta": 0.0,
+  "planned_duration_s": 0.6,
+  "trajectory": [
+    {
+      "phase": "incremental_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": -1.9999270703812833,
+          "shoulder_lift": -59.98329062171724,
+          "elbow_flex": 60.053017498509405,
+          "wrist_flex": 35.01244664452441,
+          "wrist_roll": 0.0006222410989611679
+        },
+        "gripper_open": 0.6117645147092657
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": -2.9999270703812835,
+          "shoulder_lift": -59.98329062171724,
+          "elbow_flex": 60.053017498509405,
+          "wrist_flex": 35.01244664452441,
+          "wrist_roll": 0.0006222410989611679
+        },
+        "gripper_open": 0.6117645147092657
+      },
+      "duration_s": 0.6
+    }
+  ],
+  "height_measured": false,
+  "automatic_next_step": false,
+  "validation": [
+    "fresh observation and robot generation",
+    "small joint/gripper increment",
+    "separate arm and gripper steps",
+    "joint limits",
+    "speed and duration limits"
+  ],
+  "not_validated": [
+    "Cartesian displacement",
+    "height or contact",
+    "collision-free path",
+    "task success"
+  ],
+  "generator": "host AI chooses the next increment from RGB; deterministic one-step Python exporter; no LLM in server",
+  "expires": "300 s after observation, or any robot motion/server restart",
+  "script_sha256": "0d48ead98eb9c71c38a461a15b70269b78d0972a72cc69a15cbc4aac65a8370d"
+}

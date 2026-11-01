@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "de8bea0a4d13",
+      "observation_id": "5501fb5b6ffa",
+      "visual_reason": "青ブロックの手前の同一垂直稜線の下端と上端。上面中心482,481。高低を数値で比較。",
+      "bottom_pixel": [
+        480.0,
+        518.0
+      ],
+      "top_pixel": [
+        480.0,
+        495.0
+      ],
+      "center_pixel": [
+        482.0,
+        481.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.024906945643582645,
+      "estimated_top_z_m": 0.024906945643582645,
+      "estimated_top_center_m": [
+        0.23572302376081122,
+        -0.05523120690870337,
+        0.024906945643582645
+      ],
+      "height_interval_m": [
+        0.020662181241975164,
+        0.029126771876335167
+      ],
+      "vertical_edge_residual_m": 7.838167707340106e-06,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_03/client/004_measure_height_0.png"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "5182be14fd40",
+      "observation_id": "6dc92f1a7d1c",
+      "ai_visual_verdict": "uncertain",
+      "reason": "赤の中心と右辺は見えたが左側の指が近い。把持前にさらに2度だけ指を退け、明瞭な上面画像を取得する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

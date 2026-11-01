@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "205b29586591",
+      "observation_id": "549ad574d5a1",
+      "visual_reason": "再把持後の青は机上に残る。右手前縦辺と上面中央から支持面の現在位置を測り直す。",
+      "bottom_pixel": [
+        623.6,
+        476.6
+      ],
+      "top_pixel": [
+        627.4,
+        450.8
+      ],
+      "center_pixel": [
+        618.0,
+        434.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.028478356340067346,
+      "estimated_top_z_m": 0.028478356340067346,
+      "estimated_top_center_m": [
+        0.27647520029669764,
+        0.0640749270270603,
+        0.0284783563400674
+      ],
+      "height_interval_m": [
+        0.023670756703703166,
+        0.03325122004814102
+      ],
+      "vertical_edge_residual_m": 0.0005255338451666911,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/043_measure_height_0.png"
+  ]
+}

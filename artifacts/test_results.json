@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-01",
+  "command": "python -m pytest -q",
+  "tests": 230,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_s": 22.164,
+  "warning": "anyio pytest plugin CallSpec2 deprecation",
+  "real_hardware_tests": "Historical six-motor MCP observation plus later partial joint/opening/Cartesian movements. Standby return interrupted by voltage alarm; zero pick/place successes. Unit tests use simulation or mocked devices.",
+  "resolved_during_validation": "pytest collected both source and export copies; configured testpaths=tests",
+  "sensor_tests": "10 legacy simulation-only diagnostic tests; opt-in depth enabled, excluded from real/common-profile evidence",
+  "rgb_calibration_tests": "4 tests; independent projected geometry, intrinsics, rectification, calibration/size rejection, real adapter common plane localization",
+  "additional_checks": "checkerboard PNG: 54 corners found; draft-calibration rectify/check CLI passed on synthetic fixture; no hardware",
+  "incremental_tests": "11 added cases: bounded deltas, fresh-image/program invalidation, idempotence, stop, absolute limits, real dry-run zero writes and explicit local verification",
+  "exported_package_tests": {
+    "command": "python -m pytest -q",
+    "passed": 230,
+    "elapsed_s": 57.736,
+    "status": "passed",
+    "scope": "Allowlisted export in a freshly created isolated Python 3.12 environment on the same Apple Silicon macOS machine; 127 packages installed from uv.lock. Source workspace virtual environment not reused. No hardware access or live model request."
+  },
+  "staged_tests": "12 tests including 5 analytic unknown heights, height-only/occluded centre, robot-only FK, idle physics, contact closing command retention, strict command limits, real calibration and fixed-camera gates",
+  "real_kinematics_cli": "Synthetic consistency accepted; injected 10 mm error rejected. Software checks only, no independent real measurements.",
+  "exported_offline_staged_scoring": "reproduced 7 runs, 99 commands, 9 initial height checks in exported package",
+  "camera_position_software_tests": "7 added checks: three independent distorted-camera projections, draft/reference separation and CLI failure record, changed rendered view with unchanged physics, invalid/unobservable edge rejection, real joints-only connection with all motor writes forbidden by mock.",
+  "real_connection_probe": {
+    "status": "six motors and real RGB/joints verified over MCP using matching existing calibration",
+    "motor_goal_writes": 0,
+    "camera_capture_performed": true,
+    "real_hardware_verified": "connection and observation only",
+    "motion_verified": false,
+    "evidence": "artifacts/real_connection_verification.json"
+  },
+  "exported_offline_camera_scoring": "reproduced four camera cases, six initial RGB height measurements, 18 commands and zero controlled-transfer successes",
+  "real_connection_regression_tests": {
+    "command": "python -m pytest -q tests/test_real_adapter.py tests/test_incremental.py -k \"real or absolute\"",
+    "passed": 4,
+    "deselected": 9,
+    "elapsed_s": 1.92,
+    "scope": "Mocked no-write adapter, joints-only motion gate, dry-run state and absolute joint limits"
+  },
+  "checkerboard_capture_tests": {
+    "passed": 7,
+    "scope": "Image detection, measured-size gate, reversed duplicate rejection, image hashes, noisy independent camera fit with held-out views, degenerate/tampered evidence rejection, resume without overwriting, explicit hash-bound quality exclusions. Synthetic software tests."
+  },
+  "checkerboard_real_observation": {
+    "all_54_inner_corners_detected": true,
+    "saved_calibration_views": 31,
+    "selected_views": 26,
+    "intrinsic_draft_saved": true,
+    "metric_print_size": "operator approximate 100 mm for five squares",
+    "intrinsics_verified": false,
+    "extrinsics_verified": false,
+    "motor_connections": 0,
+    "motor_writes": 0,
+    "evidence": "artifacts/real_camera_calibration_verification.json"
+  },
+  "rgb_reference_regression_tests": {
+    "command": "python -m pytest tests/test_rgb_calibration.py tests/test_checkerboard_session.py -q",
+    "passed": 12,
+    "elapsed_s": 0.93,
+    "scope": "Previous camera tests plus explicit rejection of a paper-frame reference as robot registration. Included in the current full suite."
+  },
+  "commissioning_regression_tests": {
+    "passed": 33,
+    "command": "python -m pytest -q tests/test_commissioning.py tests/test_real_adapter.py",
+    "elapsed_s": null,
+    "scope": "31 fake-bus commissioning checks and two real-adapter mocks, including refusal of motion after a feedback error and no false hold confirmation when goals differ; included in the current full suite."
+  },
+  "real_commissioning_probe": {
+    "evidence": "artifacts/real_commissioning_verification.json",
+    "jog_attempts": 1,
+    "completed": 0,
+    "motor_goal_writes": 29,
+    "torque_writes": 5,
+    "speed_writes": 10,
+    "motion_success_verified": false
+  },
+  "servo_diagnostics_tests": {
+    "passed": 19,
+    "scope": "Strict packet size/ID/checksum/error validation, read-only transmit block, input resync, truthful disconnected/torque-OFF state, and checked feedback integration without altering the bounded controller write path."
+  },
+  "real_supply_probe": {
+    "evidence": "artifacts/real_supply_verification.json",
+    "detailed_samples": 1629,
+    "servo_voltage_error_responses": 19,
+    "motor_register_writes": 0,
+    "physical_fault_location": "undetermined",
+    "scope": "Six read-only captures: two stopped-hold, one restart, two connector-maintenance (including unicast 0.5 Hz), and one power-plug reseat after adapter label confirmation. No motion resumed.",
+    "restart_capture": {
+      "samples": 291,
+      "elapsed_s": 60.13464245805517,
+      "servo_voltage_error_responses": 5,
+      "all_torque_off": true,
+      "malformed_packets": 0
+    },
+    "after_connector_check": {
+      "group_capture_errors": 2,
+      "unicast_low_rate_errors": 1,
+      "all_six_torques_off_at_last_observation": true,
+      "motor_register_writes": 0,
+      "physical_fault_location": "undetermined; actual motor power feed/rating still unconfirmed"
+    },
+    "power_adapter_label": {
+      "output_v": 5.0,
+      "output_a": 4.0,
+      "rated_w": 20.0,
+      "source": "operator photo"
+    },
+    "after_dc_plug_reseat": {
+      "samples": 291,
+      "elapsed_s": 60.183756333077326,
+      "servo_voltage_error_responses": 4,
+      "motor_writes": 0,
+      "all_torque_off_at_last_observation": true,
+      "physical_fault_location": "undetermined; adapter and distal servo voltages not externally measured"
+    }
+  },
+  "historical_fields_note": "Detailed early commissioning and camera fields below retain their original measurement scope; latest real evidence is in real_standby_recovery_verification.json, real_speed_configuration_verification.json and real_connector_press_verification.json.",
+  "api_agent_tests": {
+    "passed": 22,
+    "scope": "Actual MuJoCo/MCP plus mock Responses HTTP; image/preview/post-action loop; schema and stale/unknown program rejection; duplicate/parallel/incomplete call rejection; failed motion, API failure, cancellation and deadline stop; no live API or real hardware."
+  },
+  "api_agent_live": {
+    "evidence": "artifacts/api_live_verification.json",
+    "trials": 2,
+    "successes": 1,
+    "real_hardware_access": false
+  },
+  "clean_environment_reproduction": {
+    "installation": "uv sync --locked; fresh environment; 127 packages installed",
+    "platform_scope": "Same Apple Silicon macOS machine; separate virtual environment, not another OS or computer",
+    "package_import_from_export_verified": true,
+    "font_files_from_export_verified": true,
+    "full_suite_passed": 230,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "mock_model_with_actual_mcp_and_mujoco": {
+      "status": "passed",
+      "api_calls": 0,
+      "completed_motion_steps": 1,
+      "distinct_pngs": 3,
+      "post_motion_rgb": true,
+      "stop_requested": true
+    },
+    "api_video_rebuilt_without_existing_output_directory": true,
+    "rebuilt_video_matches_reviewed_sha256": "3d67506b60e2435ae4a59c5dd7e3a2ab7154d0a115877b822ecbf56879689cf6",
+    "real_hardware_access": false,
+    "documentation_review": "Updated API video instructions and description, embedded-font instructions, one broken link, and historical real-state scope; no experiment outcomes altered."
+  }
+}

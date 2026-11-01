@@ -1,0 +1,29 @@
+{
+  "outcome": "aborted",
+  "ai_visual_verdict": "unverified",
+  "error_type": "AgentError",
+  "error": "Token budget reached",
+  "requested_model": "gpt-6-astra",
+  "returned_models": [
+    "gpt-6-astra"
+  ],
+  "api_responses": 15,
+  "motion_requests": 5,
+  "total_tokens": 275788,
+  "elapsed_s": 75.66819283307996,
+  "stop_requested": true,
+  "backend": "sim",
+  "task_success_source": "model_visual_claim_only",
+  "independent_task_evaluation": "not_run",
+  "settings": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "max_responses": 80,
+    "max_motion_steps": 30,
+    "max_elapsed_s": 900,
+    "api_timeout_s": 90,
+    "motion_timeout_s": 70,
+    "max_output_tokens": 4096,
+    "max_total_tokens": 250000
+  }
+}

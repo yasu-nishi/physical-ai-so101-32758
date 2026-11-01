@@ -1,0 +1,100 @@
+{
+  "after_operator_action": "connector did not seem loose; gently pressed",
+  "sample_count": 156,
+  "elapsed_s": 40.270925250137225,
+  "faults": [
+    {
+      "utc": "2026-11-01T11:53:03.375421+00:00",
+      "motor_id": 5,
+      "flag": 1,
+      "register": "Status",
+      "packet": [
+        255,
+        255,
+        5,
+        3,
+        1,
+        1,
+        245
+      ]
+    },
+    {
+      "utc": "2026-11-01T11:53:19.896954+00:00",
+      "motor_id": 5,
+      "flag": 1,
+      "register": "Present_Position",
+      "packet": [
+        255,
+        255,
+        5,
+        4,
+        1,
+        40,
+        12,
+        193
+      ]
+    },
+    {
+      "utc": "2026-11-01T11:53:21.444715+00:00",
+      "motor_id": 6,
+      "flag": 1,
+      "register": "Present_Voltage",
+      "packet": [
+        255,
+        255,
+        6,
+        3,
+        1,
+        38,
+        207
+      ]
+    }
+  ],
+  "all_observed_torque_off": true,
+  "motor_register_writes": 0,
+  "invalid_packets": 0,
+  "restored_motion": false,
+  "fault_cause": "Motor ID6 reported 3.8V with voltage error flag1 below its 4.0V protection setting; external voltage not measured. Electrical supply/distribution versus servo sensing fault remains unresolved.",
+  "actual_read_paths": {
+    "grouped": {
+      "samples": 78,
+      "elapsed_s": 20.11810562503524,
+      "mean_read_s": 0.00929127984907096,
+      "error_samples": 1,
+      "servo_error_packets": 1,
+      "invalid_packets": 0,
+      "nonzero_status_samples": 0,
+      "voltage_raw_range": [
+        48,
+        49
+      ]
+    },
+    "individual": {
+      "samples": 78,
+      "elapsed_s": 20.152819625101984,
+      "mean_read_s": 0.019110164045392033,
+      "error_samples": 2,
+      "servo_error_packets": 2,
+      "invalid_packets": 0,
+      "nonzero_status_samples": 0,
+      "voltage_raw_range": [
+        48,
+        49
+      ]
+    }
+  },
+  "voltage_v_range_accepted_responses": [
+    4.8,
+    4.9
+  ],
+  "voltage_fault_reported_v": [
+    {
+      "utc": "2026-11-01T11:53:21.444715+00:00",
+      "motor_id": 6,
+      "reported_v": 3.8,
+      "error_flag": 1,
+      "not_independent_voltage_measurement": true
+    }
+  ],
+  "voltage_limit_v": 4.0
+}

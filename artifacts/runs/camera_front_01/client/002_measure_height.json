@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "7566415af421",
+      "observation_id": "88041a93ea6f",
+      "visual_reason": "青いブロックの左手前の縦辺の上下端。視点変更後の測定比較用で、搬送対象は指示された赤。",
+      "bottom_pixel": [
+        332.0,
+        484.0
+      ],
+      "top_pixel": [
+        325.0,
+        444.0
+      ],
+      "center_pixel": [
+        343.0,
+        426.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.038409457592451346,
+      "estimated_top_z_m": 0.038409457592451346,
+      "estimated_top_center_m": [
+        0.23063293890430608,
+        -0.09216401107848067,
+        0.038409457592451346
+      ],
+      "height_interval_m": [
+        0.03416136836300382,
+        0.04262363985824569
+      ],
+      "vertical_edge_residual_m": 1.8031704025062454e-05,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error, support-plane uncertainty and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_front_01/client/002_measure_height_0.png"
+  ]
+}

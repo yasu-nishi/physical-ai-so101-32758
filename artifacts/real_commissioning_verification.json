@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-01T06:35:10.261249+00:00",
+  "scope": "Explicit local initial-pose commissioning after the earlier read-only MCP connection check",
+  "outcome": "not_unfolded; stopped with position hold; no automatic restart",
+  "initialization_runs": 2,
+  "jog_attempts": 1,
+  "jogs_completed": 0,
+  "confirmed_unfold_successes": 0,
+  "motor_goal_writes": 29,
+  "torque_writes": 5,
+  "speed_register_writes": 10,
+  "calibration_writes": 0,
+  "physical_pick_place_trials": 0,
+  "physical_pick_place_successes": null,
+  "task_joint_limits_changed": false,
+  "tracking_stop_limit_relaxed": false,
+  "task_verification_flags_changed": false,
+  "mcp_task_motion_enabled": false,
+  "sim_modified": false,
+  "speed_configuration_correction": {
+    "original_value": 12,
+    "corrected_value": 50,
+    "unit": "encoder steps/second with 50-step/second effective speed resolution",
+    "source": "https://docs.waveshare.com/Memory_Map_Explanation/ST_Servo_Memory_Map_Explanation",
+    "causality": "Original setting below documented effective resolution. No completed jog after correction; root cause of original no-motion not proven."
+  },
+  "limits": [
+    "Motor-command acknowledgement is not task success.",
+    "Second run stopped during hold on a supply guard before any jog was submitted.",
+    "Trigger voltage sample was not retained in these runs; later status polling must not be presented as the trigger value.",
+    "Final encoders equal initial encoders; intermediate physical motion was not independently measured.",
+    "Real camera/model/workspace verification and pick/place remain unverified.",
+    "Real imagery and device/calibration/authorization records remain private; only sanitized totals and evidence hashes exported."
+  ],
+  "runs": [
+    {
+      "index": 1,
+      "started_utc": "2026-11-01T06:24:27.281460+00:00",
+      "last_recorded_stop_utc": "2026-11-01T06:24:41.660037+00:00",
+      "startup_to_stop_s": 14.378577,
+      "jog_start_to_stop_s": 3.066495,
+      "jog_attempts": 1,
+      "jogs_completed": 0,
+      "acknowledged_register_writes": {
+        "Goal_Velocity": 5,
+        "Goal_Position": 19,
+        "Torque_Enable": 5
+      },
+      "attempted_register_writes": {
+        "Goal_Velocity": 5,
+        "Goal_Position": 19,
+        "Torque_Enable": 5
+      },
+      "servo_speed_register_values": [
+        12
+      ],
+      "failure_category": "position_tracking_limit",
+      "stop_latched": true,
+      "trigger_health_snapshot_saved": false,
+      "final_encoder_matches_initial": true,
+      "position_hold_enabled": true,
+      "executed_source_snapshot_available": false,
+      "clip": {
+        "frames": 263,
+        "fps": 5,
+        "video_duration_s": 52.6,
+        "elapsed_s": 52.6045942499768,
+        "source": "existing local workspace camera stream",
+        "motor_connections": 0,
+        "public_export": false
+      },
+      "video_all_frames_decoded": true,
+      "private_evidence_sha256": {
+        "events.jsonl": "4c2585eb0013d05016b627a5776ea55eae386273260ad44d99124aa462d87dcf",
+        "before.jpg": "c16a1c3e83176459fe14135cf91de1fb4984670aa987eb17c22b71c19540010c",
+        "camera.mp4": "087ce7dd1c5a351385795176e051b9a855c38bf29a8f4f1cba1b97eebe74d6d9",
+        "camera_timestamps.jsonl": "44de099cce961d5729f852906067bb30a3821e77d727eaee49efba737db0d647",
+        "camera_validation.json": "6b17f488bbc5f112b06fd0a2b2d91ed706e94cc4e25a8a6ce2fe7ad8139b14dd",
+        "diagnosis.json": "dbf7bb876e5cb0bcc8ecd20770d5de079bfc6628c19d3dcb2b3e44ee0873bfab",
+        "report_status_snapshot.json": "aad9958f6af3594f4aeaaf47ea9ff5ec44af92d2d97f14b6bf729425d2e8f6a5"
+      }
+    },
+    {
+      "index": 2,
+      "started_utc": "2026-11-01T06:27:54.368870+00:00",
+      "last_recorded_stop_utc": "2026-11-01T06:27:58.014371+00:00",
+      "startup_to_stop_s": 3.645501,
+      "jog_start_to_stop_s": null,
+      "jog_attempts": 0,
+      "jogs_completed": 0,
+      "acknowledged_register_writes": {
+        "Goal_Velocity": 5,
+        "Goal_Position": 10
+      },
+      "attempted_register_writes": {
+        "Goal_Velocity": 5,
+        "Goal_Position": 10
+      },
+      "servo_speed_register_values": [
+        50
+      ],
+      "failure_category": "supply_guard",
+      "stop_latched": true,
+      "trigger_health_snapshot_saved": false,
+      "final_encoder_matches_initial": true,
+      "position_hold_enabled": true,
+      "executed_source_snapshot_available": false,
+      "clip": {
+        "frames": 440,
+        "fps": 5,
+        "video_duration_s": 88.0,
+        "elapsed_s": 88.00586762500461,
+        "source": "existing local workspace camera stream",
+        "motor_connections": 0,
+        "public_export": false
+      },
+      "video_all_frames_decoded": true,
+      "private_evidence_sha256": {
+        "events.jsonl": "688bd7cb14bc5d8b138ea6e0bac95c1b1ac120c6538d40f748a230453213a07f",
+        "before.jpg": "fb49abd58a031969fa93814bce40d7caed0b046bc1008b32a7337273608f9b0d",
+        "camera.mp4": "08cce857fcb595688f517b3721eb1fead9ca042a6a0b57f87e940b2a36464ad2",
+        "camera_timestamps.jsonl": "7de4a87f1ec0e7304cffd8541f1c3c9ce074cfc32c90fd5cc90b4096048ccbcb",
+        "camera_validation.json": "e2420ffdb06b22260477f34b679c2b9cc7266d14cad414e8cbf525c471e997c0",
+        "stopped_monitor_samples.jsonl": "e98e595895215d88230d225a4488205b9640c0da7f49c1410dc849a8a621b297",
+        "report_status_snapshot.json": "6cc8bd9940c8e1d3753b50df73d61b7345067a3640c0c65a5b7eeaf215c7f80d"
+      }
+    }
+  ],
+  "later_read_only_diagnosis": "artifacts/real_supply_verification.json",
+  "post_operator_restart_status": {
+    "six_motors_reconnected": true,
+    "all_six_torques_off_at_last_observation": true,
+    "read_only_probe_s": 60.13464245805517,
+    "servo_voltage_error_responses": 5,
+    "motion_resumed": false,
+    "additional_motor_register_writes": 0,
+    "evidence": "artifacts/real_supply_verification.json"
+  },
+  "post_connector_check_status": {
+    "read_only_captures": 2,
+    "servo_voltage_error_responses": 3,
+    "last_torque_state": "all six OFF",
+    "additional_motor_register_writes": 0,
+    "motion_resumed": false,
+    "strict_feedback_motion_code": "implemented and mock-tested; not actuated on the still-faulting hardware",
+    "evidence": "artifacts/real_supply_verification.json"
+  },
+  "post_dc_plug_reseat_status": {
+    "adapter_label_v_a": [
+      5.0,
+      4.0
+    ],
+    "servo_voltage_error_responses": 4,
+    "read_only_capture_s": 60.183756333077326,
+    "all_six_torques_off_at_last_observation": true,
+    "additional_motor_register_writes": 0,
+    "motion_resumed": false,
+    "evidence": "artifacts/real_supply_verification.json"
+  }
+}

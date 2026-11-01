@@ -1,0 +1,47 @@
+{
+  "case_id": "camera_front_01",
+  "category": "changed_camera_pick",
+  "instruction": "赤いブロックを箱に入れて。未知の高さをRGBから測り、1段ずつ動かして再観測する。",
+  "host_outcome": "target_in_box_after_uncontrolled_drop",
+  "host_reason": "初回搬送で机上へ落下。RGBから位置と高さを測り直し再把持したが、箱の上で再び滑落。最後のRGBで赤は箱内、青は元の机上に見える。目標の最終配置と制御された移載の成功を分け、正常な搬送成功は0/1と記録する。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "6a0060b846fa",
+          "name": "prepared_cartesian_step",
+          "args": {
+            "program_id": "abf233797b98"
+          },
+          "command_status": "completed",
+          "trajectory_s": 2.1400000000000015,
+          "wall_s": 0.8542436669813469,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "failure"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": -50.359999249928386,
+          "shoulder_lift": 0.7887203011767887,
+          "elbow_flex": -5.102829806847853,
+          "wrist_flex": 94.35961523896617,
+          "wrist_roll": -5.72551801958984e-07
+        },
+        "gripper_open": 0.020000345075101136,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

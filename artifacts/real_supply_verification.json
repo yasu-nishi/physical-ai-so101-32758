@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "scope": "Read-only diagnosis of a stopped robot; per-run torque state distinguishes holding from power restart",
+  "motor_register_writes": 0,
+  "automatic_motion_restart": false,
+  "robot_unfolded": false,
+  "servo_voltage_error_reproduced": true,
+  "physical_fault_location": "undetermined: adapter, distribution wiring/connectors, or servo electronics/sensing",
+  "source": "https://docs.waveshare.com/Memory_Map_Explanation/ST_Servo_Memory_Map_Explanation",
+  "interpretation": "Voltage is an internal servo sensor report, not an external multimeter measurement. Error bit 0 is a voltage alarm.",
+  "range_method": "Completed group/unicast read values plus matching unicast voltage-error replies; not every frame seen on the wire.",
+  "software_findings": [
+    "Installed feetech-servo-sdk 1.0.0 group read discards servo error flags.",
+    "Payload length must be checked against each read request.",
+    "An interrupted group read can leave older replies queued; serial.flush() does not empty host input.",
+    "Diagnostic code now distinguishes valid servo error replies from malformed packets, and clears host input after a failed read.",
+    "No motion, torque, calibration or guard-limit changes were made in these diagnostic captures."
+  ],
+  "limits": [
+    "This does not identify the cause of the earlier elbow tracking failure.",
+    "The original commissioning voltage trigger was not retained; these are separate later observations.",
+    "A supplied product name or ordinary power adapter description does not establish voltage at a downstream servo."
+  ],
+  "runs": [
+    {
+      "capture_index": 1,
+      "capture_s": 90.17426258302294,
+      "samples": 435,
+      "after_operator_restart": false,
+      "operator_context": {},
+      "fresh_baseline_mode": false,
+      "unicast_only": false,
+      "sample_hz": 5.0,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 1,
+        "shoulder_lift": 1,
+        "elbow_flex": 1,
+        "wrist_flex": 1,
+        "wrist_roll": 1,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 23349,
+      "structural_or_id_mismatches": 2,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 5,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.8,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_flex": [
+          4.7,
+          4.9
+        ],
+        "wrist_roll": [
+          4.2,
+          4.9
+        ],
+        "gripper": [
+          3.7,
+          4.9
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T06:57:53.688575+00:00",
+          "joint": "gripper",
+          "register": "Goal_Position",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        },
+        {
+          "time_utc": "2026-11-01T06:58:13.594513+00:00",
+          "joint": "gripper",
+          "register": "Present_Voltage",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": 3.7,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "84aea46c2dd3bbb0aa47138d9e019122e54e533eeae6cdcb5b77b291bbc2f97b"
+        },
+        {
+          "time_utc": "2026-11-01T06:58:30.626580+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Position",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "537c9082f44888d7ece272748558f3cc1efbfc1e156ab60c4ea399ce9deda861"
+        },
+        {
+          "time_utc": "2026-11-01T06:58:58.500320+00:00",
+          "joint": "gripper",
+          "register": "Present_Current",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        },
+        {
+          "time_utc": "2026-11-01T06:59:03.063743+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Temperature",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "eaef4f4c0fd4e118c880dbfb617eaa154275e5644252d491dba7fb6a9eb137c7"
+        }
+      ],
+      "holding_register_change_samples": 0,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "92783d7a02a2c43d2504e870decf25d911716c0c030feb32d0cff0a724799793",
+        "samples.jsonl": "ab99375ce181b00f76c5a775c807019279cdf7bbe9a1ed145006efb1edbf78a8",
+        "wire_packets.jsonl": "c05dee9b898597634751b9c6cbad29edc8c23c1b668c9c004f1bcdb4ded9c03a",
+        "baseline.json": "cb4e81b00b9a621c7bd76f4ff1770d084e44e3723599c7553bc46a74f50bcd27",
+        "executed_source/diagnose_real_hold.py": "ab4a3a1d137fec87345ed538b554f174eb55519beca0a870984241a82263c2be",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "38fd494e0bab63dd6037fecca51b44c6389a0d7e7001457eb56696ff260b0681"
+      }
+    },
+    {
+      "capture_index": 2,
+      "capture_s": 60.03485354199074,
+      "samples": 290,
+      "after_operator_restart": false,
+      "operator_context": {},
+      "fresh_baseline_mode": false,
+      "unicast_only": false,
+      "sample_hz": 5.0,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 1,
+        "shoulder_lift": 1,
+        "elbow_flex": 1,
+        "wrist_flex": 1,
+        "wrist_roll": 1,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 15689,
+      "structural_or_id_mismatches": 0,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 2,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.9,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.8,
+          4.8
+        ],
+        "wrist_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_roll": [
+          4.4,
+          4.8
+        ],
+        "gripper": [
+          4.6,
+          4.8
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T07:01:09.457551+00:00",
+          "joint": "gripper",
+          "register": "Present_Load",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        },
+        {
+          "time_utc": "2026-11-01T07:01:48.066102+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Position",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "537c9082f44888d7ece272748558f3cc1efbfc1e156ab60c4ea399ce9deda861"
+        }
+      ],
+      "holding_register_change_samples": 0,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "e78ceac322eeab003d37e556ba7b35fb53b11f46eee3a21de02bbbcb3f94a406",
+        "samples.jsonl": "143cbd09ab01af6c9b5ae6a6cb758df173f667a9e18b51f052332e475b32ae01",
+        "wire_packets.jsonl": "bc7e17df9dca7dc0486628f84b5c47fd5908459450693edb6b690062ed32d342",
+        "baseline.json": "cb4e81b00b9a621c7bd76f4ff1770d084e44e3723599c7553bc46a74f50bcd27",
+        "executed_source/diagnose_real_hold.py": "68977f998b5e426064c12c98c05ac1b9cf1bbfe4dbc9456b561549f25ae859d1",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "d81ee03451b48c8219f2445c206bab4917153b6d0d7f234b56e067b3ecec59a2"
+      }
+    },
+    {
+      "capture_index": 3,
+      "capture_s": 60.13464245805517,
+      "samples": 291,
+      "after_operator_restart": true,
+      "operator_context": {},
+      "fresh_baseline_mode": true,
+      "unicast_only": false,
+      "sample_hz": 5.0,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 15694,
+      "structural_or_id_mismatches": 0,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 5,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.8,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_roll": [
+          4.5,
+          4.8
+        ],
+        "gripper": [
+          4.1,
+          4.9
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T07:09:04.869199+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Voltage",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": 3.9,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "66f618a5f387eb81639a451526eb47b7e7fbddd633c4bc837de2d6ab0560e0f4"
+        },
+        {
+          "time_utc": "2026-11-01T07:09:20.857026+00:00",
+          "joint": "gripper",
+          "register": "Present_Temperature",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "c4421db0627970fc0546a9fa54e07a8df6da63cb7c046a03e5cd75dd339d4b26"
+        },
+        {
+          "time_utc": "2026-11-01T07:09:30.789434+00:00",
+          "joint": "gripper",
+          "register": "Present_Temperature",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "c4421db0627970fc0546a9fa54e07a8df6da63cb7c046a03e5cd75dd339d4b26"
+        },
+        {
+          "time_utc": "2026-11-01T07:09:50.034009+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Temperature",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "eaef4f4c0fd4e118c880dbfb617eaa154275e5644252d491dba7fb6a9eb137c7"
+        },
+        {
+          "time_utc": "2026-11-01T07:09:53.351282+00:00",
+          "joint": "gripper",
+          "register": "Present_Current",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        }
+      ],
+      "holding_register_change_samples": 0,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "7ec2163edd27bd9b61df4b6d7c8e6a49a3f5c94027d8cf60834a1efec9775f1c",
+        "samples.jsonl": "86d4e10aea676f5b6f9c162abd487fd66c44283e84b4a412194e5cb521553fb4",
+        "wire_packets.jsonl": "6ba3834b1b10786a7e349318e625ca7fc5aa87a46e6f7722fd73ea5e75317dd1",
+        "baseline.json": "15b96b655ed1ab9483aaaea291d25811ea3d5a67d112c0390af354c435dc28ea",
+        "executed_source/diagnose_real_hold.py": "9e7bdf50ba4d41e3b76353408800cebd88e6ea585c99733f328efff93c5ec604",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "da28681fe695662f22578de0f3c97cce1ed2e8609a5c74da2ce5bc189db3587f"
+      }
+    },
+    {
+      "capture_index": 4,
+      "capture_s": 60.14560150005855,
+      "samples": 291,
+      "after_operator_restart": true,
+      "operator_context": {
+        "reported_action": "Accessible connectors reseated by operator; exact connectors unknown",
+        "power_restart_independently_confirmed": false,
+        "fresh_baseline_option_note": "Capture 5 used the existing --after-restart option as a fresh-baseline mechanism after maintenance; this CLI flag is not independent evidence that power was restarted. Capture 6 uses --fresh-baseline."
+      },
+      "fresh_baseline_mode": true,
+      "unicast_only": false,
+      "sample_hz": 5.0,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 15738,
+      "structural_or_id_mismatches": 0,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 2,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.9,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_flex": [
+          4.5,
+          4.9
+        ],
+        "wrist_roll": [
+          4.3,
+          4.9
+        ],
+        "gripper": [
+          4.5,
+          4.9
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T07:15:01.205624+00:00",
+          "joint": "gripper",
+          "register": "Status",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "57fd9b878c6aab8410872cb4d3f186569259d294883c2771bb527e9ca561c20a"
+        },
+        {
+          "time_utc": "2026-11-01T07:15:12.026621+00:00",
+          "joint": "gripper",
+          "register": "Present_Load",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        }
+      ],
+      "holding_register_change_samples": 0,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "193340723f31d35671bde185e3e347d52d83a6e7b4ec8abf1cfed30f1d5f9bda",
+        "samples.jsonl": "43e500053029dd7541ce8d5336d1dd24f7e7661a004e3258372fb51b74048ded",
+        "wire_packets.jsonl": "70092ef1a0b5850929d5b464bafe853415deabc6a9790a1201efbdc0d6999fc7",
+        "baseline.json": "a70bcddf9e2d69a7ba2bb16f4b9bbeef8f6453d4935e534bc37ab4c2c0965bdb",
+        "operator_context.json": "d109c8e9ca21a00078ecc2f24358dd77729de1fd71bf5d5b51117f86b98c3e60",
+        "executed_source/diagnose_real_hold.py": "9e7bdf50ba4d41e3b76353408800cebd88e6ea585c99733f328efff93c5ec604",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "da28681fe695662f22578de0f3c97cce1ed2e8609a5c74da2ce5bc189db3587f"
+      }
+    },
+    {
+      "capture_index": 5,
+      "capture_s": 60.26484979200177,
+      "samples": 31,
+      "after_operator_restart": false,
+      "operator_context": {
+        "reported_action": "Accessible connectors reseated by operator; exact connectors unknown",
+        "power_restart_independently_confirmed": false,
+        "fresh_baseline_option_note": "Capture 5 used the existing --after-restart option as a fresh-baseline mechanism after maintenance; this CLI flag is not independent evidence that power was restarted. Capture 6 uses --fresh-baseline."
+      },
+      "fresh_baseline_mode": true,
+      "unicast_only": true,
+      "sample_hz": 0.5,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 1517,
+      "structural_or_id_mismatches": 0,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 1,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.9,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.8,
+          4.8
+        ],
+        "wrist_flex": [
+          4.8,
+          4.9
+        ],
+        "wrist_roll": [
+          4.8,
+          4.8
+        ],
+        "gripper": [
+          4.8,
+          4.8
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T07:16:47.146335+00:00",
+          "joint": "wrist_roll",
+          "register": "Status",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "4c1d3b4069c2f5d13ecee7e2c158e42cdbf1dcd64982cc2822458f794da5b5a7"
+        }
+      ],
+      "holding_register_change_samples": 15,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 1,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "0a0a9e531454bc0f8ca3fd9a65a08a639554435792b6212ef77e3c79660f4305",
+        "samples.jsonl": "cce21c256b4da7c7d40ac5d8b61769ef592e7df1616c748d55e7cba1531f99d7",
+        "wire_packets.jsonl": "daa7c6fa9bb5c6f6b012486600c4f5f4c122e1e15e844d3f3b2989d83b826345",
+        "baseline.json": "267f301d0368005ac962ad21a5c164435018b57a0489fc5c7fa1c789451ee4a9",
+        "operator_context.json": "d109c8e9ca21a00078ecc2f24358dd77729de1fd71bf5d5b51117f86b98c3e60",
+        "executed_source/diagnose_real_hold.py": "52178ba447ecbb619ffc63d70bd8a84376b060560a8b5ee9acadb82380b72db8",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "da28681fe695662f22578de0f3c97cce1ed2e8609a5c74da2ce5bc189db3587f"
+      }
+    },
+    {
+      "capture_index": 6,
+      "capture_s": 60.183756333077326,
+      "samples": 291,
+      "after_operator_restart": false,
+      "operator_context": {
+        "reported_action": "Separate controller power plug reseated by operator after providing AC adapter photo",
+        "adapter_label": {
+          "output_v": 5.0,
+          "output_a": 4.0,
+          "rated_w": 20.0
+        },
+        "actual_adapter_output_and_distal_motor_voltage_measured_externally": false,
+        "power_source_fault_location": "undetermined"
+      },
+      "fresh_baseline_mode": true,
+      "unicast_only": false,
+      "sample_hz": 5.0,
+      "baseline_torque_enabled": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "motor_register_writes": 0,
+      "non_read_instructions": 0,
+      "valid_register_response_packets": 15653,
+      "structural_or_id_mismatches": 0,
+      "communication_error_results": 0,
+      "servo_error_response_packets": 4,
+      "voltage_ranges_v_including_error_replies": {
+        "shoulder_pan": [
+          4.8,
+          4.9
+        ],
+        "shoulder_lift": [
+          4.8,
+          4.9
+        ],
+        "elbow_flex": [
+          4.7,
+          4.8
+        ],
+        "wrist_flex": [
+          4.6,
+          4.8
+        ],
+        "wrist_roll": [
+          3.9,
+          4.8
+        ],
+        "gripper": [
+          4.1,
+          4.8
+        ]
+      },
+      "servo_errors": [
+        {
+          "time_utc": "2026-11-01T07:23:03.218303+00:00",
+          "joint": "gripper",
+          "register": "Present_Voltage",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": 3.5,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "c514f33ccb61e7c7ecc02e509b66b7470e0bacd67ab9fa6d3414963b6f28ebda"
+        },
+        {
+          "time_utc": "2026-11-01T07:23:13.998226+00:00",
+          "joint": "gripper",
+          "register": "Present_Position",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "0b10405c6ee54a18f2b4a55d3e962c2a900ea42443bc041760a56f09512827da"
+        },
+        {
+          "time_utc": "2026-11-01T07:23:20.008754+00:00",
+          "joint": "wrist_roll",
+          "register": "Present_Voltage",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": 3.9,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "66f618a5f387eb81639a451526eb47b7e7fbddd633c4bc837de2d6ab0560e0f4"
+        },
+        {
+          "time_utc": "2026-11-01T07:23:24.987313+00:00",
+          "joint": "gripper",
+          "register": "Present_Load",
+          "error_bits": 1,
+          "voltage_error": true,
+          "voltage_v": null,
+          "reply_length_id_and_checksum_valid": true,
+          "packet_sha256": "8ab447cb9b7f069648301d74712d5d219a26c8ee295de6be611a9e7dbfadb5ad"
+        }
+      ],
+      "holding_register_change_samples": 0,
+      "maximum_observed_position_delta_ticks": {
+        "shoulder_pan": 0,
+        "shoulder_lift": 0,
+        "elbow_flex": 0,
+        "wrist_flex": 0,
+        "wrist_roll": 0,
+        "gripper": 0
+      },
+      "private_evidence_sha256": {
+        "summary.json": "152f568d81345e185ace43ae86c9d6852b2138478989ba1edad68aa7dda7303f",
+        "samples.jsonl": "79b656f796d03a07b97c3b076c7896aaea391668c0afdce53db8022cc27605a7",
+        "wire_packets.jsonl": "5dc47b2d89d661ba666b42bae9fe084a28e074c60f4c8133dc6a8bd2d1dad4f1",
+        "baseline.json": "9d6ce6abd18c3f8d16230d4f50821aaaba2e44be227e3dc5f380b50167979479",
+        "operator_context.json": "62dfbc88c7e5fe6970f1998f3e3c50576dcf19eea44b10c8679b9a74f4aed108",
+        "executed_source/diagnose_real_hold.py": "52178ba447ecbb619ffc63d70bd8a84376b060560a8b5ee9acadb82380b72db8",
+        "executed_source/real_staged.local.json": "d89a6d660ccddbbe9bb3b2afd6e6d1eef4eb99206cadb80aa6b92802864b2cf4",
+        "executed_source/servo_diagnostics.py": "1a1cf635a83c02814585feb02353fdbde3d21e93118dd5b0731048c84da21d38"
+      }
+    }
+  ]
+}

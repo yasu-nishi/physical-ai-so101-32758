@@ -1,0 +1,8 @@
+{
+  "stack": {
+    "action_id": "bd7563fabaa4",
+    "observation_id": "1be3f1afcb03",
+    "evaluation": "checkpoint_stack_private.json",
+    "ground_truth_read_during_decision": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "6b7b450bcb09",
+      "observation_id": "2518c415b367",
+      "visual_reason": "青の手前中央縦辺は上端(517.5,462)、机に接する下端(517.5,488)が見える。上面中央を合わせて選ぶ。",
+      "bottom_pixel": [
+        517.5,
+        488.0
+      ],
+      "top_pixel": [
+        517.5,
+        462.0
+      ],
+      "center_pixel": [
+        518.0,
+        444.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.028411575608827955,
+      "estimated_top_z_m": 0.028411575608827955,
+      "estimated_top_center_m": [
+        0.22708505150685204,
+        -0.005339004863680941,
+        0.028411575608827955
+      ],
+      "height_interval_m": [
+        0.023992651779707663,
+        0.03280692418313075
+      ],
+      "vertical_edge_residual_m": 0.0006792801027139394,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/001_measure_height_0.png"
+  ]
+}

@@ -1,0 +1,5 @@
+trial,target,pixel_xy,estimated_xy_m,independent_xy_error_mm,z_source,command_status,ai_visual_verdict,independent_success,trajectory_s,wall_s,failure
+continuous_01,red,"[338.0, 413.0]","[0.23674933429688216, -0.1002529333991938]",0.3371386674696158,assumed_known_30_mm_height_not_measured,completed,success,True,22.0,8.653,
+continuous_02,red,"[484.0, 423.0]","[0.24556996340950146, 0.0285282516450477]",0.44118512504912655,assumed_known_30_mm_height_not_measured,completed,success,True,22.0,8.629,
+continuous_03,blue,"[383.0, 398.0]","[0.22351839062795326, -0.06056010239240701]",0.37041853130721747,assumed_known_30_mm_height_not_measured,completed,success,True,22.0,8.547,
+continuous_04,blue,"[500.0, 418.0]","[0.24115964885319183, 0.04264125822523855]",0.7678889391985846,assumed_known_30_mm_height_not_measured,completed,success,True,22.0,8.825,

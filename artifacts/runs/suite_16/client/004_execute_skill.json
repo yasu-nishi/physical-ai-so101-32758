@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool execute_skill: Stop is latched; local restart required"
+  ],
+  "images": []
+}

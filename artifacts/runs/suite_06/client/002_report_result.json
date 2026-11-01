@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "54f4e2ff9fed",
+      "observation_id": "19634e68e2f3",
+      "ai_visual_verdict": "success",
+      "reason": "青が箱の内側にあり、元の奥の置き場は空。赤は手前に残り、指は青から離れている。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

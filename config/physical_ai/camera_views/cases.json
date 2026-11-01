@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "camera_front_01",
+    "category": "changed_camera_pick",
+    "instruction": "赤いブロックを箱に入れて。未知の高さをRGBから測り、1段ずつ動かして再観測する。",
+    "config": "config/physical_ai/camera_views/front.json",
+    "seed": 402
+  },
+  {
+    "case_id": "camera_side_01",
+    "category": "changed_camera_measurement",
+    "instruction": "赤と青の高さをRGBから測って。辺が見えない場合は推測せず、移動せずに報告して。",
+    "config": "config/physical_ai/camera_views/side.json",
+    "seed": 402
+  },
+  {
+    "case_id": "camera_low_01",
+    "category": "changed_camera_measurement",
+    "instruction": "赤と青の高さをRGBから測って。辺が見えない場合は推測せず、移動せずに報告して。",
+    "config": "config/physical_ai/camera_views/low.json",
+    "seed": 402
+  },
+  {
+    "case_id": "camera_top_01",
+    "category": "changed_camera_measurement",
+    "instruction": "赤と青の高さをRGBから測って。辺が見えない場合は推測せず、移動せずに報告して。",
+    "config": "config/physical_ai/camera_views/top.json",
+    "seed": 402
+  }
+]

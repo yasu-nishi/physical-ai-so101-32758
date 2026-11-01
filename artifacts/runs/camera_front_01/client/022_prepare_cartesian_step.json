@@ -1,0 +1,75 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "701ab48638d3",
+      "execution_skill": "prepared_cartesian_step",
+      "observation_id": "4eee2d998220",
+      "instruction": "赤いブロックを箱に入れて。未知の高さをRGBから測り、1段ずつ動かして再観測する。",
+      "visual_reason": "赤は指とともに移動し、実測開度も保持時の値。高さを維持して約38mmだけ箱の内側へ進む。",
+      "expected_visual_change": "赤が箱の縁を越えて上方に入り、落下しない。",
+      "target_xyz_m": [
+        0.19,
+        0.112,
+        0.085
+      ],
+      "target_gripper_open": null,
+      "automatic_next_step": false,
+      "maintained_gripper_command": 0.020000000000000018,
+      "planned_duration_s": 1.6431217725874279,
+      "generator": "host selects ONE next action; robot-only IK and Python exporter",
+      "trajectory": [
+        {
+          "phase": "cartesian_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -25.2712018561233,
+              "shoulder_lift": -13.509742003054557,
+              "elbow_flex": 10.81690465452882,
+              "wrist_flex": 92.73494975231128,
+              "wrist_roll": -2.783948364156467e-07
+            },
+            "gripper_open": 0.020000000000000018
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -36.83354806166726,
+              "shoulder_lift": -8.373534528012913,
+              "elbow_flex": 5.404855083264863,
+              "wrist_flex": 92.96867919712163,
+              "wrist_roll": 1.1669340948264805e-08
+            },
+            "gripper_open": 0.020000000000000018
+          },
+          "duration_s": 1.6431217725874279
+        }
+      ],
+      "validation": [
+        "fresh RGB",
+        "workspace",
+        "step displacement",
+        "joint limits",
+        "speed",
+        "duration",
+        "separate arm/gripper"
+      ],
+      "not_validated": [
+        "general obstacle avoidance",
+        "vision correctness",
+        "contact",
+        "task success"
+      ],
+      "script_sha256": "de090103f5e72241f3393b91c05127d8eff66f979f4c7a42ae301bd621070afe",
+      "files_relative_to_run_dir": {
+        "script": "programs/701ab48638d3.py",
+        "plan": "programs/701ab48638d3.json",
+        "preview": "programs/701ab48638d3_preview.png",
+        "script_sha256": "de090103f5e72241f3393b91c05127d8eff66f979f4c7a42ae301bd621070afe",
+        "plan_sha256": "d52577db8c04d222d6b4edaad90a591b20ae179aa909b2e79e1eae4a1f064432"
+      }
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_front_01/client/022_prepare_cartesian_step_0.png"
+  ]
+}

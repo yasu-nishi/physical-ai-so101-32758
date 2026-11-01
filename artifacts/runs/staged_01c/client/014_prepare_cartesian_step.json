@@ -1,0 +1,71 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "f4fcd0399934",
+      "execution_skill": "prepared_cartesian_step",
+      "observation_id": "b33f46a2f7a8",
+      "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+      "visual_reason": "赤が箱の中央内側まで下がり、上面と側面が確認できる。腕の位置を保って指を開き、箱底へ解放する。",
+      "expected_visual_change": "赤が箱底に置かれ、指が離れる。解放後も画像で残留・転倒を確認する。",
+      "target_xyz_m": null,
+      "target_gripper_open": 0.612,
+      "automatic_next_step": false,
+      "maintained_gripper_command": null,
+      "planned_duration_s": 1.3425147923782073,
+      "generator": "host selects ONE next action; robot-only IK and Python exporter",
+      "trajectory": [
+        {
+          "phase": "gripper_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -47.88537604526019,
+              "shoulder_lift": 3.4804244539343254,
+              "elbow_flex": 9.902310262397302,
+              "wrist_flex": 76.66596939088316,
+              "wrist_roll": -3.238691073579558e-07
+            },
+            "gripper_open": 0.16449506920726426
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -47.88537604526019,
+              "shoulder_lift": 3.4804244539343254,
+              "elbow_flex": 9.902310262397302,
+              "wrist_flex": 76.66596939088316,
+              "wrist_roll": -3.238691073579558e-07
+            },
+            "gripper_open": 0.612
+          },
+          "duration_s": 1.3425147923782073
+        }
+      ],
+      "validation": [
+        "fresh RGB",
+        "workspace",
+        "step displacement",
+        "joint limits",
+        "speed",
+        "duration",
+        "separate arm/gripper"
+      ],
+      "not_validated": [
+        "general obstacle avoidance",
+        "vision correctness",
+        "contact",
+        "task success"
+      ],
+      "script_sha256": "81109d0e7a8ba017360aa90da765146b3973f16c6357416c99ddc65036ffd7ee",
+      "files_relative_to_run_dir": {
+        "script": "programs/f4fcd0399934.py",
+        "plan": "programs/f4fcd0399934.json",
+        "preview": "programs/f4fcd0399934_preview.png",
+        "script_sha256": "81109d0e7a8ba017360aa90da765146b3973f16c6357416c99ddc65036ffd7ee",
+        "plan_sha256": "e6fe5235bd0ce1f45cd97a8e07516e3b16a56f7737d067eb212e7dc0b78ff011"
+      }
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_01c/client/014_prepare_cartesian_step_0.png"
+  ]
+}

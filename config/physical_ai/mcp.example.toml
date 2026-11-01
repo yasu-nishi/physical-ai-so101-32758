@@ -1,0 +1,12 @@
+# Unknown upright-object height + one-step Python generation. Replace path locally.
+[mcp_servers.so101_staged]
+command = "uv"
+args = ["--directory", "/ABS/PATH/TO/REPO", "run", "--locked", "python", "-m", "so101_mcp", "serve", "--backend", "sim", "--config", "config/physical_ai/sim_staged.json"]
+startup_timeout_sec = 30
+tool_timeout_sec = 30
+# Omit --config and its value to use the fixed-slot baseline instead.
+# sim_continuous.json selects the legacy known-height full-pick generator.
+
+# For a locally started real server, use a separate name and explicit endpoint.
+# [mcp_servers.so101_real]
+# url = "http://127.0.0.1:8765/mcp"

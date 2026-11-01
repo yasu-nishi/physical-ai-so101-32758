@@ -1,0 +1,5 @@
+trial,instruction,target,selected_slot,command_status,ai_visual_verdict,independent_success,trajectory_s,wall_s,failure
+vision_01,赤いブロックを箱に入れて,red,slot_b,completed,success,True,22.0,8.624,
+vision_02,赤いブロックを箱に入れて,red,slot_a,completed,success,True,22.0,8.678,
+vision_03,青いブロックを箱に入れて,blue,slot_b,completed,success,True,22.0,8.914,
+vision_04,青いブロックを箱に入れて,blue,slot_a,completed,success,True,22.0,8.764,

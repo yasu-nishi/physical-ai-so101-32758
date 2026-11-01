@@ -1,0 +1,68 @@
+<mujoco model="so101_tabletop">
+  <statistic center="0.2 0 0.1" extent="0.6" />
+  <visual>
+    <headlight diffuse="0.35 0.35 0.35" ambient="0.2 0.2 0.2" specular="0 0 0" />
+    <global offwidth="960" offheight="720" />
+  </visual>
+  <custom>
+    <text name="instruction" data="Select a block from the camera image and put it in the box." />
+  </custom>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.75 0.75 0.75" rgb2="0.45 0.45 0.45" width="512" height="3072" />
+    <material name="table" rgba="0.80 0.72 0.60 1" specular="0.05" shininess="0.1" />
+    <texture name="wood" type="cube" file="../assets/so101_tabletop/textures/wood.png" />
+    <material name="red_wood" texture="wood" rgba="0.95 0.15 0.12 1" specular="0.2" shininess="0.3" />
+    <material name="green_wood" texture="wood" rgba="0.20 0.75 0.25 1" specular="0.2" shininess="0.3" />
+    <material name="blue_wood" texture="wood" rgba="0.15 0.35 0.95 1" specular="0.2" shininess="0.3" />
+    <material name="yellow_wood" texture="wood" rgba="1.0 0.85 0.12 1" specular="0.2" shininess="0.3" />
+    <material name="table_leg" rgba="0.30 0.25 0.20 1" />
+    <material name="floor" rgba="0.38 0.37 0.36 1" />
+    <material name="wall" rgba="0.85 0.84 0.80 1" emission="0.5" />
+    <material name="box" rgba="0.22 0.60 0.33 1" specular="0.6" shininess="0.7" reflectance="0.05" />
+  </asset>
+  <default>
+    <default class="cube">
+      <geom type="box" size="0.015 0.015 0.015" mass="0.01" condim="4" friction="1 0.03 0.003" solref="0.01 1" />
+    </default>
+    <default class="box_wall">
+      <geom type="box" material="box" />
+    </default>
+    <default class="decor">
+      <geom type="box" contype="0" conaffinity="0" />
+    </default>
+  </default>
+  <worldbody>
+    <light pos="0 0 3.5" dir="0 0 -1" directional="true" />
+    <light pos="0.3 -0.4 0.8" dir="-0.3 0.5 -1" diffuse="0.25 0.25 0.25" castshadow="true" />
+    <geom name="table" type="box" size="0.40 0.40 0.015" pos="0.20 0 -0.015" material="table" />
+    <geom class="decor" size="0.02 0.02 0.36" pos="0.56 0.36 -0.39" material="table_leg" />
+    <geom class="decor" size="0.02 0.02 0.36" pos="0.56 -0.36 -0.39" material="table_leg" />
+    <geom class="decor" size="0.02 0.02 0.36" pos="-0.16 0.36 -0.39" material="table_leg" />
+    <geom class="decor" size="0.02 0.02 0.36" pos="-0.16 -0.36 -0.39" material="table_leg" />
+    <geom name="floor" type="plane" size="1.0 1.5 0.05" pos="0 0 -0.75" material="floor" />
+    <geom class="decor" size="0.02 1.5 1.0" pos="-1.0 0 0.25" material="wall" />
+    <geom class="decor" size="1.0 0.02 1.0" pos="0 1.5 0.25" material="wall" />
+    <geom class="decor" size="1.0 0.02 1.0" pos="0 -1.5 0.25" material="wall" />
+    <site name="so101_mount" pos="0 0 0" />
+    <body name="red_cube" pos="0.24 -0.08 0.015">
+      <freejoint />
+      <geom class="cube" material="red_wood" />
+    </body>
+    <body name="blue_cube" pos="0.24 0.02 0.015">
+      <freejoint />
+      <geom class="cube" material="blue_wood" />
+    </body>
+    <body name="box" pos="0.18 0.15 0">
+      <geom class="box_wall" size="0.049 0.049 0.002" pos="0 0 0.002" />
+      <geom class="box_wall" size="0.002 0.049 0.0175" pos="0.047 0 0.0175" />
+      <geom class="box_wall" size="0.002 0.049 0.0175" pos="-0.047 0 0.0175" />
+      <geom class="box_wall" size="0.049 0.002 0.0175" pos="0 0.047 0.0175" />
+      <geom class="box_wall" size="0.049 0.002 0.0175" pos="0 -0.047 0.0175" />
+    </body>
+    <camera name="overview" pos="0.62 -0.43 0.52" xyaxes="0.6955487380269249 0.7184789162036367 -0.0 -0.41327877045280653 0.40008902245963185 0.8180033202868512" fovy="43" />
+    <camera name="top" pos="0.19 0.025 0.58" xyaxes="0 1 0 -1 0 0" fovy="60" />
+    <geom name="slot_1" type="box" size=".025 .025 .0003" pos="0.24 -0.08 0.0003" rgba=".48 .52 .58 1" contype="0" conaffinity="0" />
+    <geom name="slot_2" type="box" size=".025 .025 .0003" pos="0.24 0.02 0.0003" rgba=".48 .52 .58 1" contype="0" conaffinity="0" />
+  </worldbody>
+  <option integrator="implicitfast" timestep="0.002" cone="elliptic" iterations="50" impratio="10" />
+</mujoco>

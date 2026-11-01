@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "0b2ae841cabd",
+      "observation_id": "45bbf3ce3f7e",
+      "ai_visual_verdict": "success",
+      "reason": "斜めの再撮影で赤が箱の壁に囲まれた内側にあり、元の手前の場所は空。青は台上に残り、指は赤から離れて開いている。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

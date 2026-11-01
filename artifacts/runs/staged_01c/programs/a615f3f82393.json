@@ -1,0 +1,56 @@
+{
+  "program_id": "a615f3f82393",
+  "execution_skill": "prepared_cartesian_step",
+  "observation_id": "4c7ee788241a",
+  "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+  "visual_reason": "左右の指が赤の側面を囲んでいる。腕を動かさず閉じ、次の画像を見て小さい試験持上げを決める。",
+  "expected_visual_change": "指が閉じて赤に接する。成功判定は持上げ後まで保留する。",
+  "target_xyz_m": null,
+  "target_gripper_open": 0.04,
+  "automatic_next_step": false,
+  "maintained_gripper_command": null,
+  "planned_duration_s": 1.7152950071566897,
+  "generator": "host selects ONE next action; robot-only IK and Python exporter",
+  "trajectory": [
+    {
+      "phase": "gripper_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 15.008849023800707,
+          "shoulder_lift": 5.629214699129166,
+          "elbow_flex": 11.947191143685957,
+          "wrist_flex": 72.47115697374053,
+          "wrist_roll": -3.1627860522960733e-07
+        },
+        "gripper_open": 0.6117650023855633
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 15.008849023800707,
+          "shoulder_lift": 5.629214699129166,
+          "elbow_flex": 11.947191143685957,
+          "wrist_flex": 72.47115697374053,
+          "wrist_roll": -3.1627860522960733e-07
+        },
+        "gripper_open": 0.04
+      },
+      "duration_s": 1.7152950071566897
+    }
+  ],
+  "validation": [
+    "fresh RGB",
+    "workspace",
+    "step displacement",
+    "joint limits",
+    "speed",
+    "duration",
+    "separate arm/gripper"
+  ],
+  "not_validated": [
+    "general obstacle avoidance",
+    "vision correctness",
+    "contact",
+    "task success"
+  ],
+  "script_sha256": "0f6650893d22d0348df3eccfa09eb4194b8c8e566bc2f3d7b2eb3d3df6764ff8"
+}

@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool prepare_step: Robot moved since this image; observe again"
+  ],
+  "images": []
+}

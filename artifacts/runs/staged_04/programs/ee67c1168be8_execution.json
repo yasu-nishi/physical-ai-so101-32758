@@ -1,0 +1,217 @@
+{
+  "action": {
+    "action_id": "ba1404cf8778",
+    "accepted": true,
+    "planned_duration_s": 0.8,
+    "command_status": "running",
+    "task_success": "unverified"
+  },
+  "status": {
+    "backend": "sim",
+    "mode": "simulation",
+    "state": "completed",
+    "connection_verified": true,
+    "last_action": {
+      "action_id": "ba1404cf8778",
+      "name": "prepared_cartesian_step",
+      "args": {
+        "program_id": "ee67c1168be8"
+      },
+      "command_status": "completed",
+      "trajectory_s": 0.8000000000000004,
+      "wall_s": 0.32354025007225573,
+      "task_success": "unverified",
+      "error": null
+    },
+    "task_success": "unverified",
+    "stop_latched": false,
+    "joints_deg": {
+      "shoulder_pan": 15.553035186535187,
+      "shoulder_lift": 2.700139517626566,
+      "elbow_flex": 5.727262013418337,
+      "wrist_flex": 81.62030839719978,
+      "wrist_roll": -1.5394656657209202e-06
+    },
+    "gripper_open": 0.04000028755408368,
+    "active_action": null,
+    "phase": null
+  },
+  "observation": {
+    "observation_id": "295a81195fa2",
+    "captured_utc": "2026-11-01T01:09:06.575283+00:00",
+    "backend": "sim",
+    "camera": "overview",
+    "joints_deg": {
+      "shoulder_pan": 15.553033982624648,
+      "shoulder_lift": 2.6990157911914023,
+      "elbow_flex": 5.727519671364399,
+      "wrist_flex": 81.62047245909402,
+      "wrist_roll": -3.884343763772827e-07
+    },
+    "gripper_open": 0.04000027828228708,
+    "status": {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "completed",
+      "connection_verified": true,
+      "last_action": {
+        "action_id": "ba1404cf8778",
+        "name": "prepared_cartesian_step",
+        "args": {
+          "program_id": "ee67c1168be8"
+        },
+        "command_status": "completed",
+        "trajectory_s": 0.8000000000000004,
+        "wall_s": 0.32354025007225573,
+        "task_success": "unverified",
+        "error": null
+      },
+      "task_success": "unverified",
+      "stop_latched": false,
+      "joints_deg": {
+        "shoulder_pan": 15.553035186535187,
+        "shoulder_lift": 2.700139517626566,
+        "elbow_flex": 5.727262013418337,
+        "wrist_flex": 81.62030839719978,
+        "wrist_roll": -1.5394656657209202e-06
+      },
+      "gripper_open": 0.04000028755408368,
+      "active_action": null,
+      "phase": null
+    },
+    "available_skills": {
+      "observe_pose": {},
+      "prepared_cartesian_step": {
+        "program_id": "returned by prepare_cartesian_step"
+      },
+      "prepared_step": {
+        "program_id": "returned by prepare_step"
+      }
+    },
+    "capabilities": {
+      "continuous_image_pick": false,
+      "known_plane_localization": true,
+      "depth_sampling": false,
+      "rgb_vertical_edge_height": true,
+      "cartesian_step": true,
+      "incremental_joint_step": true
+    },
+    "sensors": {
+      "rgb": {
+        "available": true,
+        "source": "MuJoCo RGB renderer"
+      },
+      "depth": {
+        "available": false,
+        "reason": "depth_camera not enabled"
+      },
+      "end_effector": {
+        "available": true,
+        "position_m": [
+          0.2406125471961815,
+          -0.05717566145806877,
+          0.053865311921474104
+        ],
+        "local_axes_in_work": [
+          [
+            -0.0007904004944072184,
+            0.3146910564782315,
+            0.9491938233257059
+          ],
+          [
+            0.00021998553509255947,
+            0.9491941515721466,
+            -0.31469098211991314
+          ],
+          [
+            -0.999999663436654,
+            -3.992299672223032e-05,
+            -0.0008194710071392376
+          ]
+        ],
+        "source": "robot-only forward kinematics from measured joints; calibrated model required",
+        "frame": "robot_base_table_z0",
+        "tool_frame": "gripperframe"
+      }
+    },
+    "images": [
+      {
+        "index": 0,
+        "role": "rgb",
+        "mime_type": "image/png"
+      }
+    ],
+    "instruction": "Use image pixels and the user instruction to select the object. State is not proof of task success. Unknown-height upright objects: measure_height from visible upper/lower endpoints of the SAME vertical edge. Prepare only one Cartesian or gripper step; inspect fresh RGB before the next step. No automatic task rollout. For iterative visual feedback, prepare_step creates ONE bounded joint-relative step. Inspect the new image after each step before choosing the next. Degrees are not Cartesian millimetres; do not infer contact or height from command completion.",
+    "camera_calibration": {
+      "width": 960,
+      "height": 720,
+      "pixel_origin": "top_left_u_right_v_down",
+      "principal_point_px": [
+        479.5,
+        359.5
+      ],
+      "pixel_coordinates": "integer indices denote pixel centres",
+      "focal_px": 913.9132424391506,
+      "camera_position_m": [
+        0.62,
+        -0.43,
+        0.52
+      ],
+      "camera_to_work_rotation": [
+        [
+          0.6955487380269247,
+          -0.4132787704528065,
+          0.5877181390106732
+        ],
+        [
+          0.7184789162036367,
+          0.40008902245963185,
+          -0.5689611771273537
+        ],
+        [
+          -5.551115123125783e-17,
+          0.8180033202868511,
+          0.5752134977551269
+        ]
+      ],
+      "source": "simulator camera calibration, not object pose or depth",
+      "distortion": "none",
+      "work_frame": "robot_base_table_z0"
+    },
+    "simulation_time_s": 103.29999999993949,
+    "physics_during_deliberation": true,
+    "cartesian_step_limits": {
+      "enabled": true,
+      "real_kinematics_verified": false,
+      "workspace_xyz_m": [
+        [
+          0.1,
+          0.29
+        ],
+        [
+          -0.14,
+          0.22
+        ],
+        [
+          0.008,
+          0.16
+        ]
+      ],
+      "max_translation_m": 0.06,
+      "max_joint_change_deg": 45.0,
+      "max_gripper_change": 0.7,
+      "minimum_duration_s": 0.8,
+      "max_duration_s": 5.0,
+      "speed_m_s": 0.035
+    },
+    "incremental_step_limits": {
+      "enabled": true,
+      "max_joint_delta_deg": 2.0,
+      "max_total_joint_delta_deg": 4.0,
+      "max_gripper_delta": 0.1,
+      "minimum_duration_s": 0.6,
+      "max_duration_s": 3.0
+    }
+  },
+  "task_success": "unverified: host must inspect the new PNG and report_result"
+}

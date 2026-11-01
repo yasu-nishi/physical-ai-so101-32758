@@ -1,0 +1,135 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "observation_id": "e56fdaff8aad",
+      "captured_utc": "2026-11-01T00:21:27.355520+00:00",
+      "backend": "sim",
+      "camera": "top",
+      "joints_deg": {
+        "shoulder_pan": -10.00000000000203,
+        "shoulder_lift": -59.991645913608274,
+        "elbow_flex": 60.02651020734403,
+        "wrist_flex": 35.006224975810134,
+        "wrist_roll": 0.0003118211135564505
+      },
+      "gripper_open": 0.6117662574839631,
+      "status": {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "idle",
+        "connection_verified": true,
+        "last_action": null,
+        "task_success": "unverified",
+        "stop_latched": false,
+        "joints_deg": {
+          "shoulder_pan": -10.00000000000203,
+          "shoulder_lift": -59.991645913608274,
+          "elbow_flex": 60.02651020734403,
+          "wrist_flex": 35.006224975810134,
+          "wrist_roll": 0.0003118211135564505
+        },
+        "gripper_open": 0.6117662574839631
+      },
+      "available_skills": {
+        "prepared_pick": {
+          "program_id": "returned by prepare_pick"
+        },
+        "observe_pose": {},
+        "prepared_step": {
+          "program_id": "returned by prepare_step"
+        }
+      },
+      "capabilities": {
+        "continuous_image_pick": true,
+        "known_plane_localization": true,
+        "depth_sampling": false,
+        "incremental_joint_step": true
+      },
+      "sensors": {
+        "rgb": {
+          "available": true,
+          "source": "MuJoCo RGB renderer"
+        },
+        "depth": {
+          "available": false,
+          "reason": "depth_camera not enabled"
+        },
+        "end_effector": {
+          "available": false,
+          "reason": "RGB/common-input profile: real tool-frame calibration is not verified"
+        }
+      },
+      "images": [
+        {
+          "index": 0,
+          "role": "rgb",
+          "mime_type": "image/png"
+        }
+      ],
+      "instruction": "Use image pixels and the user instruction to select the object. State is not proof of task success. Select the TOP FACE CENTER in original image pixels; call prepare_pick, inspect its preview, then execute the generated program. For iterative visual feedback, prepare_step creates ONE bounded joint-relative step. Inspect the new image after each step before choosing the next. Degrees are not Cartesian millimetres; do not infer contact or height from command completion.",
+      "camera_calibration": {
+        "width": 960,
+        "height": 720,
+        "pixel_origin": "top_left_u_right_v_down",
+        "principal_point_px": [
+          479.5,
+          359.5
+        ],
+        "pixel_coordinates": "integer indices denote pixel centres",
+        "focal_px": 623.538290724796,
+        "camera_position_m": [
+          0.19,
+          0.025,
+          0.58
+        ],
+        "camera_to_work_rotation": [
+          [
+            2.220446049250313e-16,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            2.220446049250313e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source": "simulator camera calibration, not object pose or depth",
+        "distortion": "none",
+        "work_frame": "robot_base_table_z0"
+      },
+      "simulation_time_s": 0.0,
+      "image_pick_constraints": {
+        "object_top_z_m": 0.03,
+        "pixel_tolerance_px": 3,
+        "pick_xy_bounds_m": [
+          [
+            0.215,
+            0.265
+          ],
+          [
+            -0.115,
+            0.06
+          ]
+        ]
+      },
+      "incremental_step_limits": {
+        "enabled": true,
+        "max_joint_delta_deg": 2.0,
+        "max_total_joint_delta_deg": 4.0,
+        "max_gripper_delta": 0.1,
+        "minimum_duration_s": 0.6,
+        "max_duration_s": 3.0
+      }
+    }
+  ],
+  "images": [
+    "artifacts/runs/suite_02/client/000_observe_0.png"
+  ]
+}

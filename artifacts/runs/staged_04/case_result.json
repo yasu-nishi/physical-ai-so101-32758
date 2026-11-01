@@ -1,0 +1,47 @@
+{
+  "case_id": "staged_04",
+  "category": "unknown_height_unstack",
+  "instruction": "重なった部品のうち上の赤だけを取り外し、机の空いた所へ置いて。下の青は残して。各段階で画像を確認する。",
+  "host_outcome": "recovered_after_drop",
+  "host_reason": "上の赤の試験持上げで落下1回。画像から新しい高さ27.9mmと位置を再推定して再把持し、空き場所へ搬送・解放。下の青は机上に残った。最終状態達成だが無落下成功に数えない。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "40d2c7754dcd",
+          "name": "prepared_cartesian_step",
+          "args": {
+            "program_id": "b7f1be1d415a"
+          },
+          "command_status": "completed",
+          "trajectory_s": 1.9000000000000012,
+          "wall_s": 0.7719802500214428,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "success"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": -6.134438177029268,
+          "shoulder_lift": 9.991328663947328,
+          "elbow_flex": -9.68311391150118,
+          "wrist_flex": 89.74411338679054,
+          "wrist_roll": -1.0063941462629482e-06
+        },
+        "gripper_open": 0.359999177067568,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

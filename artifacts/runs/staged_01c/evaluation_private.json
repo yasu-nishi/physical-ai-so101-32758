@@ -1,0 +1,45 @@
+{
+  "evaluator": "independent_ground_truth_not_exposed_to_ai",
+  "blocks": {
+    "red": {
+      "position_m": [
+        0.1780521334616931,
+        0.1518079842460727,
+        0.03165090116006331
+      ],
+      "full_size_m": [
+        0.030494647174711263,
+        0.030494647174711263,
+        0.055424205456155715
+      ],
+      "bottom_z_m": 0.003938798431397925,
+      "top_z_m": 0.0593630038887287,
+      "speed_norm": 8.529252341893721e-10,
+      "inside_box": true,
+      "contact_steps": 47342,
+      "max_height_m": 0.07581638256182265,
+      "gripper_contact_at_end": false
+    },
+    "blue": {
+      "position_m": [
+        0.2560936738039668,
+        0.061460057021994294,
+        0.015266631605356615
+      ],
+      "full_size_m": [
+        0.03065566634674241,
+        0.03065566634674241,
+        0.05029225223395571
+      ],
+      "bottom_z_m": -6.120156801463217e-05,
+      "top_z_m": 0.030594464778727862,
+      "speed_norm": 7.840315804261151e-10,
+      "inside_box": false,
+      "contact_steps": 0,
+      "max_height_m": 0.029322324878067053,
+      "gripper_contact_at_end": false
+    }
+  },
+  "simulation_s": 140.61999999994572,
+  "action_id": "1c3b05b8a841"
+}

@@ -1,0 +1,17 @@
+case_id,category,target,host_outcome,physical_pick_success,guard_pass,commands,commands_completed,incremental_steps,trajectory_s,wall_s,host_reason
+suite_01,pick_place,red,success,True,,1,1,0,22.0,8.52,赤の箱内移載をRGBで確認。初期旋回-10度。
+suite_02,pick_place,blue,success,True,,1,1,0,22.0,8.569,青の箱内移載をRGBで確認。初期旋回-10度。
+suite_03,pick_place,red,success,True,,4,4,3,23.8,9.236,初期遮蔽を3回の小旋回で減らし、新画像から赤を選んで箱内移載。
+suite_04,pick_place,blue,success,True,,4,4,3,23.8,9.189,3回の小旋回による再観測後に青を選び、箱内移載を確認。
+suite_05,pick_place,red,success,True,,1,1,0,22.0,9.001,斜め視点から赤の上面を選び、箱内移載を確認。
+suite_06,pick_place,blue,success,True,,1,1,0,22.0,9.066,斜め視点で青の上面を選び、箱内移載を確認。
+suite_07,pick_place,red,success,True,,2,2,1,22.6,8.356,低解像度RGBで小旋回後に赤を選び、移載を確認。
+suite_08,pick_place,blue,success,True,,1,1,0,22.0,7.931,640x480画像から青を選び、移載を確認。
+suite_09,incremental,blue,feedback_verified,,,2,2,2,1.2,0.512,青が左にある画像から正方向を選び、再撮影後に2度から1度へ変更した。把持試行ではない。
+suite_10,incremental,red,stopped_occlusion,,,1,1,1,0.6,0.263,1回の接近で対象の遮蔽が増えたため中止。別視点または観測姿勢が必要。
+suite_11,incremental,blue,feedback_verified,,,2,2,2,1.2,0.543,斜め画像で毎回の動きを確認し、負方向2度から1度へ変更。方向確認のみ。
+suite_12,incremental,red,feedback_verified,,,2,2,2,1.2,0.479,低解像度で遮蔽を減らす小旋回を2段階で確認。把持接近の成功とは扱わない。
+suite_13,absent_target,,expected_abstention,,True,0,0,0,0,0,RGBで緑なのは搬送先の箱で、緑色のブロックは確認できない。赤・青や箱を対象として代用せず、動かさず終了した。
+suite_14,outside_workspace,,expected_rejection,,True,0,0,0,0,0,RGBから選んだ赤の位置が作業範囲外として拒否された。制限を広げたり別座標へ置き換えたりせず、動作0で終了。
+suite_15,stale_observation,,expected_rejection,,True,1,1,1,0.6,0.26,実際に1度移動した後、旧観測IDの再利用が拒否された。追加動作0。
+suite_16,stop_during_motion,,expected_stop,,True,1,0,0,0.3,0.168,動作中にローカルSTOPを作成。停止状態を約0.018秒で観測し、後続指令の拒否も確認。単発シミュレーションの値。

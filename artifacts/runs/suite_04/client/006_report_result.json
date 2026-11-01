@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "e215f20f8668",
+      "observation_id": "234a7c8a7476",
+      "ai_visual_verdict": "success",
+      "reason": "青が箱の内側にあり、元の青の位置は空。指は青から離れている。赤は指に一部隠れたまま台上に見える。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

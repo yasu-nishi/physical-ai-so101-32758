@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "1b0040c2bab0",
+      "observation_id": "cf4b25433086",
+      "ai_visual_verdict": "uncertain",
+      "reason": "新画像で指先が左へ動き、左側の青へ横方向に近づいた。まだ大きなずれがあり、把持していない。次は同方向へ1度だけ動かす。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

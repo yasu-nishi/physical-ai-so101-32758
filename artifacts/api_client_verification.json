@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "Initial mock Responses endpoint + actual MCP stdio + actual MuJoCo physics; historical transport test, separate from subsequent live API trials",
+  "live_api_requests": 0,
+  "live_astra_trials": 0,
+  "real_hardware_access": false,
+  "model_decision_fixture": true,
+  "task_successes": null,
+  "mock_api_responses": 3,
+  "completed_sim_motion_steps": 1,
+  "distinct_pngs_delivered_to_mock_api": 3,
+  "generated_python_saved": true,
+  "execution_via_common_mcp_program_id": true,
+  "post_motion_rgb_before_next_decision": true,
+  "stop_requested": true,
+  "api_key_available_at_implementation": false,
+  "live_model_validation": "See separate actual-model evidence",
+  "historical_demo_agent": "conversation-hosted Codex; exact model not recorded; not API/Astra trial",
+  "references_checked": "2026-11-01",
+  "api_reference": "https://developers.openai.com/api/docs/guides/function-calling",
+  "model_reference": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+  "implementation_sha256": {
+    "so101_mcp/api_agent.py": "0b700deab74f8c2ce73fbbe5249f40db329c6472bd4f0810c26f89563eb970d2",
+    "config/physical_ai/api_agent.json": "4ca2a8ea759ea1c559207d40e4512496c1a0e9500e63b7d44184375efb6f5779",
+    "scripts/verify_api_client.py": "ad18bd7045daaff764579f1ce4accc229072695444b0567584e82fe6e87e58ea",
+    "tests/test_api_agent.py": "7a811c89539099f8da184ed57cb3e5b90f7aae7bbd0f2509fee626ce9e1bdc76"
+  },
+  "software_tests": 22,
+  "full_suite_tests": 230,
+  "live_results": "artifacts/api_live_verification.json"
+}

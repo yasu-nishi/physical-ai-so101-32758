@@ -1,0 +1,60 @@
+{
+  "program_id": "979c81d8e459",
+  "execution_skill": "prepared_cartesian_step",
+  "observation_id": "9b8394b2cae6",
+  "instruction": "高い方のブロックを箱へ、低い方を机の空いた場所へ移して。画像から高さを測って選び、各段階で確認する。",
+  "visual_reason": "赤が机から離れて指に保持された。空いた机面へ向けて持上げながら移す。",
+  "expected_visual_change": "赤がさらに上がり、青は箱に残る。",
+  "target_xyz_m": [
+    0.249,
+    -0.015,
+    0.068
+  ],
+  "target_gripper_open": null,
+  "automatic_next_step": false,
+  "maintained_gripper_command": 0.020000000000000018,
+  "planned_duration_s": 1.8699155536578684,
+  "generator": "host selects ONE next action; robot-only IK and Python exporter",
+  "trajectory": [
+    {
+      "phase": "cartesian_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 10.758164696845716,
+          "shoulder_lift": 2.2276742035536468,
+          "elbow_flex": 15.398187073095297,
+          "wrist_flex": 72.42151740271566,
+          "wrist_roll": -3.2757343577593637e-07
+        },
+        "gripper_open": 0.020000000000000018
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 3.8160774215630267,
+          "shoulder_lift": 2.726633465899886,
+          "elbow_flex": -0.3139062895652561,
+          "wrist_flex": 87.58727281966176,
+          "wrist_roll": 1.9181946712309083e-10
+        },
+        "gripper_open": 0.020000000000000018
+      },
+      "duration_s": 1.8699155536578684
+    }
+  ],
+  "validation": [
+    "fresh RGB",
+    "workspace",
+    "step displacement",
+    "joint limits",
+    "speed",
+    "duration",
+    "separate arm/gripper"
+  ],
+  "not_validated": [
+    "general obstacle avoidance",
+    "vision correctness",
+    "contact",
+    "task success"
+  ],
+  "script_sha256": "630b0f003cb93ab0e7b666345087df88f6de84dac49293f4b137308dd4fdc7fa"
+}

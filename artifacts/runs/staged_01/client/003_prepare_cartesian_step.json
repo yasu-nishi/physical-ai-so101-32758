@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool prepare_cartesian_step: wrist_flex outside [-94.9, 94.9] degrees"
+  ],
+  "images": []
+}

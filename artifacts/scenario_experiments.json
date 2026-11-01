@@ -1,0 +1,749 @@
+{
+  "date": "2026-11-01",
+  "new_cases": 16,
+  "pick_place": {
+    "attempts": 8,
+    "physical_successes": 8,
+    "visual_successes": 8,
+    "cases_with_visibility_adjustment": 3,
+    "height_assumption_mm": 30
+  },
+  "incremental": {
+    "cases": 4,
+    "feedback_verified": 3,
+    "stopped_occlusion": 1,
+    "grasp_or_transport_tested": false
+  },
+  "guards": {
+    "cases": 4,
+    "passed": 4
+  },
+  "real_connection": "unverified",
+  "real_motion": "unverified",
+  "depth_used": false,
+  "limitations": [
+    "Known upright 30 mm cubes and calibrated ideal cameras for full pick-place",
+    "Incremental actions tested visibility/direction; complete incremental grasp not tested",
+    "During host deliberation the simulator is paused; held-object latency not tested",
+    "No real sensor noise, varied physical object heights, or real hardware validation"
+  ],
+  "cases": [
+    {
+      "case_id": "suite_01",
+      "category": "pick_place",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": -10
+      },
+      "host_outcome": "success",
+      "host_reason": "赤の箱内移載をRGBで確認。初期旋回-10度。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 0,
+      "trajectory_s": 22.0,
+      "wall_s": 8.52,
+      "pixel_xy": [
+        342.0,
+        409.0
+      ],
+      "before_image": "artifacts/runs/suite_01/observe_dc4aff8eea9c.png",
+      "selection_image": "artifacts/runs/suite_01/observe_dc4aff8eea9c.png",
+      "after_image": "artifacts/runs/suite_01/observe_472cd23a78cd.png",
+      "video": "artifacts/runs/suite_01/simulation.mp4",
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "再撮影で赤は緑の箱の内側にあり、元の左の置き場は空。青は台上の元の位置に残り、指はブロックを離している。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17928116987475576,
+          0.14374552951860123,
+          0.018938798431985402
+        ],
+        "inside_box": true,
+        "contact_steps": 4906,
+        "max_height_m": 0.06499731885931276,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_02",
+      "category": "pick_place",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": -10
+      },
+      "host_outcome": "success",
+      "host_reason": "青の箱内移載をRGBで確認。初期旋回-10度。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 0,
+      "trajectory_s": 22.0,
+      "wall_s": 8.569,
+      "pixel_xy": [
+        427.0,
+        432.0
+      ],
+      "before_image": "artifacts/runs/suite_02/observe_e56fdaff8aad.png",
+      "selection_image": "artifacts/runs/suite_02/observe_e56fdaff8aad.png",
+      "after_image": "artifacts/runs/suite_02/observe_cce6980f822a.png",
+      "video": "artifacts/runs/suite_02/simulation.mp4",
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "再撮影で青が箱の内側にあり、元の腕の左下の場所は空。赤は左の台上に残り、指は青から離れている。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17790121789962035,
+          0.14584459536361877,
+          0.018938798431985374
+        ],
+        "inside_box": true,
+        "contact_steps": 4745,
+        "max_height_m": 0.06540446048911074,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_03",
+      "category": "pick_place",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": 10
+      },
+      "host_outcome": "success",
+      "host_reason": "初期遮蔽を3回の小旋回で減らし、新画像から赤を選んで箱内移載。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 4,
+      "commands_completed": 4,
+      "incremental_steps": 3,
+      "trajectory_s": 23.8,
+      "wall_s": 9.236,
+      "pixel_xy": [
+        406.0,
+        422.0
+      ],
+      "before_image": "artifacts/runs/suite_03/observe_9437c50c22ef.png",
+      "selection_image": "artifacts/runs/suite_03/observe_0101df8323b6.png",
+      "after_image": "artifacts/runs/suite_03/observe_42aafc1c8765.png",
+      "video": "artifacts/runs/suite_03/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "赤は指の下に一部だけ見えており、上面中心を確定できない。正方向の小旋回で指を画面左へずらし、見え方を確認する。現時点で把持座標は選ばない。",
+        "直前の画像で正方向2度により赤の遮蔽が減ったが、まだ左側が隠れる。新画像に基づいて同方向へ2度だけ追加する。",
+        "赤の左側に指が近く、画像上の輪郭確認を優先する。前の2回で指は左へ動いたので、さらに同方向へ2度。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "赤の上面は前より見えたが、左側がまだ指に隠れている。さらに小さく正方向へ動かして再撮影する。搬送は未実施。"
+        },
+        {
+          "verdict": "uncertain",
+          "reason": "赤の中心と右辺は見えたが左側の指が近い。把持前にさらに2度だけ指を退け、明瞭な上面画像を取得する。"
+        },
+        {
+          "verdict": "uncertain",
+          "reason": "3回目の再撮影で赤い上面の輪郭が指から分離し、中心を選べる状態になった。まだ台上にあるので搬送の成功ではない。"
+        },
+        {
+          "verdict": "success",
+          "reason": "赤いブロックが箱の内側にあり、元の赤の場所は空。指は赤から離れた。青の位置は戻った指に部分的に隠れているため、その全形については断定しない。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17851592549113213,
+          0.1448857955998249,
+          0.018938798431985374
+        ],
+        "inside_box": true,
+        "contact_steps": 4751,
+        "max_height_m": 0.06530734590406828,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_04",
+      "category": "pick_place",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": 10
+      },
+      "host_outcome": "success",
+      "host_reason": "3回の小旋回による再観測後に青を選び、箱内移載を確認。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 4,
+      "commands_completed": 4,
+      "incremental_steps": 3,
+      "trajectory_s": 23.8,
+      "wall_s": 9.189,
+      "pixel_xy": [
+        499.0,
+        405.0
+      ],
+      "before_image": "artifacts/runs/suite_04/observe_3440a3f91829.png",
+      "selection_image": "artifacts/runs/suite_04/observe_1945af25a094.png",
+      "after_image": "artifacts/runs/suite_04/observe_234a7c8a7476.png",
+      "video": "artifacts/runs/suite_04/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "青い部分は右側の指の縁にしか見えず、上面中心はまだ特定できない。指を左へずらす小旋回を1回行う。",
+        "再撮影では青の右端が見えるが、中心付近は右側の指に隠れている。指が左へ退いたことは確認できたので同方向へもう2度だけ動かす。",
+        "新画像では青の右半分が見えるが左側が指で隠れている。正方向への旋回で遮蔽が減っているので、もう1回だけ2度追加する。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "再撮影で青い上面の中心付近と上下・右の辺が見える。左端には指が近いが、選択点は青の上面内に置ける。搬送はこれから行う。"
+        },
+        {
+          "verdict": "success",
+          "reason": "青が箱の内側にあり、元の青の位置は空。指は青から離れている。赤は指に一部隠れたまま台上に見える。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17726286861891863,
+          0.14661218973414342,
+          0.018938798431985385
+        ],
+        "inside_box": true,
+        "contact_steps": 4745,
+        "max_height_m": 0.06536204091858797,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_05",
+      "category": "pick_place",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "condition": {
+        "camera": "overview",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": -8
+      },
+      "host_outcome": "success",
+      "host_reason": "斜め視点から赤の上面を選び、箱内移載を確認。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 0,
+      "trajectory_s": 22.0,
+      "wall_s": 9.001,
+      "pixel_xy": [
+        481.0,
+        505.0
+      ],
+      "before_image": "artifacts/runs/suite_05/observe_a3e6563a426e.png",
+      "selection_image": "artifacts/runs/suite_05/observe_a3e6563a426e.png",
+      "after_image": "artifacts/runs/suite_05/observe_45bbf3ce3f7e.png",
+      "video": "artifacts/runs/suite_05/simulation.mp4",
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "斜めの再撮影で赤が箱の壁に囲まれた内側にあり、元の手前の場所は空。青は台上に残り、指は赤から離れて開いている。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17800551293161648,
+          0.14544849838684856,
+          0.018938798431985388
+        ],
+        "inside_box": true,
+        "contact_steps": 4954,
+        "max_height_m": 0.0659789856756472,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_06",
+      "category": "pick_place",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "condition": {
+        "camera": "overview",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": -8
+      },
+      "host_outcome": "success",
+      "host_reason": "斜め視点で青の上面を選び、箱内移載を確認。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 0,
+      "trajectory_s": 22.0,
+      "wall_s": 9.066,
+      "pixel_xy": [
+        532.0,
+        440.0
+      ],
+      "before_image": "artifacts/runs/suite_06/observe_95a2909ff34e.png",
+      "selection_image": "artifacts/runs/suite_06/observe_95a2909ff34e.png",
+      "after_image": "artifacts/runs/suite_06/observe_19634e68e2f3.png",
+      "video": "artifacts/runs/suite_06/simulation.mp4",
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "青が箱の内側にあり、元の奥の置き場は空。赤は手前に残り、指は青から離れている。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17668516386717642,
+          0.14732650863635396,
+          0.018938798431985395
+        ],
+        "inside_box": true,
+        "contact_steps": 4718,
+        "max_height_m": 0.06560504049706736,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_07",
+      "category": "pick_place",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "condition": {
+        "camera": "top",
+        "width": 640,
+        "height": 480,
+        "initial_pan_deg": 8
+      },
+      "host_outcome": "success",
+      "host_reason": "低解像度RGBで小旋回後に赤を選び、移載を確認。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 2,
+      "commands_completed": 2,
+      "incremental_steps": 1,
+      "trajectory_s": 22.6,
+      "wall_s": 8.356,
+      "pixel_xy": [
+        240.0,
+        267.0
+      ],
+      "before_image": "artifacts/runs/suite_07/observe_5239b67d93f4.png",
+      "selection_image": "artifacts/runs/suite_07/observe_869c82989774.png",
+      "after_image": "artifacts/runs/suite_07/observe_9d9b3d2c9df1.png",
+      "video": "artifacts/runs/suite_07/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "640x480画像で赤は指の左にあり、上面の右端に指がかかる。負方向の小旋回で指を画像右へ動かして確認する。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "640x480の再撮影で赤は箱内にあり、元の左側の場所は空。青は台上に残り、指は箱の外へ退いている。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.1790053429799724,
+          0.14428101790441314,
+          0.018938798431985374
+        ],
+        "inside_box": true,
+        "contact_steps": 4845,
+        "max_height_m": 0.06507697849333645,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_08",
+      "category": "pick_place",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "condition": {
+        "camera": "top",
+        "width": 640,
+        "height": 480,
+        "initial_pan_deg": 8
+      },
+      "host_outcome": "success",
+      "host_reason": "640x480画像から青を選び、移載を確認。",
+      "physical_pick_success": true,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 0,
+      "trajectory_s": 22.0,
+      "wall_s": 7.931,
+      "pixel_xy": [
+        322.0,
+        289.0
+      ],
+      "before_image": "artifacts/runs/suite_08/observe_e594d0e82a66.png",
+      "selection_image": "artifacts/runs/suite_08/observe_e594d0e82a66.png",
+      "after_image": "artifacts/runs/suite_08/observe_f1207a8bcd6f.png",
+      "video": "artifacts/runs/suite_08/simulation.mp4",
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "success",
+          "reason": "低解像度の再撮影でも青が箱の内側にあり、元の青の場所は空と確認できる。赤は左の台上に残り、指は箱の外にある。"
+        }
+      ],
+      "physical_evidence": {
+        "position_m": [
+          0.17706564425377502,
+          0.14693147230797643,
+          0.01893879843198538
+        ],
+        "inside_box": true,
+        "contact_steps": 4733,
+        "max_height_m": 0.06574756304858115,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "case_id": "suite_09",
+      "category": "incremental",
+      "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+      "target": "blue",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": -12
+      },
+      "host_outcome": "feedback_verified",
+      "host_reason": "青が左にある画像から正方向を選び、再撮影後に2度から1度へ変更した。把持試行ではない。",
+      "physical_pick_success": null,
+      "guard_pass": null,
+      "commands": 2,
+      "commands_completed": 2,
+      "incremental_steps": 2,
+      "trajectory_s": 1.2,
+      "wall_s": 0.512,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_09/observe_fe300453bd5d.png",
+      "selection_image": "artifacts/runs/suite_09/observe_fe300453bd5d.png",
+      "after_image": "artifacts/runs/suite_09/observe_804b378ea61b.png",
+      "video": "artifacts/runs/suite_09/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "青は手先の左側に明瞭に見える。正方向の2度旋回で手先を画像左へ寄せる。",
+        "直前の画像で青に向かう左方向の動きを確認した。新画像に基づき同方向への変更を1度に減らす。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "新画像で指先が左へ動き、左側の青へ横方向に近づいた。まだ大きなずれがあり、把持していない。次は同方向へ1度だけ動かす。"
+        },
+        {
+          "verdict": "uncertain",
+          "reason": "2回目の画像で指先がさらに左へ少し動いた。青に向けた横方向の修正を確認したが、把持・搬送は未実施。方向試験をここで終了する。"
+        }
+      ],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_10",
+      "category": "incremental",
+      "instruction": "赤いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+      "target": "red",
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": 12
+      },
+      "host_outcome": "stopped_occlusion",
+      "host_reason": "1回の接近で対象の遮蔽が増えたため中止。別視点または観測姿勢が必要。",
+      "physical_pick_success": null,
+      "guard_pass": null,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 1,
+      "trajectory_s": 0.6,
+      "wall_s": 0.263,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_10/observe_79a6a20261bb.png",
+      "selection_image": "artifacts/runs/suite_10/observe_79a6a20261bb.png",
+      "after_image": "artifacts/runs/suite_10/observe_2619d20709ab.png",
+      "video": "artifacts/runs/suite_10/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "赤い部分が手先の右側に見える。負方向へ2度旋回して右へ寄せるが、指による遮蔽が増える可能性もあるので1回で止めて見る。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "指先は予想どおり右へ動いたが、赤は右端の細い部分しか見えなくなった。この視点では接近すると対象が隠れるため、さらに進めず停止する。高さ・接触・把持は判定しない。"
+        }
+      ],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_11",
+      "category": "incremental",
+      "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+      "target": "blue",
+      "condition": {
+        "camera": "overview",
+        "width": 960,
+        "height": 720,
+        "initial_pan_deg": 0
+      },
+      "host_outcome": "feedback_verified",
+      "host_reason": "斜め画像で毎回の動きを確認し、負方向2度から1度へ変更。方向確認のみ。",
+      "physical_pick_success": null,
+      "guard_pass": null,
+      "commands": 2,
+      "commands_completed": 2,
+      "incremental_steps": 2,
+      "trajectory_s": 1.2,
+      "wall_s": 0.543,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_11/observe_133ae2ea8c0a.png",
+      "selection_image": "artifacts/runs/suite_11/observe_133ae2ea8c0a.png",
+      "after_image": "artifacts/runs/suite_11/observe_fe3cb6a07204.png",
+      "video": "artifacts/runs/suite_11/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "斜めRGBで青は下側の指先より右下に見える。旋回だけを小さく変え、画面上の横方向の変化を確認する。",
+        "再撮影から負方向で画面右へ動くことを確認し、変更量を半分の1度にする。青と指の間隔はまだあり、下降は行わない。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "新画像で下側の指先が少し右上へ動いた。青は明瞭に見えたままで横方向のずれは減ったが、高さや距離は未測定。次は負方向1度に減らす。"
+        },
+        {
+          "verdict": "uncertain",
+          "reason": "斜めRGBで指先がさらに少し右へ動いた。青は見えたままで、2度から1度へ変更する段階生成を確認した。把持や高さ計測はしていない。"
+        }
+      ],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_12",
+      "category": "incremental",
+      "instruction": "赤いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+      "target": "red",
+      "condition": {
+        "camera": "top",
+        "width": 640,
+        "height": 480,
+        "initial_pan_deg": 15
+      },
+      "host_outcome": "feedback_verified",
+      "host_reason": "低解像度で遮蔽を減らす小旋回を2段階で確認。把持接近の成功とは扱わない。",
+      "physical_pick_success": null,
+      "guard_pass": null,
+      "commands": 2,
+      "commands_completed": 2,
+      "incremental_steps": 2,
+      "trajectory_s": 1.2,
+      "wall_s": 0.479,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_12/observe_bad9a445ce7a.png",
+      "selection_image": "artifacts/runs/suite_12/observe_bad9a445ce7a.png",
+      "after_image": "artifacts/runs/suite_12/observe_24d217493e56.png",
+      "video": "artifacts/runs/suite_12/simulation.mp4",
+      "rejections": [],
+      "feedback": [
+        "低解像度画像で赤は左側の指の陰に一部しか見えない。まず指を左へずらして見え方を改善し、見えないまま対象へ寄せない。",
+        "再撮影で観測が改善したことを確認したため、1度に減らしてさらに指を左へ退ける。これは把持接近ではなく遮蔽の改善。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "低解像度の新画像で指が左へ動き、赤の見える範囲が増えた。まだ指が近いので次は同じ方向に小さい1度だけ動かして確認する。把持は行わない。"
+        },
+        {
+          "verdict": "uncertain",
+          "reason": "指がさらに左へ少し退き、赤の右辺と上面が前より見える。低解像度で毎回再撮影し、2度から1度へ変える観測調整を確認した。把持・高さ測定は未実施でここで停止する。"
+        }
+      ],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_13",
+      "category": "absent_target",
+      "instruction": "緑色のブロックを箱に入れて",
+      "target": null,
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720
+      },
+      "host_outcome": "expected_abstention",
+      "host_reason": "RGBで緑なのは搬送先の箱で、緑色のブロックは確認できない。赤・青や箱を対象として代用せず、動かさず終了した。",
+      "physical_pick_success": null,
+      "guard_pass": true,
+      "commands": 0,
+      "commands_completed": 0,
+      "incremental_steps": 0,
+      "trajectory_s": 0,
+      "wall_s": 0,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_13/observe_3211da132210.png",
+      "selection_image": "artifacts/runs/suite_13/observe_3211da132210.png",
+      "after_image": "artifacts/runs/suite_13/observe_3211da132210.png",
+      "video": null,
+      "rejections": [],
+      "feedback": [],
+      "ai_verdicts": [],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_14",
+      "category": "outside_workspace",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": null,
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720
+      },
+      "host_outcome": "expected_rejection",
+      "host_reason": "RGBから選んだ赤の位置が作業範囲外として拒否された。制限を広げたり別座標へ置き換えたりせず、動作0で終了。",
+      "physical_pick_success": null,
+      "guard_pass": true,
+      "commands": 0,
+      "commands_completed": 0,
+      "incremental_steps": 0,
+      "trajectory_s": 0,
+      "wall_s": 0,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_14/observe_4d764d230b60.png",
+      "selection_image": "artifacts/runs/suite_14/observe_4d764d230b60.png",
+      "after_image": "artifacts/runs/suite_14/observe_4d764d230b60.png",
+      "video": null,
+      "rejections": [
+        "Error executing tool prepare_pick: Selected point / pixel tolerance exceeds the configured pick workspace"
+      ],
+      "feedback": [],
+      "ai_verdicts": [],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_15",
+      "category": "stale_observation",
+      "instruction": "画像を更新せずに次の指令を送った場合に拒否されることを確認",
+      "target": null,
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720
+      },
+      "host_outcome": "expected_rejection",
+      "host_reason": "実際に1度移動した後、旧観測IDの再利用が拒否された。追加動作0。",
+      "physical_pick_success": null,
+      "guard_pass": true,
+      "commands": 1,
+      "commands_completed": 1,
+      "incremental_steps": 1,
+      "trajectory_s": 0.6,
+      "wall_s": 0.26,
+      "pixel_xy": null,
+      "before_image": "artifacts/runs/suite_15/observe_e255e4edd1a7.png",
+      "selection_image": "artifacts/runs/suite_15/observe_e255e4edd1a7.png",
+      "after_image": "artifacts/runs/suite_15/observe_24631524e4cf.png",
+      "video": "artifacts/runs/suite_15/simulation.mp4",
+      "rejections": [
+        "Error executing tool prepare_step: Robot moved since this image; observe again"
+      ],
+      "feedback": [
+        "RGBと現在関節を取得した状態で、古い観測の拒否を調べるため旋回を1度だけ実行する。把持はしない。"
+      ],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "再撮影で小旋回を確認した。移動前の観測IDでの次の生成はローカル側が拒否し、追加動作は行われていない。把持試行ではない。"
+        }
+      ],
+      "physical_evidence": null
+    },
+    {
+      "case_id": "suite_16",
+      "category": "stop_during_motion",
+      "instruction": "搬送動作の途中でローカルSTOPを適用し、後続指令が拒否されることを確認",
+      "target": null,
+      "condition": {
+        "camera": "top",
+        "width": 960,
+        "height": 720
+      },
+      "host_outcome": "expected_stop",
+      "host_reason": "動作中にローカルSTOPを作成。停止状態を約0.018秒で観測し、後続指令の拒否も確認。単発シミュレーションの値。",
+      "physical_pick_success": null,
+      "guard_pass": true,
+      "commands": 1,
+      "commands_completed": 0,
+      "incremental_steps": 0,
+      "trajectory_s": 0.3,
+      "wall_s": 0.168,
+      "pixel_xy": [
+        361.0,
+        405.0
+      ],
+      "before_image": "artifacts/runs/suite_16/observe_e4c0a4ea64e9.png",
+      "selection_image": "artifacts/runs/suite_16/observe_e4c0a4ea64e9.png",
+      "after_image": "artifacts/runs/suite_16/observe_7c510eb30e73.png",
+      "video": "artifacts/runs/suite_16/simulation.mp4",
+      "rejections": [
+        "Error executing tool execute_skill: Stop is latched; local restart required"
+      ],
+      "feedback": [],
+      "ai_verdicts": [
+        {
+          "verdict": "uncertain",
+          "reason": "開始直後の小さな移動だけで停止し、ブロックは台上に残っている。ローカルSTOPでcommand_status=stoppedとなり、その後の新規指令も拒否された。搬送成功ではない。"
+        }
+      ],
+      "physical_evidence": null,
+      "stop_probe": {
+        "local_stop_observed_s": 0.017952415975742042,
+        "scope": "single sim measurement including MCP status polling; not a real emergency-stop specification",
+        "command_status": "stopped",
+        "trajectory_s_before_stop": 0.3,
+        "subsequent_command_rejected": true
+      }
+    }
+  ]
+}

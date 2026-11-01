@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-31",
+  "protocol": "active Codex vision via transparent MCP client bridge",
+  "host_model_id": "not recorded; Astra-specific test unverified",
+  "attempts": 4,
+  "successes": 4,
+  "real_connection": "unverified: configured USB serial port absent",
+  "real_motion": "unverified",
+  "scope": "two 30 mm blocks, two fixed slots, one box; deterministic initial poses; no noise",
+  "other_checks": "development contact probe and automated tests are not counted as AI trials",
+  "trials": [
+    {
+      "trial": "vision_01",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "selected_slot": "slot_b",
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.624,
+      "failure": null,
+      "visual_reason": "再撮影画像で赤いブロックが緑の箱の内側に見え、slot_bは空になった。青いブロックはslot_aに残り、グリッパーは箱から離れている。",
+      "before_image": "artifacts/runs/vision_01/observe_9f1203bc1951.png",
+      "after_image": "artifacts/runs/vision_01/observe_7f9b7843c7a0.png",
+      "before_sha256": "fa8bef09e85331e25ec5971ddcc698e88e08e9c9085f7496506dca88e4462d12",
+      "after_sha256": "23b4190072319989b626aefad3cf98f8ba8cbc16647d2aacceaaa2876465d0ab",
+      "video": "artifacts/runs/vision_01/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.1768364101725754,
+          0.14708603067780335,
+          0.018938798431985388
+        ],
+        "inside_box": true,
+        "contact_steps": 4740,
+        "max_height_m": 0.0654443378932758,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "vision_02",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "selected_slot": "slot_a",
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.678,
+      "failure": null,
+      "visual_reason": "再撮影画像で赤いブロックは緑の箱の内側、slot_aは空、青はslot_bに残っている。指は箱の外へ退避している。",
+      "before_image": "artifacts/runs/vision_02/observe_098c8f96fdaa.png",
+      "after_image": "artifacts/runs/vision_02/observe_cde28e52d51f.png",
+      "before_sha256": "ebbec9090f3acfb44b4e5be4507aa05f7c4cdb3c38d0cbd0defe05cce9512b69",
+      "after_sha256": "b20be467b1f642475ec76aaa2ec29e93f0ed53c869b0976c9babe1f2c8f6d6b5",
+      "video": "artifacts/runs/vision_02/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17842255228027348,
+          0.14497229611256024,
+          0.018938798431985395
+        ],
+        "inside_box": true,
+        "contact_steps": 4777,
+        "max_height_m": 0.06514643113499831,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "vision_03",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "selected_slot": "slot_b",
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.914,
+      "failure": null,
+      "visual_reason": "箱の内側に青いブロックが見える。slot_bは空で、赤いブロックはslot_aに残っている。グリッパーは箱から離れている。",
+      "before_image": "artifacts/runs/vision_03/observe_d18514929448.png",
+      "after_image": "artifacts/runs/vision_03/observe_c1a8f1491148.png",
+      "before_sha256": "ebbec9090f3acfb44b4e5be4507aa05f7c4cdb3c38d0cbd0defe05cce9512b69",
+      "after_sha256": "184ba5c77a32f75bac0844fe2927010adedd5ee7b20938a6846d95d71d14f84c",
+      "video": "artifacts/runs/vision_03/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.1768364101719253,
+          0.14708603067709747,
+          0.018938798431985395
+        ],
+        "inside_box": true,
+        "contact_steps": 4740,
+        "max_height_m": 0.06544433789321408,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "vision_04",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "selected_slot": "slot_a",
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.764,
+      "failure": null,
+      "visual_reason": "再撮影画像で青いブロックが箱の内側にあり、slot_aは空になった。赤いブロックはslot_bに残り、指は箱の外へ戻っている。",
+      "before_image": "artifacts/runs/vision_04/observe_d94f0893d51e.png",
+      "after_image": "artifacts/runs/vision_04/observe_65d5a2e06f00.png",
+      "before_sha256": "fa8bef09e85331e25ec5971ddcc698e88e08e9c9085f7496506dca88e4462d12",
+      "after_sha256": "deda1c2d2ff31a11c6407eb513cc30d2417a9013595ec9c3d14b56400815a1e8",
+      "video": "artifacts/runs/vision_04/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17842255262763212,
+          0.14497229573778964,
+          0.01893879843198538
+        ],
+        "inside_box": true,
+        "contact_steps": 4777,
+        "max_height_m": 0.06514643249036324,
+        "gripper_contact_at_end": false
+      }
+    }
+  ]
+}

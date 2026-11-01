@@ -1,0 +1,33 @@
+[project]
+name = "so-101"
+version = "0.1.0"
+description = "Reproducible SO-101 setup and operation workspace"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "httpx==0.28.1",
+  "jsonschema==4.26.0",
+  "python-dotenv==1.2.4",
+  "imageio==2.37.3",
+  "imageio-ffmpeg==0.6.0",
+  "lerobot[feetech] @ git+https://github.com/huggingface/lerobot.git@v0.5.1",
+  "mcp==1.30.0",
+  "mujoco==3.17.0",
+  "numpy==2.2.6",
+  "pillow==12.2.0",
+  "scipy==1.18.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pypdf>=6.21.4",
+    "pytest>=9.2.0",
+    "reportlab>=5.1.0",
+]
+

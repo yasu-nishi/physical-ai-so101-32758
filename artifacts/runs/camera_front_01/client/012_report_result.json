@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "91d89cf68f2b",
+      "observation_id": "090d00e49933",
+      "ai_visual_verdict": "failure",
+      "reason": "画像で赤が箱の左の机上へ落下し、グリッパーが空になっている。実測開度も0.187から0.040へ変化。指令完了を搬送成功として扱わない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

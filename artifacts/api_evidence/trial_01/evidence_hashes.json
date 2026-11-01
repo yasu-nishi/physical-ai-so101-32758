@@ -1,0 +1,146 @@
+[
+  {
+    "path": "events.jsonl",
+    "sha256": "48754c8738387941b7da8b57b33882254ca20b8e7b6e15d8d62fbbd56a30606f"
+  },
+  {
+    "path": "result.json",
+    "sha256": "17b204631e49ea7141927ddf17b88ec69e939a830a190421c70d62a895ed14e8"
+  },
+  {
+    "path": "agent_manifest.json",
+    "sha256": "68ea75d4b6ef1dfe7097d17eedc2146bd3920d122a4134d231c718b4e6e99329"
+  },
+  {
+    "path": "0021_observe_1.png",
+    "sha256": "16e80abca4cad18dc43a4d471dd05dc34efba689147a9953859ad4bf5b1339bb"
+  },
+  {
+    "path": "0005_prepare_cartesian_step_1.png",
+    "sha256": "000927f660824f1b9ac880c8b161dd4a79e8c2a733610e8be38f0d2a8959dc32"
+  },
+  {
+    "path": "0041_observe_1.png",
+    "sha256": "c25d6165ad50574721d8d3e0957f9a48874975c5fe5b86b2aa539dac745b2f1a"
+  },
+  {
+    "path": "0037_prepare_cartesian_step_1.png",
+    "sha256": "5aae216ff0e997f3849385e06b34187bb8c51be9e78fdab0095c634deef1703b"
+  },
+  {
+    "path": "0015_observe_1.png",
+    "sha256": "b109094ea509a8791fbee039c719a14b6f5aabf0d1bb5ad7e3ee656b32d19354"
+  },
+  {
+    "path": "0001_observe_1.png",
+    "sha256": "22a4145e58fb85f1acf16a2405fcf7380840c84eee8862346151533d5338f4f6"
+  },
+  {
+    "path": "0017_prepare_cartesian_step_1.png",
+    "sha256": "4b7e3170cd642a24e74b30f028533c6ca18f97cbf31e78b98de146d4740ce01c"
+  },
+  {
+    "path": "0023_prepare_cartesian_step_1.png",
+    "sha256": "06ea53d1dbb716ea13d8a66f33f4491a29aad7eddc2531eeebda605b9b4e5cf5"
+  },
+  {
+    "path": "0003_measure_height_1.png",
+    "sha256": "a73a3b0993a60dbf97a588113996fa201cadf86ecc7caaed715511e4bad8b72f"
+  },
+  {
+    "path": "0009_observe_1.png",
+    "sha256": "2b74c7574728a12f3ed5eaed7b8cc473e28247175850aa28a9c40c707ca48e59"
+  },
+  {
+    "path": "0027_observe_1.png",
+    "sha256": "f09050b1974fe47652305df2dc05a5aeb71298ba69a49f51df581e2f4a719ceb"
+  },
+  {
+    "path": "0029_measure_height_1.png",
+    "sha256": "88d1868a172aee8312f0653acb82ff5a171e9d413f07863566ebb6566c8f945b"
+  },
+  {
+    "path": "0011_prepare_cartesian_step_1.png",
+    "sha256": "01643494f589a24491bbe2e6be6ccd0c0a8eaf615e1082eeb20716376820302c"
+  },
+  {
+    "path": "sim/events.jsonl",
+    "sha256": "c046aeba74ec62694a6bde4b124e70e5072b728e14e4557ad0ed0aa7b0afee5d"
+  },
+  {
+    "path": "sim/evaluation_private.json",
+    "sha256": "f4cf7f633d56c1cb468b90bd044c2ee6377ea7b85732a1eb7ba1e5a72d664830"
+  },
+  {
+    "path": "sim/evaluation_history_private.jsonl",
+    "sha256": "d43607fea6d9a3b90a281d6c81b35b3606c548c453b4fe09946040eaa1bc1a8d"
+  },
+  {
+    "path": "sim/run_manifest.json",
+    "sha256": "393c5600a718f2a9f76f062bd3de74b5fdeb0eba1ce48aa29e0c0268ac77c4c2"
+  },
+  {
+    "path": "sim/simulation.mp4",
+    "sha256": "60bce7eba95e3a76d4cf189ac85693e0532adff46217642ba7bfca2c4810e3bb"
+  },
+  {
+    "path": "sim/programs/7af70f06ddaf.py",
+    "sha256": "f4e01b9a7f06a57f1a096dd7e0446afbdfa2e2f76b33c8f477f542e010539163"
+  },
+  {
+    "path": "sim/programs/671d96d6e51d.json",
+    "sha256": "63fe1a2264b64fe388c2ddfd6dd4931ff3ab90c0902d42c1f153f0594ae65caa"
+  },
+  {
+    "path": "sim/programs/75f348b84bad.json",
+    "sha256": "42efa6945e3b5c96d4d98f90a6237cf70abe1419073974938f42fae627301f8b"
+  },
+  {
+    "path": "sim/programs/7af70f06ddaf.json",
+    "sha256": "b20e2acff97303131621e38f6c2a48ce6b22c3543bfdd556b3abd1545639c8e3"
+  },
+  {
+    "path": "sim/programs/7af70f06ddaf_preview.png",
+    "sha256": "06ea53d1dbb716ea13d8a66f33f4491a29aad7eddc2531eeebda605b9b4e5cf5"
+  },
+  {
+    "path": "sim/programs/c17e3fe71b47_preview.png",
+    "sha256": "01643494f589a24491bbe2e6be6ccd0c0a8eaf615e1082eeb20716376820302c"
+  },
+  {
+    "path": "sim/programs/c17e3fe71b47.json",
+    "sha256": "0a95de6988778aa9da5738cf3005351c1db527b03392ab6b6ad03ee4dfccee5e"
+  },
+  {
+    "path": "sim/programs/b0fda03b4ecd.py",
+    "sha256": "f5e9916d283de95289d136a104ebc9074d19c821ae0091879f4928c18df41855"
+  },
+  {
+    "path": "sim/programs/75f348b84bad.py",
+    "sha256": "38c955407417416c2ab10fa25df4ab3bf58bc5c9a167389dfe63bc13ca049d2d"
+  },
+  {
+    "path": "sim/programs/671d96d6e51d_preview.png",
+    "sha256": "4b7e3170cd642a24e74b30f028533c6ca18f97cbf31e78b98de146d4740ce01c"
+  },
+  {
+    "path": "sim/programs/b0fda03b4ecd.json",
+    "sha256": "84878d6035e6b17759cf97ab94751cf7c8a38510d0c42d260c7dc95ea21a5d92"
+  },
+  {
+    "path": "sim/programs/c17e3fe71b47.py",
+    "sha256": "58f25b6be17027e6cc947c08b6fc17d68dc80b7899836244fe4b45cf7855aa66"
+  },
+  {
+    "path": "sim/programs/75f348b84bad_preview.png",
+    "sha256": "000927f660824f1b9ac880c8b161dd4a79e8c2a733610e8be38f0d2a8959dc32"
+  },
+  {
+    "path": "sim/programs/b0fda03b4ecd_preview.png",
+    "sha256": "5aae216ff0e997f3849385e06b34187bb8c51be9e78fdab0095c634deef1703b"
+  },
+  {
+    "path": "sim/programs/671d96d6e51d.py",
+    "sha256": "f095c7140f2586b305a4ee4005ccc4bf531420f9e13125331655261a2e54ff75"
+  }
+]

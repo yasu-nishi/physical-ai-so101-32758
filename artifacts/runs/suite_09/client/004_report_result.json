@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "bbc094f34df3",
+      "observation_id": "804b378ea61b",
+      "ai_visual_verdict": "uncertain",
+      "reason": "2回目の画像で指先がさらに左へ少し動いた。青に向けた横方向の修正を確認したが、把持・搬送は未実施。方向試験をここで終了する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

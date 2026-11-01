@@ -1,0 +1,23 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "stopped",
+      "connection_verified": true,
+      "last_action": null,
+      "task_success": "unverified",
+      "stop_latched": true,
+      "joints_deg": {
+        "shoulder_pan": 13.600816611369792,
+        "shoulder_lift": -19.457840650053907,
+        "elbow_flex": 18.662139904489358,
+        "wrist_flex": 90.83409111347154,
+        "wrist_roll": -2.6084159588356713e-07
+      },
+      "gripper_open": 0.6117665011049582
+    }
+  ],
+  "images": []
+}

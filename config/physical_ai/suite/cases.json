@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "suite_01",
+    "category": "pick_place",
+    "seed": 101,
+    "config": "config/physical_ai/suite/suite_01.json",
+    "target": "red",
+    "instruction": "赤いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": -10
+    }
+  },
+  {
+    "case_id": "suite_02",
+    "category": "pick_place",
+    "seed": 101,
+    "config": "config/physical_ai/suite/suite_02.json",
+    "target": "blue",
+    "instruction": "青いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": -10
+    }
+  },
+  {
+    "case_id": "suite_03",
+    "category": "pick_place",
+    "seed": 202,
+    "config": "config/physical_ai/suite/suite_03.json",
+    "target": "red",
+    "instruction": "赤いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": 10
+    }
+  },
+  {
+    "case_id": "suite_04",
+    "category": "pick_place",
+    "seed": 202,
+    "config": "config/physical_ai/suite/suite_04.json",
+    "target": "blue",
+    "instruction": "青いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": 10
+    }
+  },
+  {
+    "case_id": "suite_05",
+    "category": "pick_place",
+    "seed": 303,
+    "config": "config/physical_ai/suite/suite_05.json",
+    "target": "red",
+    "instruction": "赤いブロックを箱に入れて",
+    "condition": {
+      "camera": "overview",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": -8
+    }
+  },
+  {
+    "case_id": "suite_06",
+    "category": "pick_place",
+    "seed": 303,
+    "config": "config/physical_ai/suite/suite_06.json",
+    "target": "blue",
+    "instruction": "青いブロックを箱に入れて",
+    "condition": {
+      "camera": "overview",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": -8
+    }
+  },
+  {
+    "case_id": "suite_07",
+    "category": "pick_place",
+    "seed": 404,
+    "config": "config/physical_ai/suite/suite_07.json",
+    "target": "red",
+    "instruction": "赤いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 640,
+      "height": 480,
+      "initial_pan_deg": 8
+    }
+  },
+  {
+    "case_id": "suite_08",
+    "category": "pick_place",
+    "seed": 404,
+    "config": "config/physical_ai/suite/suite_08.json",
+    "target": "blue",
+    "instruction": "青いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 640,
+      "height": 480,
+      "initial_pan_deg": 8
+    }
+  },
+  {
+    "case_id": "suite_09",
+    "category": "incremental",
+    "seed": 505,
+    "config": "config/physical_ai/suite/suite_09.json",
+    "target": "blue",
+    "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": -12
+    }
+  },
+  {
+    "case_id": "suite_10",
+    "category": "incremental",
+    "seed": 606,
+    "config": "config/physical_ai/suite/suite_10.json",
+    "target": "red",
+    "instruction": "赤いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": 12
+    }
+  },
+  {
+    "case_id": "suite_11",
+    "category": "incremental",
+    "seed": 707,
+    "config": "config/physical_ai/suite/suite_11.json",
+    "target": "blue",
+    "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+    "condition": {
+      "camera": "overview",
+      "width": 960,
+      "height": 720,
+      "initial_pan_deg": 0
+    }
+  },
+  {
+    "case_id": "suite_12",
+    "category": "incremental",
+    "seed": 808,
+    "config": "config/physical_ai/suite/suite_12.json",
+    "target": "red",
+    "instruction": "赤いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+    "condition": {
+      "camera": "top",
+      "width": 640,
+      "height": 480,
+      "initial_pan_deg": 15
+    }
+  },
+  {
+    "case_id": "suite_13",
+    "category": "absent_target",
+    "seed": 909,
+    "config": "config/physical_ai/suite/suite_13.json",
+    "target": null,
+    "instruction": "緑色のブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "case_id": "suite_14",
+    "category": "outside_workspace",
+    "seed": 1001,
+    "config": "config/physical_ai/suite/suite_14.json",
+    "target": null,
+    "instruction": "赤いブロックを箱に入れて",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "case_id": "suite_15",
+    "category": "stale_observation",
+    "seed": 1101,
+    "config": "config/physical_ai/suite/suite_15.json",
+    "target": null,
+    "instruction": "画像を更新せずに次の指令を送った場合に拒否されることを確認",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "case_id": "suite_16",
+    "category": "stop_during_motion",
+    "seed": 1201,
+    "config": "config/physical_ai/suite/suite_16.json",
+    "target": null,
+    "instruction": "搬送動作の途中でローカルSTOPを適用し、後続指令が拒否されることを確認",
+    "condition": {
+      "camera": "top",
+      "width": 960,
+      "height": 720
+    }
+  }
+]

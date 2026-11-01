@@ -1,0 +1,31 @@
+{
+  "family": "Noto Sans JP",
+  "repository": "https://github.com/google/fonts",
+  "revision": "66a36c8c94b1a5d992ee4e7f392fccfe4945767c",
+  "files": {
+    "NotoSansJP-VF.ttf": {
+      "url": "https://raw.githubusercontent.com/google/fonts/66a36c8c94b1a5d992ee4e7f392fccfe4945767c/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+      "sha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+      "bytes": 9589900
+    },
+    "OFL.txt": {
+      "url": "https://raw.githubusercontent.com/google/fonts/66a36c8c94b1a5d992ee4e7f392fccfe4945767c/ofl/notosansjp/OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "bytes": 4388
+    }
+  },
+  "license": "SIL Open Font License 1.1",
+  "derivation": "fontTools 4.60.1 instantiateVariableFont, wght=400 and 700, updateFontNames=True; all glyphs retained",
+  "static_fonts": {
+    "NotoSansJP-Regular.ttf": {
+      "weight": 400,
+      "bytes": 5766884,
+      "sha256": "57458d02bb14502d7ae98abe1e2f79b52783ceda9e4628df145faae23a3d31d2"
+    },
+    "NotoSansJP-Bold.ttf": {
+      "weight": 700,
+      "bytes": 5761680,
+      "sha256": "611dbdbda88a7a34c44232b90c71161b65178a82649bdc6e365a30f61ab28237"
+    }
+  }
+}

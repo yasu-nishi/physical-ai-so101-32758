@@ -1,0 +1,60 @@
+{
+  "program_id": "2a6ef8b1d356",
+  "execution_skill": "prepared_cartesian_step",
+  "observation_id": "b9ea92e7a9ff",
+  "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+  "visual_reason": "再測定の赤の高さは53.8mm。青から離れた赤の上へ、開いた指を移す。",
+  "expected_visual_change": "指が赤の上に来る。両物体は机上に残る。",
+  "target_xyz_m": [
+    0.2428,
+    -0.0557,
+    0.08
+  ],
+  "target_gripper_open": null,
+  "automatic_next_step": false,
+  "maintained_gripper_command": 0.6117665011049582,
+  "planned_duration_s": 1.9566480428752997,
+  "generator": "host selects ONE next action; robot-only IK and Python exporter",
+  "trajectory": [
+    {
+      "phase": "cartesian_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 13.60081661138797,
+          "shoulder_lift": -19.457840650123526,
+          "elbow_flex": 18.662139904427054,
+          "wrist_flex": 90.83409111348271,
+          "wrist_roll": -2.6084065214110296e-07
+        },
+        "gripper_open": 0.6117665011049582
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 15.008849023786247,
+          "shoulder_lift": 3.376926077880311,
+          "elbow_flex": -6.2272684832657035,
+          "wrist_flex": 92.85034240538492,
+          "wrist_roll": 3.602253452894408e-15
+        },
+        "gripper_open": 0.6117665011049582
+      },
+      "duration_s": 1.9566480428752997
+    }
+  ],
+  "validation": [
+    "fresh RGB",
+    "workspace",
+    "step displacement",
+    "joint limits",
+    "speed",
+    "duration",
+    "separate arm/gripper"
+  ],
+  "not_validated": [
+    "general obstacle avoidance",
+    "vision correctness",
+    "contact",
+    "task success"
+  ],
+  "script_sha256": "51d82b668d5a513743f645890052fc6531611ef717600e41dabeaa1e7b6a778b"
+}

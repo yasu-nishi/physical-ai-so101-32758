@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "087378153df1",
+      "observation_id": "0a75f157a425",
+      "visual_reason": "上の赤は青との境界が下端、上面の手前角が上端として見える。青のRGB推定高さ24.89mmを支持面に使い、赤の高さと上面中心を測る。",
+      "bottom_pixel": [
+        473.0,
+        497.0
+      ],
+      "top_pixel": [
+        472.0,
+        478.0
+      ],
+      "center_pixel": [
+        473.0,
+        462.0
+      ],
+      "support_z_m": 0.02488674,
+      "estimated_height_m": 0.01983527633532502,
+      "estimated_top_z_m": 0.04472201633532502,
+      "estimated_top_center_m": [
+        0.23069302037163675,
+        -0.060171856596305584,
+        0.044722016335324966
+      ],
+      "height_interval_m": [
+        0.01570301331516207,
+        0.023948377032305252
+      ],
+      "vertical_edge_residual_m": 0.0006821911865010564,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_04/client/002_measure_height_0.png"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "0623265232a2",
+      "observation_id": "5d301b65dd13",
+      "ai_visual_verdict": "uncertain",
+      "reason": "赤の上面は前より見えたが、左側がまだ指に隠れている。さらに小さく正方向へ動かして再撮影する。搬送は未実施。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

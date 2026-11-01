@@ -1,0 +1,29 @@
+{
+  "outcome": "finished",
+  "ai_visual_verdict": "success",
+  "reason": "開放後の新しいRGBで、赤いブロックが緑の箱の四方の壁の内側に立って収まり、開いた指から離れていることを確認した。元の机上位置には赤いブロックはない。青いブロックと箱には目視で位置変化が認められない。把持時には赤いブロックのみがわずかに寄った。",
+  "observation_id": "c8fa69f692f1",
+  "requested_model": "gpt-6-astra",
+  "returned_models": [
+    "gpt-6-astra"
+  ],
+  "api_responses": 28,
+  "motion_requests": 11,
+  "total_tokens": 879770,
+  "elapsed_s": 132.74618062505033,
+  "stop_requested": true,
+  "backend": "sim",
+  "task_success_source": "model_visual_claim_only",
+  "independent_task_evaluation": "not_run",
+  "settings": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "max_responses": 80,
+    "max_motion_steps": 30,
+    "max_elapsed_s": 900,
+    "api_timeout_s": 90,
+    "motion_timeout_s": 70,
+    "max_output_tokens": 4096,
+    "max_total_tokens": 1500000
+  }
+}

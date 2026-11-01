@@ -1,0 +1,98 @@
+{
+  "backend": "sim",
+  "depth_camera": false,
+  "portable_observations": true,
+  "control_hz": 50,
+  "speed_deg_s": 30,
+  "gripper_speed_s": 0.5,
+  "max_skill_s": 60,
+  "tracking_tolerance_deg": 3,
+  "camera": "top",
+  "image_width": 960,
+  "image_height": 720,
+  "slots": {
+    "slot_a": [
+      0.24,
+      -0.08
+    ],
+    "slot_b": [
+      0.24,
+      0.02
+    ]
+  },
+  "box_xy": [
+    0.18,
+    0.15
+  ],
+  "pick_z": 0.019,
+  "approach_z": 0.065,
+  "carry_z": 0.07,
+  "gripper_open": 0.611768,
+  "gripper_closed": 0.03882,
+  "home": {
+    "joints_deg": {
+      "shoulder_pan": 10,
+      "shoulder_lift": -60,
+      "elbow_flex": 60,
+      "wrist_flex": 35,
+      "wrist_roll": 0
+    },
+    "gripper_open": 0.611768
+  },
+  "limits_deg": {
+    "shoulder_pan": [
+      -109,
+      109
+    ],
+    "shoulder_lift": [
+      -99,
+      99
+    ],
+    "elbow_flex": [
+      -96,
+      96
+    ],
+    "wrist_flex": [
+      -94.9,
+      94.9
+    ],
+    "wrist_roll": [
+      -157,
+      162
+    ]
+  },
+  "layout": "continuous",
+  "video_camera": "overview",
+  "spawn_xy_bounds_m": [
+    [
+      0.223,
+      0.257
+    ],
+    [
+      -0.1,
+      0.044
+    ]
+  ],
+  "continuous_pick": {
+    "object_top_z_m": 0.03,
+    "pixel_tolerance_px": 3,
+    "pick_xy_bounds_m": [
+      [
+        0.215,
+        0.265
+      ],
+      [
+        -0.115,
+        0.06
+      ]
+    ]
+  },
+  "incremental_steps": {
+    "enabled": true,
+    "max_joint_delta_deg": 2.0,
+    "max_total_joint_delta_deg": 4.0,
+    "max_gripper_delta": 0.1,
+    "minimum_duration_s": 0.6,
+    "max_duration_s": 3.0
+  }
+}

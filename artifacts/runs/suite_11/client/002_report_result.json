@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "75a1a40fe60a",
+      "observation_id": "b447313def6e",
+      "ai_visual_verdict": "uncertain",
+      "reason": "新画像で下側の指先が少し右上へ動いた。青は明瞭に見えたままで横方向のずれは減ったが、高さや距離は未測定。次は負方向1度に減らす。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

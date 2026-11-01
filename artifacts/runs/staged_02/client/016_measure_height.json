@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "36dd4d1700d1",
+      "observation_id": "385f9739484d",
+      "visual_reason": "移動後の青の上面と手前右寄りの縦辺が見える。下端は机に接し、赤を載せる支持面の高さと中心を再測定する。",
+      "bottom_pixel": [
+        608.0,
+        469.0
+      ],
+      "top_pixel": [
+        608.0,
+        443.0
+      ],
+      "center_pixel": [
+        600.0,
+        429.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.02835730841475892,
+      "estimated_top_z_m": 0.02835730841475892,
+      "estimated_top_center_m": [
+        0.26166799434933674,
+        0.05844006410570923,
+        0.02835730841475892
+      ],
+      "height_interval_m": [
+        0.023598446896642034,
+        0.03308293182772343
+      ],
+      "vertical_edge_residual_m": 0.002283591915741155,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/016_measure_height_0.png"
+  ]
+}

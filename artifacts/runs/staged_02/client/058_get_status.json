@@ -1,0 +1,36 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "stopped",
+      "connection_verified": true,
+      "last_action": {
+        "action_id": "3408ee7b7a9d",
+        "name": "prepared_cartesian_step",
+        "args": {
+          "program_id": "404a82014f8f"
+        },
+        "command_status": "failed",
+        "trajectory_s": 0.0,
+        "wall_s": 0.00021383294370025396,
+        "task_success": "unverified",
+        "error": "ValueError: wrist_flex outside [-94.9, 94.9] degrees"
+      },
+      "task_success": "unverified",
+      "stop_latched": true,
+      "joints_deg": {
+        "shoulder_pan": -15.65182220972334,
+        "shoulder_lift": 23.345503156394937,
+        "elbow_flex": -28.69211361093004,
+        "wrist_flex": 94.89979444273656,
+        "wrist_roll": 0.012631905584617518
+      },
+      "gripper_open": 0.3599991737965113,
+      "active_action": null,
+      "phase": null
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-01",
+  "scope": "camera-position development checks, not a held-out benchmark",
+  "runs": 4,
+  "distinct_object_arrangements": 1,
+  "camera_poses": 4,
+  "initial_rgb_height_measurements": 6,
+  "height_mean_absolute_error_mm": 0.6723031944626371,
+  "height_maximum_absolute_error_mm": 1.5840038610365341,
+  "height_in_pixel_interval": 6,
+  "height_comparison_note": "Same two objects viewed from three cameras; not six independent objects. Ideal simulated calibration.",
+  "commands": 18,
+  "commands_completed": 18,
+  "trajectory_s": 30.24,
+  "transport_trials": 1,
+  "controlled_transport_successes": 0,
+  "final_target_in_box_after_drops": 1,
+  "unobservable_top_view_no_motion": 1,
+  "host_observed_uncommanded_drops": 2,
+  "real_connection": "unverified; OS did not enumerate configured USB serial",
+  "real_camera_calibration": "not performed",
+  "real_motion": "unverified",
+  "physics_contact_only": true,
+  "depth_used": false,
+  "llm_calls_in_server": 0,
+  "all_host_decisions_finished_before_offline_scoring": true,
+  "cases": [
+    {
+      "case_id": "camera_front_01",
+      "camera_override": {
+        "position_m": [
+          0.62,
+          -0.12,
+          0.43
+        ],
+        "target_m": [
+          0.18,
+          0.015,
+          0.025
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "fovy_deg": 46
+      },
+      "host_outcome": "target_in_box_after_uncontrolled_drop",
+      "host_reason": "初回搬送で机上へ落下。RGBから位置と高さを測り直し再把持したが、箱の上で再び滑落。最後のRGBで赤は箱内、青は元の机上に見える。目標の最終配置と制御された移載の成功を分け、正常な搬送成功は0/1と記録する。",
+      "commands": 18,
+      "commands_completed": 18,
+      "trajectory_s": 30.24,
+      "controller_wall_s": 12.403,
+      "last_observation_sim_s": 382.42,
+      "measurements": 3,
+      "initial_height_checks": [
+        {
+          "color": "red",
+          "estimated_mm": 37.53328519863219,
+          "actual_mm": 37.673389491073046,
+          "error_mm": -0.14010429244085132,
+          "interval_mm": [
+            33.71761950830637,
+            41.329186792155745
+          ],
+          "actual_in_pixel_interval": true
+        },
+        {
+          "color": "blue",
+          "estimated_mm": 38.409457592451346,
+          "actual_mm": 39.99346145348788,
+          "error_mm": -1.5840038610365341,
+          "interval_mm": [
+            34.16136836300382,
+            42.62363985824569
+          ],
+          "actual_in_pixel_interval": true
+        }
+      ],
+      "physical_checks": {
+        "red_inside_box": true,
+        "red_at_rest": true,
+        "red_released": true,
+        "blue_displacement_mm": 3.005454883294454e-08,
+        "blue_gripper_contact_steps": 0,
+        "host_observed_uncommanded_drops": 2,
+        "controlled_transfer_success": false
+      },
+      "before_image": "artifacts/runs/camera_front_01/observe_88041a93ea6f.png",
+      "after_image": "artifacts/runs/camera_front_01/observe_d9f5b20dfa7b.png",
+      "video": "artifacts/runs/camera_front_01/simulation.mp4",
+      "note": "Initial truth reconstructed only after all four host decisions finished"
+    },
+    {
+      "case_id": "camera_side_01",
+      "camera_override": {
+        "position_m": [
+          0.48,
+          0.47,
+          0.43
+        ],
+        "target_m": [
+          0.18,
+          0.015,
+          0.025
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "fovy_deg": 48
+      },
+      "host_outcome": "measured_no_motion",
+      "host_reason": "横側の実レンダリングを見て赤37.55mm、青38.86mmと推定。誤差区間は重なるため高さの順位は断定しない。移動指令は0件。",
+      "commands": 0,
+      "commands_completed": 0,
+      "trajectory_s": 0,
+      "controller_wall_s": 0,
+      "last_observation_sim_s": 0.02,
+      "measurements": 2,
+      "initial_height_checks": [
+        {
+          "color": "red",
+          "estimated_mm": 37.54796096266955,
+          "actual_mm": 37.673389491073046,
+          "error_mm": -0.12542852840349838,
+          "interval_mm": [
+            33.30188249560295,
+            41.762229616639615
+          ],
+          "actual_in_pixel_interval": true
+        },
+        {
+          "color": "blue",
+          "estimated_mm": 38.859968900055165,
+          "actual_mm": 39.99346145348788,
+          "error_mm": -1.133492553432716,
+          "interval_mm": [
+            34.3546413527333,
+            43.32511680740758
+          ],
+          "actual_in_pixel_interval": true
+        }
+      ],
+      "physical_checks": {},
+      "before_image": "artifacts/runs/camera_side_01/observe_e878dfce23aa.png",
+      "after_image": "artifacts/runs/camera_side_01/observe_e878dfce23aa.png",
+      "video": "artifacts/runs/camera_side_01/simulation.mp4",
+      "note": "Initial truth reconstructed only after all four host decisions finished"
+    },
+    {
+      "case_id": "camera_low_01",
+      "camera_override": {
+        "position_m": [
+          0.62,
+          -0.4,
+          0.3
+        ],
+        "target_m": [
+          0.18,
+          0.015,
+          0.025
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "fovy_deg": 43
+      },
+      "host_outcome": "measured_no_motion",
+      "host_reason": "低い斜め視点でも両方の垂直辺を選べた。高さを測定して記録し、移動は行わない。",
+      "commands": 0,
+      "commands_completed": 0,
+      "trajectory_s": 0,
+      "controller_wall_s": 0,
+      "last_observation_sim_s": 0.02,
+      "measurements": 2,
+      "initial_height_checks": [
+        {
+          "color": "red",
+          "estimated_mm": 37.113758500273434,
+          "actual_mm": 37.673389491073046,
+          "error_mm": -0.5596309907996144,
+          "interval_mm": [
+            34.283778622415774,
+            39.92073627465981
+          ],
+          "actual_in_pixel_interval": true
+        },
+        {
+          "color": "blue",
+          "estimated_mm": 39.502302512825274,
+          "actual_mm": 39.99346145348788,
+          "error_mm": -0.4911589406626088,
+          "interval_mm": [
+            36.78857697099175,
+            42.19484583629929
+          ],
+          "actual_in_pixel_interval": true
+        }
+      ],
+      "physical_checks": {},
+      "before_image": "artifacts/runs/camera_low_01/observe_c371543893a1.png",
+      "after_image": "artifacts/runs/camera_low_01/observe_c371543893a1.png",
+      "video": "artifacts/runs/camera_low_01/simulation.mp4",
+      "note": "Initial truth reconstructed only after all four host decisions finished"
+    },
+    {
+      "case_id": "camera_top_01",
+      "camera_override": {
+        "position_m": [
+          0.24,
+          -0.03,
+          0.65
+        ],
+        "target_m": [
+          0.24,
+          -0.03,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "fovy_deg": 50
+      },
+      "host_outcome": "unobservable_no_motion",
+      "host_reason": "真上からのRGBでは赤の一部が腕で隠れ、青もほぼ上面のみ。同じ縦辺の上下端を十分な画素長で選べないため高さを推測せず停止。測定呼出し0、移動指令0。",
+      "commands": 0,
+      "commands_completed": 0,
+      "trajectory_s": 0,
+      "controller_wall_s": 0,
+      "last_observation_sim_s": 0.02,
+      "measurements": 0,
+      "initial_height_checks": [],
+      "physical_checks": {},
+      "before_image": "artifacts/runs/camera_top_01/observe_46ef4873a3e9.png",
+      "after_image": "artifacts/runs/camera_top_01/observe_46ef4873a3e9.png",
+      "video": "artifacts/runs/camera_top_01/simulation.mp4",
+      "note": "Initial truth reconstructed only after all four host decisions finished"
+    }
+  ],
+  "limitations": [
+    "Viewpoint changes are ideal simulated cameras; real lighting, blur, distortion and calibration error need physical tests.",
+    "Height requires visible matching vertical-edge endpoints and a known support plane; top view was not measurable.",
+    "Two losses of grasp occurred; final placement alone is not counted as controlled transport success.",
+    "Moving wrist-camera calibration is not implemented. No real motion or real height accuracy has been verified."
+  ]
+}

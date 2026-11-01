@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "5405e0ee5b91",
+      "observation_id": "2619d20709ab",
+      "ai_visual_verdict": "uncertain",
+      "reason": "指先は予想どおり右へ動いたが、赤は右端の細い部分しか見えなくなった。この視点では接近すると対象が隠れるため、さらに進めず停止する。高さ・接触・把持は判定しない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

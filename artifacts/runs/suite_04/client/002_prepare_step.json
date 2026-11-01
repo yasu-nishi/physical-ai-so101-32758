@@ -1,0 +1,73 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "6c2285c5ba77",
+      "execution_skill": "prepared_step",
+      "observation_id": "d4f7f2517048",
+      "instruction": "青いブロックを箱に入れて",
+      "visual_reason": "再撮影では青の右端が見えるが、中心付近は右側の指に隠れている。指が左へ退いたことは確認できたので同方向へもう2度だけ動かす。",
+      "expected_visual_change": "青の上面がさらに見える。画像を見てから次を決める。",
+      "joint_delta_deg": {
+        "shoulder_pan": 2.0
+      },
+      "gripper_delta": 0.0,
+      "planned_duration_s": 0.6,
+      "trajectory": [
+        {
+          "phase": "incremental_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 11.999927070393797,
+              "shoulder_lift": -59.983292946185536,
+              "elbow_flex": 60.053018493275516,
+              "wrist_flex": 35.01244754348154,
+              "wrist_roll": 0.0006247310905833207
+            },
+            "gripper_open": 0.6117645143440895
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 13.999927070393797,
+              "shoulder_lift": -59.983292946185536,
+              "elbow_flex": 60.053018493275516,
+              "wrist_flex": 35.01244754348154,
+              "wrist_roll": 0.0006247310905833207
+            },
+            "gripper_open": 0.6117645143440895
+          },
+          "duration_s": 0.6
+        }
+      ],
+      "height_measured": false,
+      "automatic_next_step": false,
+      "validation": [
+        "fresh observation and robot generation",
+        "small joint/gripper increment",
+        "separate arm and gripper steps",
+        "joint limits",
+        "speed and duration limits"
+      ],
+      "not_validated": [
+        "Cartesian displacement",
+        "height or contact",
+        "collision-free path",
+        "task success"
+      ],
+      "generator": "host AI chooses the next increment from RGB; deterministic one-step Python exporter; no LLM in server",
+      "expires": "300 s after observation, or any robot motion/server restart",
+      "script_sha256": "62479586d6208234160c8b9b5d0d292c00f344b54d3bd70e572592076bedaece",
+      "files_relative_to_run_dir": {
+        "script": "programs/6c2285c5ba77.py",
+        "plan": "programs/6c2285c5ba77.json",
+        "preview": "programs/6c2285c5ba77_preview.png",
+        "script_sha256": "62479586d6208234160c8b9b5d0d292c00f344b54d3bd70e572592076bedaece",
+        "plan_sha256": "5749aab73303cd009f15f2d50421b15868d14360fae4aafac19a55aded305a0b"
+      },
+      "next": "Execute this single step, inspect the returned NEW RGB, then decide whether to generate another step or stop. No automatic continuation."
+    }
+  ],
+  "images": [
+    "artifacts/runs/suite_04/client/002_prepare_step_0.png"
+  ]
+}

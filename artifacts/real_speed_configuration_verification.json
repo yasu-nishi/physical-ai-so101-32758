@@ -1,0 +1,21 @@
+{
+  "source_program": "fc98c7a33853",
+  "previous_duration_s": 0.8077747210701763,
+  "previous_peak_deg_s": 7.009919379370068,
+  "configured_servo_steps_per_s": 50,
+  "phase_readback": 12,
+  "approximate_servo_speed_deg_s": 4.395604395604396,
+  "corrected_software_limit_deg_s": 3,
+  "corrected_duration_s": 1.8874785571316934,
+  "corrected_peak_deg_s": 3.0,
+  "sampled_20hz_reference_rate_passed": true,
+  "real_motion_retest": "Cartesian API not retested; separate 3 deg/s shoulder recovery moved 8.615 deg then stopped on a voltage error",
+  "motor_register_writes": 0,
+  "voltage_limits_raw": [
+    40,
+    80
+  ],
+  "all_six_calibrations_match": true,
+  "after_reseat_all_torque_off_read_only_faults": 1,
+  "fault_motor_id": 6
+}

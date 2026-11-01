@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "804af17d4b1d",
+      "observation_id": "1be3f1afcb03",
+      "visual_reason": "赤は青の上に直立し、同じ縦辺の上端と青に接する下端が見える。支持面は先にRGBから測った青の上面28.48mmとして、上の赤の位置を測る。",
+      "bottom_pixel": [
+        625.0,
+        449.5
+      ],
+      "top_pixel": [
+        629.0,
+        422.0
+      ],
+      "center_pixel": [
+        626.0,
+        407.5
+      ],
+      "support_z_m": 0.02848,
+      "estimated_height_m": 0.029055104678727524,
+      "estimated_top_z_m": 0.05753510467872752,
+      "estimated_top_center_m": [
+        0.2799712729719889,
+        0.0660878141472312,
+        0.05753510467872752
+      ],
+      "height_interval_m": [
+        0.02448551149061607,
+        0.03359072911857581
+      ],
+      "vertical_edge_residual_m": 0.0005432700732405356,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/051_measure_height_0.png"
+  ]
+}

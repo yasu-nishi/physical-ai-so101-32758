@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "85c9df556537",
+      "observation_id": "5213bc7c3194",
+      "ai_visual_verdict": "failure",
+      "reason": "解放後、赤が青の左側へ落ちて机上に立ち、青の上には残らなかった。積み上げ失敗。保持中の赤の中心が手先基準点とずれる影響を補正せず下降した。画像で位置と高さを測り直し、再把持して配置を修正する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

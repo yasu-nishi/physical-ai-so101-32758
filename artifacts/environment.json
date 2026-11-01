@@ -1,0 +1,32 @@
+{
+  "os": "Darwin",
+  "os_version": "26.6.2",
+  "architecture": "arm64",
+  "python": "3.12.12",
+  "packages": {
+    "lerobot": "0.5.1",
+    "mujoco": "3.17.0",
+    "mcp": "1.30.0",
+    "numpy": "2.2.6",
+    "scipy": "1.18.1",
+    "opencv-python-headless": "4.13.0.92",
+    "pillow": "12.2.0",
+    "imageio": "2.37.3",
+    "reportlab": "5.1.0"
+  },
+  "usb_serial_count": 0,
+  "configured_follower_port_exists": false,
+  "configured_calibration_exists": true,
+  "calibrated_joints": [
+    "elbow_flex",
+    "gripper",
+    "shoulder_lift",
+    "shoulder_pan",
+    "wrist_flex",
+    "wrist_roll"
+  ],
+  "robot_camera_verified": false,
+  "real_connection": "unverified",
+  "real_motion": "unverified",
+  "note": "Read-only inventory. No motor writes or camera capture; no personal identifiers exported."
+}

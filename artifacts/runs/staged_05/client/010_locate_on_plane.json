@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool locate_on_plane: 2 validation errors for locate_on_planeArguments\npixel_x\n  Field required [type=missing, input_value={'observation_id': '7f510...mは設備校正値。'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\npixel_y\n  Field required [type=missing, input_value={'observation_id': '7f510...mは設備校正値。'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+  ],
+  "images": []
+}

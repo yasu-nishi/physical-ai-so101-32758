@@ -1,0 +1,39 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "stopped",
+      "connection_verified": true,
+      "last_action": {
+        "action_id": "40d2c7754dcd",
+        "name": "prepared_cartesian_step",
+        "args": {
+          "program_id": "b7f1be1d415a"
+        },
+        "command_status": "completed",
+        "trajectory_s": 1.9000000000000012,
+        "wall_s": 0.7719802500214428,
+        "task_success": "unverified",
+        "error": null
+      },
+      "task_success": {
+        "source": "ai_visual_verdict",
+        "verdict": "success"
+      },
+      "stop_latched": true,
+      "joints_deg": {
+        "shoulder_pan": -6.134438177029268,
+        "shoulder_lift": 9.991328663947328,
+        "elbow_flex": -9.68311391150118,
+        "wrist_flex": 89.74411338679054,
+        "wrist_roll": -1.0063941462629482e-06
+      },
+      "gripper_open": 0.359999177067568,
+      "active_action": null,
+      "phase": null
+    }
+  ],
+  "images": []
+}

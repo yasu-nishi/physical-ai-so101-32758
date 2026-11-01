@@ -1,0 +1,47 @@
+{
+  "case_id": "staged_01c",
+  "category": "unknown_height_box",
+  "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+  "host_outcome": "target_success_with_collateral_motion",
+  "host_reason": "RGBから高さを推定し、13回の一段生成で赤を箱へ移載して解放を画像確認。青を搬送中に倒したため完全成功には数えない。AI待ち中も物理を進めた。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "1c3b05b8a841",
+          "name": "prepared_cartesian_step",
+          "args": {
+            "program_id": "4b32c4ff180e"
+          },
+          "command_status": "completed",
+          "trajectory_s": 1.660000000000001,
+          "wall_s": 0.6725720840040594,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "success"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": -47.885375380522156,
+          "shoulder_lift": 2.4158401426615743,
+          "elbow_flex": -4.971516891726903,
+          "wrist_flex": 92.60421360162312,
+          "wrist_roll": -7.223375581351368e-07
+        },
+        "gripper_open": 0.6119985004061306,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

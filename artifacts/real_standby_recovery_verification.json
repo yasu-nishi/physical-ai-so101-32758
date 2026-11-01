@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-01T11:47:44.310314+00:00",
+  "request": "return to upright waiting posture",
+  "result": "incomplete_stopped_holding",
+  "motion_command": {
+    "utc": "2026-11-01T11:46:39.693964+00:00",
+    "event": "action_finished",
+    "action_id": "68203d2a6f1b",
+    "name": "observe_pose",
+    "args": {},
+    "command_status": "failed",
+    "trajectory_s": 4.599999999999992,
+    "wall_s": 4.964172416017391,
+    "task_success": "unverified",
+    "error": "ServoReportedError: Servo error flags in response: 1"
+  },
+  "requested_shoulder_delta_deg": -10,
+  "measured_shoulder_delta_deg": -8.615384615384613,
+  "all_other_arm_joints_delta_deg": {
+    "shoulder_pan": 0.0,
+    "elbow_flex": 0.0,
+    "wrist_flex": 0.0,
+    "wrist_roll": 0.0
+  },
+  "robot_fk_tip_delta_mm": [
+    -2.684311932387995,
+    -1.830478467004279,
+    25.672478259089416
+  ],
+  "independent_metric_tip_measurement": false,
+  "waiting_pose_reached": false,
+  "note": "Later normal voltage/status does not dismiss the checksum-valid motor ID6 error flag 1 during motion.",
+  "servo_fault": {
+    "motor": "gripper",
+    "id": 6,
+    "flag": 1,
+    "meaning_in_installed_sdk": "Input voltage error",
+    "checksum_valid": true,
+    "register_read": "Present_Position"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-31",
+  "protocol": "Codex visual pixel choice -> calibrated XY -> generated Python runner over MCP",
+  "attempts": 4,
+  "successes": 4,
+  "xy_error_mm_max": 0.7678889391985846,
+  "height_measurement": "NOT USED IN THESE 2026-10-31 TRIALS: Z=30 mm is assumed; later sensor trials are reported separately",
+  "generation": "deterministic IK and bounded MCP Python runner export; no arbitrary Python execution in server",
+  "scope": "two seeded continuous arrangements x two colors; upright 30 mm cubes, calibrated ideal camera, no noise",
+  "real_continuous_picking": "unsupported: camera and kinematic calibration absent",
+  "trials": [
+    {
+      "trial": "continuous_01",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "pixel_xy": [
+        338.0,
+        413.0
+      ],
+      "estimated_xy_m": [
+        0.23674933429688216,
+        -0.1002529333991938
+      ],
+      "z_source": "assumed_known_30_mm_height_not_measured",
+      "independent_initial_xy_m": [
+        0.2369069301160596,
+        -0.09995489642349954
+      ],
+      "initial_image_replay_matches": true,
+      "independent_xy_error_mm": 0.3371386674696158,
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.653,
+      "failure": null,
+      "visual_reason": "動作後の上面画像では赤いブロックが右の緑の箱の内側にあり、元の赤の位置は空。青いブロックは元の位置に残り、グリッパーは対象から離れている。",
+      "before_image": "artifacts/runs/continuous_01/observe_8b40b4bc2b6c.png",
+      "after_image": "artifacts/runs/continuous_01/observe_11c0b3d48617.png",
+      "before_sha256": "228ffbd874b320ac45e67705b3e39b9c257d21031ba8298e6d642170dacb3413",
+      "after_sha256": "4862dc8aaa63208db44aac5ec77affd3d1bab8255a308939b3f5bd525fdb5f18",
+      "preview_image": "artifacts/runs/continuous_01/programs/c92745dc5042_preview.png",
+      "generated_python": "artifacts/runs/continuous_01/programs/c92745dc5042.py",
+      "generated_plan": "artifacts/runs/continuous_01/programs/c92745dc5042.json",
+      "video": "artifacts/runs/continuous_01/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17879524961664361,
+          0.14426848926967237,
+          0.018938798431985395
+        ],
+        "inside_box": true,
+        "contact_steps": 4913,
+        "max_height_m": 0.06510083436554615,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "continuous_02",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "pixel_xy": [
+        484.0,
+        423.0
+      ],
+      "estimated_xy_m": [
+        0.24556996340950146,
+        0.0285282516450477
+      ],
+      "z_source": "assumed_known_30_mm_height_not_measured",
+      "independent_initial_xy_m": [
+        0.24600778257159334,
+        0.02847385774952823
+      ],
+      "initial_image_replay_matches": true,
+      "independent_xy_error_mm": 0.44118512504912655,
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.629,
+      "failure": null,
+      "visual_reason": "赤いブロックが緑の箱の内側に見え、右側の元位置は空。左の青は元の場所に残っている。グリッパーは赤を放して退避済み。",
+      "before_image": "artifacts/runs/continuous_02/observe_16c56ed6bd06.png",
+      "after_image": "artifacts/runs/continuous_02/observe_69b69348aca4.png",
+      "before_sha256": "761e478ece3c6a547b418a2e331e0a87d60a5407d90b0ca7f8c0f30dfec6e4cb",
+      "after_sha256": "25a4756cd839aeade4eb2393c12fb964e1a331e30f7da79f65b559ba33247d72",
+      "preview_image": "artifacts/runs/continuous_02/programs/76abed208d4f_preview.png",
+      "generated_python": "artifacts/runs/continuous_02/programs/76abed208d4f.py",
+      "generated_plan": "artifacts/runs/continuous_02/programs/76abed208d4f.json",
+      "video": "artifacts/runs/continuous_02/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17691757855351856,
+          0.1469843007012473,
+          0.018938798431985378
+        ],
+        "inside_box": true,
+        "contact_steps": 4747,
+        "max_height_m": 0.06530661158600914,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "continuous_03",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "pixel_xy": [
+        383.0,
+        398.0
+      ],
+      "estimated_xy_m": [
+        0.22351839062795326,
+        -0.06056010239240701
+      ],
+      "z_source": "assumed_known_30_mm_height_not_measured",
+      "independent_initial_xy_m": [
+        0.22385036567706731,
+        -0.06039577815468927
+      ],
+      "initial_image_replay_matches": true,
+      "independent_xy_error_mm": 0.37041853130721747,
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.547,
+      "failure": null,
+      "visual_reason": "青いブロックが緑の箱の内側に見え、左側の青の元位置は空。赤は右側の元位置に残り、指は箱内の青から離れている。",
+      "before_image": "artifacts/runs/continuous_03/observe_690ae1783f39.png",
+      "after_image": "artifacts/runs/continuous_03/observe_4f3e200876a8.png",
+      "before_sha256": "761e478ece3c6a547b418a2e331e0a87d60a5407d90b0ca7f8c0f30dfec6e4cb",
+      "after_sha256": "d93bae0b2e3c0e3a6f821f0c1edeb4b00eef506898915293daf78b39984dd34d",
+      "preview_image": "artifacts/runs/continuous_03/programs/7d6f59c872bb_preview.png",
+      "generated_python": "artifacts/runs/continuous_03/programs/7d6f59c872bb.py",
+      "generated_plan": "artifacts/runs/continuous_03/programs/7d6f59c872bb.json",
+      "video": "artifacts/runs/continuous_03/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17956879430891073,
+          0.14794147666817922,
+          0.018938798431985385
+        ],
+        "inside_box": true,
+        "contact_steps": 4771,
+        "max_height_m": 0.06583436009054089,
+        "gripper_contact_at_end": false
+      }
+    },
+    {
+      "trial": "continuous_04",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "pixel_xy": [
+        500.0,
+        418.0
+      ],
+      "estimated_xy_m": [
+        0.24115964885319183,
+        0.04264125822523855
+      ],
+      "z_source": "assumed_known_30_mm_height_not_measured",
+      "independent_initial_xy_m": [
+        0.24191081203932763,
+        0.04280065487118143
+      ],
+      "initial_image_replay_matches": true,
+      "independent_xy_error_mm": 0.7678889391985846,
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.825,
+      "failure": null,
+      "visual_reason": "青が緑の箱の内側にあり、右側の青の元位置は空。左の赤は元の位置に残っている。指は青から離れて観測姿勢へ戻っている。",
+      "before_image": "artifacts/runs/continuous_04/observe_21435b03a902.png",
+      "after_image": "artifacts/runs/continuous_04/observe_91b36ce3a4d4.png",
+      "before_sha256": "228ffbd874b320ac45e67705b3e39b9c257d21031ba8298e6d642170dacb3413",
+      "after_sha256": "b7409aae3a71067deac872fd021326a2da00379a8a8f748802a98f855534530c",
+      "preview_image": "artifacts/runs/continuous_04/programs/07001eb36710_preview.png",
+      "generated_python": "artifacts/runs/continuous_04/programs/07001eb36710.py",
+      "generated_plan": "artifacts/runs/continuous_04/programs/07001eb36710.json",
+      "video": "artifacts/runs/continuous_04/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17722556646309925,
+          0.14675605650622436,
+          0.01893879843198539
+        ],
+        "inside_box": true,
+        "contact_steps": 4756,
+        "max_height_m": 0.06556511096798846,
+        "gripper_contact_at_end": false
+      }
+    }
+  ]
+}

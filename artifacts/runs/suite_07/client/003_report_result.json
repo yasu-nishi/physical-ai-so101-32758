@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "44cb7ff3733f",
+      "observation_id": "9d9b3d2c9df1",
+      "ai_visual_verdict": "success",
+      "reason": "640x480の再撮影で赤は箱内にあり、元の左側の場所は空。青は台上に残り、指は箱の外へ退いている。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

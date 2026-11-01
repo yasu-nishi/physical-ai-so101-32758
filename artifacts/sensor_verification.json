@@ -1,0 +1,147 @@
+{
+  "date": "2026-11-01",
+  "attempts": 1,
+  "successes": 1,
+  "protocol": "Host views RGB + virtual depth, selects RGB pixels, samples depth, checks the known-height condition, executes generated runner, views post-action RGB + depth",
+  "height_measurement": "simulated visible-surface depth + calibrated table plane",
+  "motion_height_source": "existing known 30 mm block skill; no depth-adaptive trajectory",
+  "real_depth": "unavailable; hardware not connected or calibrated",
+  "trials": [
+    {
+      "trial": "sensors_01",
+      "instruction": "青いブロックを箱に入れて",
+      "target": "blue",
+      "visual_selection_reason": "RGB画像の腕の右下、緑の箱の左下に青い四角形の上面が見える。元画像の中心付近(494,409)を選んだ。同じ画素の深度は0.550064 m、台面からの高さは29.936 mmで既存30 mmブロック用動作の条件と一致する。",
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.518,
+      "failure": null,
+      "visual_result_reason": "RGB画像で青いブロックが緑の箱の内側にあり、元の腕の右下の場所は空いている。赤いブロックは元の左側に残り、指は箱から離れている。深度画像でも箱内の上面が見える。指令完了とは別に、再撮影画像から搬送成功と判断した。",
+      "depth_samples": [
+        {
+          "utc": "2026-10-31T23:33:34.079256+00:00",
+          "event": "depth_sampled",
+          "observation_id": "db903428ede0",
+          "pixel_xy": [
+            494,
+            409
+          ],
+          "depth_m": 0.550063967704773,
+          "depth_convention": "positive camera-forward Z, not Euclidean range",
+          "range_m": 0.5519427616623029,
+          "work_position_m": [
+            0.23366719222605634,
+            0.03779139974298619,
+            0.02993603229522701
+          ],
+          "work_frame": "robot_base_table_z0",
+          "height_above_table_m": 0.02993603229522701,
+          "table_plane_z_m": 0.0,
+          "neighborhood_3x3_depth_range_m": [
+            0.550063967704773,
+            0.550063967704773
+          ],
+          "source": "aligned rendered depth pixels + camera calibration",
+          "limitation": "Visible surface only. Height is above the calibrated table, not object size or object identity. Ideal simulation depth has no hardware noise."
+        },
+        {
+          "utc": "2026-10-31T23:33:34.324149+00:00",
+          "event": "depth_sampled",
+          "observation_id": "db903428ede0",
+          "pixel_xy": [
+            570,
+            500
+          ],
+          "depth_m": 0.5800037980079651,
+          "depth_convention": "positive camera-forward Z, not Euclidean range",
+          "range_m": 0.6004755835314329,
+          "work_position_m": [
+            0.3206905042277278,
+            0.10918142799010219,
+            -3.7980079651278587e-06
+          ],
+          "work_frame": "robot_base_table_z0",
+          "height_above_table_m": -3.7980079651278587e-06,
+          "table_plane_z_m": 0.0,
+          "neighborhood_3x3_depth_range_m": [
+            0.5800037980079651,
+            0.5800037980079651
+          ],
+          "source": "aligned rendered depth pixels + camera calibration",
+          "limitation": "Visible surface only. Height is above the calibrated table, not object size or object identity. Ideal simulation depth has no hardware noise."
+        },
+        {
+          "utc": "2026-10-31T23:33:34.568811+00:00",
+          "event": "depth_sampled",
+          "observation_id": "db903428ede0",
+          "pixel_xy": [
+            434,
+            445
+          ],
+          "depth_m": 0.387245237827301,
+          "depth_convention": "positive camera-forward Z, not Euclidean range",
+          "range_m": 0.39188888992693277,
+          "work_position_m": [
+            0.2430993337967233,
+            -0.0032575402076129925,
+            0.19275476217269893
+          ],
+          "work_frame": "robot_base_table_z0",
+          "height_above_table_m": 0.19275476217269893,
+          "table_plane_z_m": 0.0,
+          "neighborhood_3x3_depth_range_m": [
+            0.3870523273944855,
+            0.3874393701553345
+          ],
+          "source": "aligned rendered depth pixels + camera calibration",
+          "limitation": "Visible surface only. Height is above the calibrated table, not object size or object identity. Ideal simulation depth has no hardware noise."
+        },
+        {
+          "utc": "2026-10-31T23:34:05.903268+00:00",
+          "event": "depth_sampled",
+          "observation_id": "a02fb186a2be",
+          "pixel_xy": [
+            617,
+            346
+          ],
+          "depth_m": 0.5460618734359741,
+          "depth_convention": "positive camera-forward Z, not Euclidean range",
+          "range_m": 0.5593059727327696,
+          "work_position_m": [
+            0.17817741363915812,
+            0.14541523145301946,
+            0.03393812656402584
+          ],
+          "work_frame": "robot_base_table_z0",
+          "height_above_table_m": 0.03393812656402584,
+          "table_plane_z_m": 0.0,
+          "neighborhood_3x3_depth_range_m": [
+            0.5460618734359741,
+            0.5460618734359741
+          ],
+          "source": "aligned rendered depth pixels + camera calibration",
+          "limitation": "Visible surface only. Height is above the calibrated table, not object size or object identity. Ideal simulation depth has no hardware noise."
+        }
+      ],
+      "before_image": "artifacts/runs/sensors_01/observe_db903428ede0.png",
+      "before_depth_image": "artifacts/runs/sensors_01/observe_db903428ede0_depth.png",
+      "after_image": "artifacts/runs/sensors_01/observe_a02fb186a2be.png",
+      "after_depth_image": "artifacts/runs/sensors_01/observe_a02fb186a2be_depth.png",
+      "video": "artifacts/runs/sensors_01/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.17743887254872778,
+          0.14641052040854827,
+          0.018938798431985395
+        ],
+        "inside_box": true,
+        "contact_steps": 4749,
+        "max_height_m": 0.06551255319924938,
+        "gripper_contact_at_end": false
+      }
+    }
+  ],
+  "adoption_status": "SIM_ONLY_DIAGNOSTIC_REJECTED_FOR_COMMON_PROFILE: not evidence of real hardware depth or sim-to-real success"
+}

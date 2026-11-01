@@ -1,0 +1,8 @@
+case_id,category,seed,host_outcome,commands,commands_completed,command_failures,trajectory_s,controller_wall_s,last_observation_sim_s,summary_ja
+staged_01,unknown_height_box,231,failed,1,1,0,1.98,0.811,41.08,接近後に微小な関節限界超過で拒否。把持なし。
+staged_01b,unknown_height_box,231,aborted_control_review,4,4,0,5.8,2.407,58.04,把持後、閉指令を保持する実装の問題を発見し中止。
+staged_01c,unknown_height_box,231,target_success_with_collateral_motion,13,13,0,22.4,9.365,140.66,赤を箱へ。搬送中に青を倒したため対象のみ成功。
+staged_02,relocate_stack_unstack,672,partial_stack_success_unstack_not_started,37,36,1,52.16,21.625,749.08,青の移設、赤の積上げは再試行で達成。続く取外しは関節限界で未着手。
+staged_03,height_sort,915,height_ambiguous_no_motion,0,0,0,0,0,199.02,高さの画素誤差範囲が重なり、動作せず判別保留。
+staged_04,unknown_height_unstack,561,recovered_after_drop,18,18,0,24.84,10.144,284.36,上の赤の試験持上げで落下。画像から再推定・再把持し別置き達成。
+staged_05,height_sort,136,success,26,26,0,43.14,17.804,245.22,高い青を箱へ、低い赤を空き机面へ。落下なしで両方達成。

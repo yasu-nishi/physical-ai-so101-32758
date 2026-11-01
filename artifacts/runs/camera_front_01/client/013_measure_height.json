@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "9285d1a9dbf6",
+      "observation_id": "090d00e49933",
+      "visual_reason": "落下後の赤が机上にある。転がった可能性があるため、現在見える手前の縦辺と上面中心を選び直す。",
+      "bottom_pixel": [
+        511.0,
+        425.0
+      ],
+      "top_pixel": [
+        511.0,
+        391.0
+      ],
+      "center_pixel": [
+        520.0,
+        370.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.03299499448148041,
+      "estimated_top_z_m": 0.03299499448148041,
+      "estimated_top_center_m": [
+        0.20760474338244767,
+        0.036132358200396814,
+        0.03299499448148041
+      ],
+      "height_interval_m": [
+        0.02912286050853824,
+        0.03684579290257173
+      ],
+      "vertical_edge_residual_m": 0.0008094763639121798,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error, support-plane uncertainty and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_front_01/client/013_measure_height_0.png"
+  ]
+}

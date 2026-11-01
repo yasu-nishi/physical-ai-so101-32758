@@ -1,0 +1,257 @@
+{
+  "video": "artifacts/camera_view_review.mp4",
+  "duration_s": 87.88,
+  "fps": 25,
+  "speed": "1x simulation time; deliberation cut; captions added afterwards",
+  "sha256": "f64719859d469e121f673203b6892f6296f9f9ba9c035a15942dc970913af098",
+  "segments": [
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_front_01/observe_88041a93ea6f.png",
+      "title": "カメラ位置を変える",
+      "output_start_s": 0.0,
+      "duration_s": 6.0
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_side_01/observe_e878dfce23aa.png",
+      "title": "横側",
+      "output_start_s": 6.0,
+      "duration_s": 5.0
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_low_01/observe_c371543893a1.png",
+      "title": "低い斜め視点",
+      "output_start_s": 11.0,
+      "duration_s": 5.0
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_top_01/observe_46ef4873a3e9.png",
+      "title": "真上：測定を保留",
+      "output_start_s": 16.0,
+      "duration_s": 6.0
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "cafe1f911585",
+      "source_start_frame": 454,
+      "source_end_frame_exclusive": 518,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 22.0,
+      "duration_s": 2.56
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "a1011147c49c",
+      "source_start_frame": 1000,
+      "source_end_frame_exclusive": 1051,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 24.56,
+      "duration_s": 2.04
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "453fa29cf113",
+      "source_start_frame": 1395,
+      "source_end_frame_exclusive": 1440,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 26.6,
+      "duration_s": 1.8
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "56b435f94eb8",
+      "source_start_frame": 1854,
+      "source_end_frame_exclusive": 1916,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 28.4,
+      "duration_s": 2.48
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "173f7a0f3095",
+      "source_start_frame": 2566,
+      "source_end_frame_exclusive": 2607,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 30.88,
+      "duration_s": 1.64
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "224bd53e593e",
+      "source_start_frame": 2884,
+      "source_end_frame_exclusive": 2950,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 32.52,
+      "duration_s": 2.64
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "caccdc0422c4",
+      "source_start_frame": 3811,
+      "source_end_frame_exclusive": 3887,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 35.16,
+      "duration_s": 3.04
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "3ae6d174bf43",
+      "source_start_frame": 4294,
+      "source_end_frame_exclusive": 4373,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 38.2,
+      "duration_s": 3.16
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_front_01/programs/3ae6d174bf43_after.png",
+      "title": "結果：机上へ落下",
+      "output_start_s": 41.36,
+      "duration_s": 6.0
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "243f7293eafa",
+      "source_start_frame": 5256,
+      "source_end_frame_exclusive": 5318,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 47.36,
+      "duration_s": 2.48
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "1bcbc59d985e",
+      "source_start_frame": 5656,
+      "source_end_frame_exclusive": 5730,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 49.84,
+      "duration_s": 2.96
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "2d4871895da1",
+      "source_start_frame": 6026,
+      "source_end_frame_exclusive": 6090,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 52.8,
+      "duration_s": 2.56
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "4255fd2cb689",
+      "source_start_frame": 6444,
+      "source_end_frame_exclusive": 6490,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 55.36,
+      "duration_s": 1.84
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "a097e636e1b2",
+      "source_start_frame": 6842,
+      "source_end_frame_exclusive": 6906,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 57.2,
+      "duration_s": 2.56
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "493c612eb18d",
+      "source_start_frame": 7223,
+      "source_end_frame_exclusive": 7264,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 59.76,
+      "duration_s": 1.64
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "9f06c19be4b1",
+      "source_start_frame": 7529,
+      "source_end_frame_exclusive": 7596,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 61.4,
+      "duration_s": 2.68
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "3945d43ab3d4",
+      "source_start_frame": 7991,
+      "source_end_frame_exclusive": 8052,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 64.08,
+      "duration_s": 2.44
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "701ab48638d3",
+      "source_start_frame": 8383,
+      "source_end_frame_exclusive": 8444,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 66.52,
+      "duration_s": 2.44
+    },
+    {
+      "kind": "motion",
+      "source": "artifacts/runs/camera_front_01/simulation.mp4",
+      "program_id": "abf233797b98",
+      "source_start_frame": 8739,
+      "source_end_frame_exclusive": 8812,
+      "source_fps": 25,
+      "speed": 1.0,
+      "output_start_s": 68.96,
+      "duration_s": 2.92
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_front_01/observe_d9f5b20dfa7b.png",
+      "title": "再試行も把持が外れた",
+      "output_start_s": 71.88,
+      "duration_s": 8.0
+    },
+    {
+      "kind": "still",
+      "source": "artifacts/runs/camera_low_01/observe_c371543893a1.png",
+      "title": "今回確認できた範囲",
+      "output_start_s": 79.88,
+      "duration_s": 8.0
+    }
+  ],
+  "scope": "simulation only, includes two uncommanded drops"
+}

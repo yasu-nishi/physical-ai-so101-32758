@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "d8753fe29f1b",
+      "observation_id": "0101df8323b6",
+      "ai_visual_verdict": "uncertain",
+      "reason": "3回目の再撮影で赤い上面の輪郭が指から分離し、中心を選べる状態になった。まだ台上にあるので搬送の成功ではない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

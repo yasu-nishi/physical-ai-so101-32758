@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "1aedb48199c7",
+      "observation_id": "cce6980f822a",
+      "ai_visual_verdict": "success",
+      "reason": "再撮影で青が箱の内側にあり、元の腕の左下の場所は空。赤は左の台上に残り、指は青から離れている。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

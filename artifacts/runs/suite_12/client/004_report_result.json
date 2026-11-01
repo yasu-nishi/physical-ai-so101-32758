@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "e405a53828db",
+      "observation_id": "24d217493e56",
+      "ai_visual_verdict": "uncertain",
+      "reason": "指がさらに左へ少し退き、赤の右辺と上面が前より見える。低解像度で毎回再撮影し、2度から1度へ変える観測調整を確認した。把持・高さ測定は未実施でここで停止する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

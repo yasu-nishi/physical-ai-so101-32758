@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "bd7563fabaa4",
+      "observation_id": "1be3f1afcb03",
+      "ai_visual_verdict": "success",
+      "reason": "再把持後、保持中の赤の上面を画像で選び直して手先との約15mmのずれを補正した。解放し指を退避しても赤は青の上に残る。最初の積み上げ失敗からの再試行成功。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

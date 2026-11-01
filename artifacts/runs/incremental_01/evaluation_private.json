@@ -1,0 +1,29 @@
+{
+  "evaluator": "independent_ground_truth_not_exposed_to_ai",
+  "blocks": {
+    "red": {
+      "position_m": [
+        0.2504274864194773,
+        0.038311247480127035,
+        0.014938798431985381
+      ],
+      "inside_box": false,
+      "contact_steps": 0,
+      "max_height_m": 0.01493879843240988,
+      "gripper_contact_at_end": false
+    },
+    "blue": {
+      "position_m": [
+        0.22674550964276677,
+        -0.09612110386249528,
+        0.014938798431985407
+      ],
+      "inside_box": false,
+      "contact_steps": 0,
+      "max_height_m": 0.014938798432344805,
+      "gripper_contact_at_end": false
+    }
+  },
+  "simulation_s": 1.7999999999999678,
+  "action_id": "d8692306258f"
+}

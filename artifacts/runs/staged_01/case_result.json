@@ -1,0 +1,44 @@
+{
+  "case_id": "staged_01",
+  "category": "unknown_height_box",
+  "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+  "host_outcome": "failed",
+  "host_reason": "高さ53.8mmをRGBから推定して接近。次の下降生成は、wrist_flex実測94.90024度が指令上限94.9度を0.00024度超えたため拒否。把持には未到達。拒否を保存し、測定誤差許容と上限付近の経路を修正して別試行で再検証する。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "3eacbf6288d8",
+          "name": "prepared_cartesian_step",
+          "args": {
+            "program_id": "59c0803f6cf1"
+          },
+          "command_status": "completed",
+          "trajectory_s": 1.9800000000000013,
+          "wall_s": 0.8111927079735324,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": "unverified",
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": 15.007879001798672,
+          "shoulder_lift": 3.5511124715617304,
+          "elbow_flex": -8.486644289461157,
+          "wrist_flex": 94.89984224511667,
+          "wrist_roll": 0.0011377093862008716
+        },
+        "gripper_open": 0.6117649945135517,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

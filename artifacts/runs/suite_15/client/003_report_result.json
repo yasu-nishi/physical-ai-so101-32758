@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "6804e569bbda",
+      "observation_id": "24631524e4cf",
+      "ai_visual_verdict": "uncertain",
+      "reason": "再撮影で小旋回を確認した。移動前の観測IDでの次の生成はローカル側が拒否し、追加動作は行われていない。把持試行ではない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

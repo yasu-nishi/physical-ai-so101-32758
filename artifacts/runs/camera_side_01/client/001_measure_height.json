@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "2a970d857c99",
+      "observation_id": "e878dfce23aa",
+      "visual_reason": "横側のRGBで赤い直立ブロックの手前の同じ縦辺の上端と机面の下端を選択。上面の中心も見える。",
+      "bottom_pixel": [
+        413.0,
+        405.0
+      ],
+      "top_pixel": [
+        410.0,
+        369.0
+      ],
+      "center_pixel": [
+        417.0,
+        353.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.037547960962669547,
+      "estimated_top_z_m": 0.037547960962669547,
+      "estimated_top_center_m": [
+        0.2272844708715827,
+        -0.006689149367581082,
+        0.03754796096266949
+      ],
+      "height_interval_m": [
+        0.03330188249560295,
+        0.04176222961663961
+      ],
+      "vertical_edge_residual_m": 0.0005605798585892168,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error, support-plane uncertainty and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_side_01/client/001_measure_height_0.png"
+  ]
+}

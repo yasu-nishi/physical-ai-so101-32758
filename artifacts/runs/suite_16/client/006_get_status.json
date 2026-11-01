@@ -1,0 +1,36 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "backend": "sim",
+      "mode": "simulation",
+      "state": "stopped",
+      "connection_verified": true,
+      "last_action": {
+        "action_id": "6ce64f71f72f",
+        "name": "prepared_pick",
+        "args": {
+          "program_id": "ae86f2a5bdd9"
+        },
+        "command_status": "stopped",
+        "trajectory_s": 0.3,
+        "wall_s": 0.16802787501364946,
+        "task_success": "unverified",
+        "error": null
+      },
+      "task_success": "unverified",
+      "stop_latched": true,
+      "joints_deg": {
+        "shoulder_pan": 0.3705129604665895,
+        "shoulder_lift": -58.9720415583841,
+        "elbow_flex": 59.109494207711435,
+        "wrist_flex": 35.85582870555725,
+        "wrist_roll": 0.0006172135180182251
+      },
+      "gripper_open": 0.6117645396789173,
+      "active_action": null,
+      "phase": null
+    }
+  ],
+  "images": []
+}

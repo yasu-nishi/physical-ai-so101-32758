@@ -1,0 +1,73 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "289d6c594873",
+      "execution_skill": "prepared_step",
+      "observation_id": "bad9a445ce7a",
+      "instruction": "赤いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+      "visual_reason": "低解像度画像で赤は左側の指の陰に一部しか見えない。まず指を左へずらして見え方を改善し、見えないまま対象へ寄せない。",
+      "expected_visual_change": "指が画像左へ動いて赤の輪郭が多く見える。次の画像から継続か停止を決める。",
+      "joint_delta_deg": {
+        "shoulder_pan": 2.0
+      },
+      "gripper_delta": 0.0,
+      "planned_duration_s": 0.6,
+      "trajectory": [
+        {
+          "phase": "incremental_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 14.999999999997957,
+              "shoulder_lift": -59.99164591360825,
+              "elbow_flex": 60.02651020734403,
+              "wrist_flex": 35.006224975810134,
+              "wrist_roll": 0.0003118211135564167
+            },
+            "gripper_open": 0.6117662574839631
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 16.999999999997957,
+              "shoulder_lift": -59.99164591360825,
+              "elbow_flex": 60.02651020734403,
+              "wrist_flex": 35.006224975810134,
+              "wrist_roll": 0.0003118211135564167
+            },
+            "gripper_open": 0.6117662574839631
+          },
+          "duration_s": 0.6
+        }
+      ],
+      "height_measured": false,
+      "automatic_next_step": false,
+      "validation": [
+        "fresh observation and robot generation",
+        "small joint/gripper increment",
+        "separate arm and gripper steps",
+        "joint limits",
+        "speed and duration limits"
+      ],
+      "not_validated": [
+        "Cartesian displacement",
+        "height or contact",
+        "collision-free path",
+        "task success"
+      ],
+      "generator": "host AI chooses the next increment from RGB; deterministic one-step Python exporter; no LLM in server",
+      "expires": "300 s after observation, or any robot motion/server restart",
+      "script_sha256": "1c1ce42c71d491098421f35cb16f5a6ca78e1a7e6267baf7c8039037cf244de2",
+      "files_relative_to_run_dir": {
+        "script": "programs/289d6c594873.py",
+        "plan": "programs/289d6c594873.json",
+        "preview": "programs/289d6c594873_preview.png",
+        "script_sha256": "1c1ce42c71d491098421f35cb16f5a6ca78e1a7e6267baf7c8039037cf244de2",
+        "plan_sha256": "0b5dd65aa7f9f8a5e191177e6f23134a6437b4ddd35f6c7680510508a5afcb2a"
+      },
+      "next": "Execute this single step, inspect the returned NEW RGB, then decide whether to generate another step or stop. No automatic continuation."
+    }
+  ],
+  "images": [
+    "artifacts/runs/suite_12/client/001_prepare_step_0.png"
+  ]
+}

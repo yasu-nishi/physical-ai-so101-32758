@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "1c3b05b8a841",
+      "observation_id": "6f470c96d529",
+      "ai_visual_verdict": "success",
+      "reason": "未知高さの赤は箱内に立ち、開いた指だけが退避して赤は残った。ただし搬送途中で青が横倒しになったため、他物体非干渉の要件は満たしていない。目標移載成功と副作用を分けて記録する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

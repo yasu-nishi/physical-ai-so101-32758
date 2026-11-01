@@ -1,0 +1,261 @@
+{
+  "program_id": "ef961b0b6b75",
+  "observation_id": "dc4aff8eea9c",
+  "instruction": "赤いブロックを箱に入れて",
+  "visual_reason": "RGBで赤いブロックは腕の左下、青より左にある。赤い上面の中心を元画像の(342,409)と選ぶ。",
+  "localization": {
+    "pixel_xy": [
+      342.0,
+      409.0
+    ],
+    "work_frame": "robot_base_table_z0",
+    "estimated_top_center_m": [
+      0.2336621141074654,
+      -0.0962836502985151,
+      0.030000000000000027
+    ],
+    "pick_xy_m": [
+      0.2336621141074654,
+      -0.0962836502985151
+    ],
+    "assumed_top_z_m": 0.03,
+    "pixel_tolerance_px": 3,
+    "xy_bounds_from_pixel_tolerance_m": [
+      [
+        0.23101592537367963,
+        -0.0989298390323009
+      ],
+      [
+        0.2363083028412512,
+        -0.09363746156472932
+      ]
+    ],
+    "method": "host visual pixel selection + calibrated ray / known-height plane",
+    "limitation": "Tolerance is assumed, not a measured vision confidence. Known upright 30 mm cube only."
+  },
+  "camera_calibration": {
+    "width": 960,
+    "height": 720,
+    "pixel_origin": "top_left_u_right_v_down",
+    "principal_point_px": [
+      479.5,
+      359.5
+    ],
+    "pixel_coordinates": "integer indices denote pixel centres",
+    "focal_px": 623.538290724796,
+    "camera_position_m": [
+      0.19,
+      0.025,
+      0.58
+    ],
+    "camera_to_work_rotation": [
+      [
+        2.220446049250313e-16,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        2.220446049250313e-16,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "source": "simulator camera calibration, not object pose or depth",
+    "distortion": "none",
+    "work_frame": "robot_base_table_z0"
+  },
+  "planned_duration_s": 22.0,
+  "destination": "configured box",
+  "trajectory": [
+    {
+      "phase": "approach",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": -10.00000000000203,
+          "shoulder_lift": -59.991645913608274,
+          "elbow_flex": 60.02651020734403,
+          "wrist_flex": 35.006224975810134,
+          "wrist_roll": 0.0003118211135564505
+        },
+        "gripper_open": 0.6117662574839631
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 26.04040502157789,
+          "shoulder_lift": 6.176671336800546,
+          "elbow_flex": -3.427253223752142,
+          "wrist_flex": 87.250581886951,
+          "wrist_roll": 3.7156528916457525e-14
+        },
+        "gripper_open": 0.611768
+      },
+      "duration_s": 4.0
+    },
+    {
+      "phase": "descend",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 26.04040502157789,
+          "shoulder_lift": 6.176671336800546,
+          "elbow_flex": -3.427253223752142,
+          "wrist_flex": 87.250581886951,
+          "wrist_roll": 3.7156528916457525e-14
+        },
+        "gripper_open": 0.611768
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 26.0404050215883,
+          "shoulder_lift": 10.150386616097276,
+          "elbow_flex": 11.189506420409803,
+          "wrist_flex": 68.6601069613189,
+          "wrist_roll": 1.0316739916136139e-10
+        },
+        "gripper_open": 0.611768
+      },
+      "duration_s": 2.0
+    },
+    {
+      "phase": "close",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 26.0404050215883,
+          "shoulder_lift": 10.150386616097276,
+          "elbow_flex": 11.189506420409803,
+          "wrist_flex": 68.6601069613189,
+          "wrist_roll": 1.0316739916136139e-10
+        },
+        "gripper_open": 0.611768
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 26.0404050215883,
+          "shoulder_lift": 10.150386616097276,
+          "elbow_flex": 11.189506420409803,
+          "wrist_flex": 68.6601069613189,
+          "wrist_roll": 1.0316739916136139e-10
+        },
+        "gripper_open": 0.03882
+      },
+      "duration_s": 2.0
+    },
+    {
+      "phase": "lift",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 26.0404050215883,
+          "shoulder_lift": 10.150386616097276,
+          "elbow_flex": 11.189506420409803,
+          "wrist_flex": 68.6601069613189,
+          "wrist_roll": 1.0316739916136139e-10
+        },
+        "gripper_open": 0.03882
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 26.04040502157801,
+          "shoulder_lift": 6.200756252067337,
+          "elbow_flex": -5.580743629813066,
+          "wrist_flex": 89.37998737774073,
+          "wrist_roll": 2.465906910739493e-13
+        },
+        "gripper_open": 0.03882
+      },
+      "duration_s": 3.0
+    },
+    {
+      "phase": "transfer",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 26.04040502157801,
+          "shoulder_lift": 6.200756252067337,
+          "elbow_flex": -5.580743629813066,
+          "wrist_flex": 89.37998737774073,
+          "wrist_roll": 2.465906910739493e-13
+        },
+        "gripper_open": 0.03882
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": -47.01054064195459,
+          "shoulder_lift": 0.30690231792800704,
+          "elbow_flex": 1.8120589382631522,
+          "wrist_flex": 87.88103873603004,
+          "wrist_roll": 3.6938731586344016e-10
+        },
+        "gripper_open": 0.03882
+      },
+      "duration_s": 5.0
+    },
+    {
+      "phase": "release",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": -47.01054064195459,
+          "shoulder_lift": 0.30690231792800704,
+          "elbow_flex": 1.8120589382631522,
+          "wrist_flex": 87.88103873603004,
+          "wrist_roll": 3.6938731586344016e-10
+        },
+        "gripper_open": 0.03882
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": -47.01054064195459,
+          "shoulder_lift": 0.30690231792800704,
+          "elbow_flex": 1.8120589382631522,
+          "wrist_flex": 87.88103873603004,
+          "wrist_roll": 3.6938731586344016e-10
+        },
+        "gripper_open": 0.611768
+      },
+      "duration_s": 2.0
+    },
+    {
+      "phase": "observe_pose",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": -47.01054064195459,
+          "shoulder_lift": 0.30690231792800704,
+          "elbow_flex": 1.8120589382631522,
+          "wrist_flex": 87.88103873603004,
+          "wrist_roll": 3.6938731586344016e-10
+        },
+        "gripper_open": 0.611768
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": -10.0,
+          "shoulder_lift": -60.0,
+          "elbow_flex": 60.0,
+          "wrist_flex": 35.0,
+          "wrist_roll": 0.0
+        },
+        "gripper_open": 0.611768
+      },
+      "duration_s": 4.0
+    }
+  ],
+  "validation": [
+    "image age and generation",
+    "pixel bounds and known-height plane",
+    "workspace including assumed 3 px tolerance",
+    "IK residual <= 1 mm",
+    "joint limits",
+    "cubic peak velocity",
+    "duration limit"
+  ],
+  "not_validated": [
+    "occluded objects",
+    "arbitrary object shapes/rotations",
+    "general collision avoidance"
+  ],
+  "generator": "host AI selects pixels; deterministic local IK and Python runner exporter; no LLM in server",
+  "expires": "300 s after observation, or any robot motion/server restart",
+  "script_sha256": "4064591f8e54cc3c983aabc9ae4c8f70ff3d28f7b1801af70275525df6401468"
+}

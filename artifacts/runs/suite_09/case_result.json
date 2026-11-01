@@ -1,0 +1,47 @@
+{
+  "case_id": "suite_09",
+  "category": "incremental",
+  "instruction": "青いブロックの方向へ少しずつ旋回し、各画像で次を判断。今回は方向確認まで。",
+  "host_outcome": "feedback_verified",
+  "host_reason": "青が左にある画像から正方向を選び、再撮影後に2度から1度へ変更した。把持試行ではない。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "bbc094f34df3",
+          "name": "prepared_step",
+          "args": {
+            "program_id": "3a6bbcbd4d90"
+          },
+          "command_status": "completed",
+          "trajectory_s": 0.6000000000000002,
+          "wall_s": 0.2440412500873208,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "uncertain"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": -9.001082441132024,
+          "shoulder_lift": -59.974938989899904,
+          "elbow_flex": 60.07952402425796,
+          "wrist_flex": 35.018667021802514,
+          "wrist_roll": 0.0009368131598757778
+        },
+        "gripper_open": 0.6117627708685576,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

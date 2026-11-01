@@ -1,0 +1,11 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "stop_requested": true,
+      "stop_latched": true,
+      "note": "Check get_status for local halt completion. Restart locally to clear."
+    }
+  ],
+  "images": []
+}

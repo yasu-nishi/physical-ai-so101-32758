@@ -1,0 +1,11 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "max_responses": 80,
+  "max_motion_steps": 30,
+  "max_elapsed_s": 900,
+  "api_timeout_s": 90,
+  "motion_timeout_s": 70,
+  "max_output_tokens": 4096,
+  "max_total_tokens": 1500000
+}

@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "6ce64f71f72f",
+      "observation_id": "7c510eb30e73",
+      "ai_visual_verdict": "uncertain",
+      "reason": "開始直後の小さな移動だけで停止し、ブロックは台上に残っている。ローカルSTOPでcommand_status=stoppedとなり、その後の新規指令も拒否された。搬送成功ではない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

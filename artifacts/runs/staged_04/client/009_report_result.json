@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "ba1404cf8778",
+      "observation_id": "295a81195fa2",
+      "ai_visual_verdict": "failure",
+      "reason": "試験持上げで赤が指から滑り、青の左側の机へ落ちた。青は机上に残る。指令完了を把持成功とせず、次の搬送へ進まない。赤の新しい位置・高さを画像で測り直して再把持する。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

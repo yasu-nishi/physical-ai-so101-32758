@@ -1,0 +1,23 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "observation_id": "1be3f1afcb03",
+      "pixel_xy": [
+        520.0,
+        500.0
+      ],
+      "work_position_m": [
+        0.2540107403184832,
+        -0.029936027361346595,
+        0.0
+      ],
+      "work_frame": "robot_base_table_z0",
+      "assumed_plane_z_m": 0.0,
+      "height_measured": false,
+      "method": "RGB-selected pixel ray intersected with an explicitly supplied known plane",
+      "limitation": "Z is supplied, not observed. Wrong height or calibration changes XY. No robot movement."
+    }
+  ],
+  "images": []
+}

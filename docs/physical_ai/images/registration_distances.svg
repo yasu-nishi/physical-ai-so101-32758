@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <title>紙のAからロボットの根元の回転軸の真下Rまでの、横と奥の距離</title>
+  <desc>上から見た模式図。AからB方向の横距離を青、そこからC方向に曲がってRへ至る奥の距離をオレンジで示す。右の側面図はRが根元の縦の回転軸を机の面に垂直投影した点であることを示す。Rの位置と距離は実測値ではない。</desc>
+  <defs>
+    <marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d9580b"/></marker>
+    <pattern id="checks" width="60" height="60" x="160" y="370" patternUnits="userSpaceOnUse"><rect width="60" height="60" fill="#fff"/><path d="M0 0H30V30H0ZM30 30H60V60H30Z" fill="#334155"/></pattern>
+  </defs>
+  <rect width="1400" height="820" fill="#fff"/>
+  <g font-family="Hiragino Sans, Noto Sans CJK JP, sans-serif" fill="#172338">
+    <text x="45" y="67" font-size="34" font-weight="600">測るのは、青とオレンジの2つの距離です</text>
+    <text x="47" y="111" font-size="23">紙のAから、ロボットの根元の回転軸の真下「R」まで。</text>
+
+    <rect x="30" y="150" width="900" height="510" rx="20" fill="#f1f5f9"/>
+    <text x="58" y="193" font-size="24" font-weight="600">上から見た測り方</text>
+    <text x="59" y="229" font-size="18" fill="#536378">A→B が横方向、A→C が奥方向</text>
+
+    <rect x="130" y="330" width="360" height="300" rx="5" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="150" y="356" font-size="17" fill="#536378">印刷した紙</text>
+    <rect x="160" y="370" width="300" height="210" fill="url(#checks)"/>
+
+    <path d="M190 550 L190 400" stroke="#d9580b" stroke-width="4" stroke-dasharray="8 6" fill="none"/>
+    <path d="M190 550 H735" stroke="#2563eb" stroke-width="6" marker-end="url(#blue-arrow)" fill="none"/>
+    <path d="M735 550 V365" stroke="#d9580b" stroke-width="6" marker-end="url(#orange-arrow)" fill="none"/>
+    <path d="M717 550 V532 H735" stroke="#64748b" stroke-width="2" fill="none"/>
+
+    <g fill="#fff" stroke="#172338" stroke-width="3">
+      <circle cx="190" cy="550" r="7"/><circle cx="430" cy="550" r="7"/><circle cx="190" cy="400" r="7"/>
+    </g>
+    <g fill="#fff"><rect x="166" y="557" width="32" height="32" rx="4"/><rect x="423" y="557" width="32" height="32" rx="4"/><rect x="164" y="368" width="32" height="32" rx="4"/></g>
+    <g font-size="26" font-weight="600"><text x="173" y="583">A</text><text x="429" y="583">B</text><text x="170" y="393">C</text></g>
+    <text x="183" y="611" font-size="19">A〜B＝160 mm（確認済み）</text>
+
+    <circle cx="735" cy="365" r="33" fill="#dbe2eb" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M702 365 H768 M735 332 V398" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="735" cy="365" r="8" fill="#be123c"/>
+    <text x="782" y="376" font-size="32" font-weight="600" fill="#be123c">R</text>
+    <text x="615" y="306" font-size="23">根元の回転軸の真下</text>
+    <path d="M722 313 L731 330" stroke="#64748b" stroke-width="2"/>
+
+    <rect x="504" y="570" width="237" height="67" rx="10" fill="#eff6ff"/>
+    <text x="520" y="600" font-size="26" font-weight="600" fill="#1d4ed8">① 横：____ mm</text>
+    <text x="520" y="625" font-size="17" fill="#1d4ed8">A→B と同じ方向</text>
+    <rect x="757" y="427" width="154" height="97" rx="10" fill="#fff3e8"/>
+    <text x="771" y="456" font-size="25" font-weight="600" fill="#c2410c">② 奥</text>
+    <text x="771" y="485" font-size="24" font-weight="600" fill="#c2410c">____ mm</text>
+    <text x="771" y="511" font-size="16" fill="#c2410c">A→C と同じ方向</text>
+
+    <rect x="950" y="150" width="420" height="510" rx="20" fill="#f8fafc" stroke="#dbe2eb"/>
+    <text x="979" y="193" font-size="24" font-weight="600">横から見ると、Rはここ</text>
+    <text x="980" y="250" font-size="21">いちばん根元の縦の回転軸</text>
+    <path d="M1070 263 L1122 343" stroke="#64748b" stroke-width="2" fill="none"/>
+    <path d="M1140 355 L1200 290 L1260 328" stroke="#94a3b8" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="1200" cy="290" r="15" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    <rect x="1090" y="410" width="100" height="90" rx="7" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <rect x="1115" y="355" width="50" height="55" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+    <ellipse cx="1140" cy="355" rx="25" ry="9" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <rect x="982" y="500" width="355" height="14" rx="3" fill="#94a3b8"/>
+    <text x="988" y="484" font-size="18" fill="#536378">机の面</text>
+    <path d="M1140 318 V500" stroke="#be123c" stroke-width="3" stroke-dasharray="8 6"/>
+    <circle cx="1140" cy="500" r="8" fill="#be123c"/>
+    <text x="1156" y="538" font-size="30" font-weight="600" fill="#be123c">R</text>
+    <text x="982" y="586" font-size="21">軸の中心から机へ</text>
+    <text x="982" y="619" font-size="21">垂直に下ろした点です。</text>
+
+    <rect x="30" y="687" width="1340" height="72" rx="14" fill="#eaf1ff"/>
+    <text x="60" y="733" font-size="29" font-weight="600">教えてほしい値： 「横 ____ mm、奥 ____ mm」</text>
+    <text x="45" y="795" font-size="18" fill="#536378">模式図です。Rの位置と距離は未測定です。矢印と逆の方向にある場合は、マイナスで教えてください。</text>
+  </g>
+</svg>

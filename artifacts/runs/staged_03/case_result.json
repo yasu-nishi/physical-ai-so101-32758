@@ -1,0 +1,31 @@
+{
+  "case_id": "staged_03",
+  "category": "height_sort",
+  "instruction": "高い方のブロックを箱へ、低い方を机の空いた場所へ移して。画像から高さを測って選び、各段階で確認する。",
+  "host_outcome": "height_ambiguous_no_motion",
+  "host_reason": "青24.9mm（20.7–29.1mm）、赤23.3mm（18.7–27.8mm）。画素誤差範囲が重なり高低を確定できないため動作しない。追加視点・高解像度・校正精度の改善が必要。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": null,
+        "task_success": "unverified",
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": 13.600816611369792,
+          "shoulder_lift": -19.457840650053907,
+          "elbow_flex": 18.662139904489358,
+          "wrist_flex": 90.83409111347154,
+          "wrist_roll": -2.6084159588356713e-07
+        },
+        "gripper_open": 0.6117665011049582
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

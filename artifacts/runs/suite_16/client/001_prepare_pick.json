@@ -1,0 +1,277 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "ae86f2a5bdd9",
+      "observation_id": "e4c0a4ea64e9",
+      "instruction": "搬送動作の途中でローカルSTOPを適用し、後続指令が拒否されることを確認",
+      "visual_reason": "停止試験の動作対象として、RGBで左に明瞭に見える青いブロックの上面中心(361,405)を選ぶ。動作開始直後にローカルSTOPで中断する。",
+      "localization": {
+        "pixel_xy": [
+          361.0,
+          405.0
+        ],
+        "work_frame": "robot_base_table_z0",
+        "estimated_top_center_m": [
+          0.2301338624624177,
+          -0.07952445498453847,
+          0.030000000000000027
+        ],
+        "pick_xy_m": [
+          0.2301338624624177,
+          -0.07952445498453847
+        ],
+        "assumed_top_z_m": 0.03,
+        "pixel_tolerance_px": 3,
+        "xy_bounds_from_pixel_tolerance_m": [
+          [
+            0.2274876737286319,
+            -0.08217064371832428
+          ],
+          [
+            0.23278005119620349,
+            -0.0768782662507527
+          ]
+        ],
+        "method": "host visual pixel selection + calibrated ray / known-height plane",
+        "limitation": "Tolerance is assumed, not a measured vision confidence. Known upright 30 mm cube only."
+      },
+      "camera_calibration": {
+        "width": 960,
+        "height": 720,
+        "pixel_origin": "top_left_u_right_v_down",
+        "principal_point_px": [
+          479.5,
+          359.5
+        ],
+        "pixel_coordinates": "integer indices denote pixel centres",
+        "focal_px": 623.538290724796,
+        "camera_position_m": [
+          0.19,
+          0.025,
+          0.58
+        ],
+        "camera_to_work_rotation": [
+          [
+            2.220446049250313e-16,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            2.220446049250313e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source": "simulator camera calibration, not object pose or depth",
+        "distortion": "none",
+        "work_frame": "robot_base_table_z0"
+      },
+      "planned_duration_s": 22.0,
+      "destination": "configured box",
+      "trajectory": [
+        {
+          "phase": "approach",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -2.0357150267457304e-12,
+              "shoulder_lift": -59.991645913608274,
+              "elbow_flex": 60.02651020734403,
+              "wrist_flex": 35.006224975810134,
+              "wrist_roll": 0.00031182111355639453
+            },
+            "gripper_open": 0.6117662574839631
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 22.3021891756356,
+              "shoulder_lift": 0.9520589252308379,
+              "elbow_flex": 3.1495988811352635,
+              "wrist_flex": 85.89834218626916,
+              "wrist_roll": 3.4981125724109125e-10
+            },
+            "gripper_open": 0.611768
+          },
+          "duration_s": 4.0
+        },
+        {
+          "phase": "descend",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 22.3021891756356,
+              "shoulder_lift": 0.9520589252308379,
+              "elbow_flex": 3.1495988811352635,
+              "wrist_flex": 85.89834218626916,
+              "wrist_roll": 3.4981125724109125e-10
+            },
+            "gripper_open": 0.611768
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 22.302189175630176,
+              "shoulder_lift": 5.433321252849511,
+              "elbow_flex": 17.504488457908597,
+              "wrist_flex": 67.06219028923941,
+              "wrist_roll": 1.17358088184091e-13
+            },
+            "gripper_open": 0.611768
+          },
+          "duration_s": 2.0
+        },
+        {
+          "phase": "close",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 22.302189175630176,
+              "shoulder_lift": 5.433321252849511,
+              "elbow_flex": 17.504488457908597,
+              "wrist_flex": 67.06219028923941,
+              "wrist_roll": 1.17358088184091e-13
+            },
+            "gripper_open": 0.611768
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 22.302189175630176,
+              "shoulder_lift": 5.433321252849511,
+              "elbow_flex": 17.504488457908597,
+              "wrist_flex": 67.06219028923941,
+              "wrist_roll": 1.17358088184091e-13
+            },
+            "gripper_open": 0.03882
+          },
+          "duration_s": 2.0
+        },
+        {
+          "phase": "lift",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 22.302189175630176,
+              "shoulder_lift": 5.433321252849511,
+              "elbow_flex": 17.504488457908597,
+              "wrist_flex": 67.06219028923941,
+              "wrist_roll": 1.17358088184091e-13
+            },
+            "gripper_open": 0.03882
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 22.30218917563023,
+              "shoulder_lift": 0.9148646154020491,
+              "elbow_flex": 1.0726032430678327,
+              "wrist_flex": 88.01253214153012,
+              "wrist_roll": 3.411766441739768e-18
+            },
+            "gripper_open": 0.03882
+          },
+          "duration_s": 3.0
+        },
+        {
+          "phase": "transfer",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": 22.30218917563023,
+              "shoulder_lift": 0.9148646154020491,
+              "elbow_flex": 1.0726032430678327,
+              "wrist_flex": 88.01253214153012,
+              "wrist_roll": 3.411766441739768e-18
+            },
+            "gripper_open": 0.03882
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -47.01054064195459,
+              "shoulder_lift": 0.30690231792800704,
+              "elbow_flex": 1.8120589382631522,
+              "wrist_flex": 87.88103873603004,
+              "wrist_roll": 3.6938731586344016e-10
+            },
+            "gripper_open": 0.03882
+          },
+          "duration_s": 5.0
+        },
+        {
+          "phase": "release",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -47.01054064195459,
+              "shoulder_lift": 0.30690231792800704,
+              "elbow_flex": 1.8120589382631522,
+              "wrist_flex": 87.88103873603004,
+              "wrist_roll": 3.6938731586344016e-10
+            },
+            "gripper_open": 0.03882
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -47.01054064195459,
+              "shoulder_lift": 0.30690231792800704,
+              "elbow_flex": 1.8120589382631522,
+              "wrist_flex": 87.88103873603004,
+              "wrist_roll": 3.6938731586344016e-10
+            },
+            "gripper_open": 0.611768
+          },
+          "duration_s": 2.0
+        },
+        {
+          "phase": "observe_pose",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -47.01054064195459,
+              "shoulder_lift": 0.30690231792800704,
+              "elbow_flex": 1.8120589382631522,
+              "wrist_flex": 87.88103873603004,
+              "wrist_roll": 3.6938731586344016e-10
+            },
+            "gripper_open": 0.611768
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": 0.0,
+              "shoulder_lift": -60.0,
+              "elbow_flex": 60.0,
+              "wrist_flex": 35.0,
+              "wrist_roll": 0.0
+            },
+            "gripper_open": 0.611768
+          },
+          "duration_s": 4.0
+        }
+      ],
+      "validation": [
+        "image age and generation",
+        "pixel bounds and known-height plane",
+        "workspace including assumed 3 px tolerance",
+        "IK residual <= 1 mm",
+        "joint limits",
+        "cubic peak velocity",
+        "duration limit"
+      ],
+      "not_validated": [
+        "occluded objects",
+        "arbitrary object shapes/rotations",
+        "general collision avoidance"
+      ],
+      "generator": "host AI selects pixels; deterministic local IK and Python runner exporter; no LLM in server",
+      "expires": "300 s after observation, or any robot motion/server restart",
+      "script_sha256": "33492b83ff91b553688c94d8c9d29d83829a0cb3bb00e27fde366bd822999bc2",
+      "files_relative_to_run_dir": {
+        "script": "programs/ae86f2a5bdd9.py",
+        "plan": "programs/ae86f2a5bdd9.json",
+        "preview": "programs/ae86f2a5bdd9_preview.png",
+        "script_sha256": "33492b83ff91b553688c94d8c9d29d83829a0cb3bb00e27fde366bd822999bc2",
+        "plan_sha256": "d2b14db960ea798b54739122fc5ede5b8957abb1bdd79d327fd5665b722a26c2"
+      },
+      "next": "Inspect the yellow marker and generated script; run the Python file or execute_skill(prepared_pick)."
+    }
+  ],
+  "images": [
+    "artifacts/runs/suite_16/client/001_prepare_pick_0.png"
+  ]
+}

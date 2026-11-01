@@ -1,0 +1,14 @@
+{
+  "path": "output/pdf/staged_unknown_height_review.pdf",
+  "pages": 5,
+  "all_pages_rendered_and_visually_checked": true,
+  "layout_defects_observed": false,
+  "sha256": "22bfdfb5a679d26266e8d104ea554075ca3bd33dc279d4737cfbd4b3d03f4c71",
+  "scope": "Five-page submission: legacy Codex experiments, partial real motion, live Astra API trials separately. No calendar timestamps or local file locations; metadata dates removed.",
+  "calendar_dates_absent": true,
+  "clock_times_absent": true,
+  "local_file_locations_absent": true,
+  "date_metadata_absent": true,
+  "japanese_font": "Noto Sans JP Regular / Bold; embedded subsets",
+  "missing_glyphs": []
+}

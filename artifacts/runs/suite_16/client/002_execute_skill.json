@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "6ce64f71f72f",
+      "accepted": true,
+      "planned_duration_s": 22.0,
+      "command_status": "running",
+      "task_success": "unverified"
+    }
+  ],
+  "images": []
+}

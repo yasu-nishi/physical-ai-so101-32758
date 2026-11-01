@@ -1,0 +1,7 @@
+{
+  "isError": true,
+  "text": [
+    "Error executing tool prepare_pick: Selected point / pixel tolerance exceeds the configured pick workspace"
+  ],
+  "images": []
+}

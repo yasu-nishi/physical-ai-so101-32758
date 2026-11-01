@@ -1,0 +1,47 @@
+{
+  "case_id": "suite_16",
+  "category": "stop_during_motion",
+  "instruction": "搬送動作の途中でローカルSTOPを適用し、後続指令が拒否されることを確認",
+  "host_outcome": "expected_stop",
+  "host_reason": "動作中にローカルSTOPを作成。停止状態を約0.018秒で観測し、後続指令の拒否も確認。単発シミュレーションの値。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "6ce64f71f72f",
+          "name": "prepared_pick",
+          "args": {
+            "program_id": "ae86f2a5bdd9"
+          },
+          "command_status": "stopped",
+          "trajectory_s": 0.3,
+          "wall_s": 0.16802787501364946,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": {
+          "source": "ai_visual_verdict",
+          "verdict": "uncertain"
+        },
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": 0.3705129604665895,
+          "shoulder_lift": -58.9720415583841,
+          "elbow_flex": 59.109494207711435,
+          "wrist_flex": 35.85582870555725,
+          "wrist_roll": 0.0006172135180182251
+        },
+        "gripper_open": 0.6117645396789173,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

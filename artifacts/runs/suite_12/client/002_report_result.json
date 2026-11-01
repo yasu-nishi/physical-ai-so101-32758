@@ -1,0 +1,13 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "action_id": "5894d8b40ffd",
+      "observation_id": "391ec8759782",
+      "ai_visual_verdict": "uncertain",
+      "reason": "低解像度の新画像で指が左へ動き、赤の見える範囲が増えた。まだ指が近いので次は同じ方向に小さい1度だけ動かして確認する。把持は行わない。",
+      "independent_evaluation": "separate_offline_file"
+    }
+  ],
+  "images": []
+}

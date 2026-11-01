@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "2c8c3814b900",
+      "observation_id": "c371543893a1",
+      "visual_reason": "低い斜め視点。赤いブロックの手前中央の縦辺が机面から上面まで見える。",
+      "bottom_pixel": [
+        502.0,
+        439.0
+      ],
+      "top_pixel": [
+        503.0,
+        389.0
+      ],
+      "center_pixel": [
+        502.0,
+        374.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.03711375850027343,
+      "estimated_top_z_m": 0.03711375850027343,
+      "estimated_top_center_m": [
+        0.2268639739088642,
+        -0.008431029469456564,
+        0.03711375850027343
+      ],
+      "height_interval_m": [
+        0.03428377862241577,
+        0.03992073627465981
+      ],
+      "vertical_edge_residual_m": 0.0002706614578192337,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error, support-plane uncertainty and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_low_01/client/001_measure_height_0.png"
+  ]
+}

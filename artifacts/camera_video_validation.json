@@ -1,0 +1,36 @@
+[
+  {
+    "path": "artifacts/camera_view_review.mp4",
+    "passed": true,
+    "all_frames_decoded": true,
+    "sha256": "f64719859d469e121f673203b6892f6296f9f9ba9c035a15942dc970913af098",
+    "duration_s": 87.88,
+    "cut_midpoints": 25,
+    "all_cut_midpoints_visually_checked": true,
+    "visual_review": "All 25 cut midpoints inspected on 5 contact sheets; captions distinguish predictions, drops and final placement."
+  },
+  {
+    "path": "artifacts/runs/camera_front_01/simulation.mp4",
+    "passed": true,
+    "all_frames_decoded": true,
+    "sha256": "f7017277ac08d24e82d85c93ea8ec7e8c2c714c106eda2a6005344a1762331a3"
+  },
+  {
+    "path": "artifacts/runs/camera_low_01/simulation.mp4",
+    "passed": true,
+    "all_frames_decoded": true,
+    "sha256": "d373d36c2cf6f64efadc5237840955490e7a13d62912562a954899e573b25bcc"
+  },
+  {
+    "path": "artifacts/runs/camera_side_01/simulation.mp4",
+    "passed": true,
+    "all_frames_decoded": true,
+    "sha256": "0d957ce07b841f2617ec088d133f198786c96c79d138db5f8254ed87a229888c"
+  },
+  {
+    "path": "artifacts/runs/camera_top_01/simulation.mp4",
+    "passed": true,
+    "all_frames_decoded": true,
+    "sha256": "b402a2df26d3c718e89097decb17d78e2a6fa021da87ef5c84f58e63eb1d2c32"
+  }
+]

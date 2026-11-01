@@ -1,0 +1,44 @@
+{
+  "case_id": "staged_01b",
+  "category": "unknown_height_box",
+  "instruction": "赤いブロックを箱に入れて。高さを画像から測り、各段階で確認して進める。",
+  "host_outcome": "aborted_control_review",
+  "host_reason": "赤の高さを画像推定し、接近・2段階下降・閉じるまで実行。閉じ指令0.04に対して実測開度0.174で物体を挟んだ。次の腕移動が実測開度を目標に戻して把持力を緩める設計上の問題を点検で発見し、持上げ前に終了。指令開度保持を修正して別試行で再実行する。",
+  "stop_status": {
+    "isError": false,
+    "text": [
+      {
+        "backend": "sim",
+        "mode": "simulation",
+        "state": "stopped",
+        "connection_verified": true,
+        "last_action": {
+          "action_id": "8f22d6fd74ed",
+          "name": "prepared_cartesian_step",
+          "args": {
+            "program_id": "f5e5d8aa9d73"
+          },
+          "command_status": "completed",
+          "trajectory_s": 1.720000000000001,
+          "wall_s": 0.7284861670341343,
+          "task_success": "unverified",
+          "error": null
+        },
+        "task_success": "unverified",
+        "stop_latched": true,
+        "joints_deg": {
+          "shoulder_pan": 15.012963528254316,
+          "shoulder_lift": 5.634326375482887,
+          "elbow_flex": 11.945176658090896,
+          "wrist_flex": 72.46524011971272,
+          "wrist_roll": 0.003780940467710699
+        },
+        "gripper_open": 0.17410792888717305,
+        "active_action": null,
+        "phase": null
+      }
+    ],
+    "images": []
+  },
+  "scope": "simulation only; AI inspected RGB; no real hardware"
+}

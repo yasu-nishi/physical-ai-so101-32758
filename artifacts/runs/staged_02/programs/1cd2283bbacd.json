@@ -1,0 +1,60 @@
+{
+  "program_id": "1cd2283bbacd",
+  "execution_skill": "prepared_cartesian_step",
+  "observation_id": "5c204089f7a1",
+  "instruction": "青を空いている机の場所へ移し、赤を青の上に積んで。その後、赤だけを隣へ降ろして。各段階で画像を確認して進める。",
+  "visual_reason": "赤は指の下で机上にある。推定上面19.4mmの約13mm上まで開いたまま下げる。",
+  "expected_visual_change": "赤を動かさず、指が側面の上方へ下がる。",
+  "target_xyz_m": [
+    0.2242,
+    -0.0929,
+    0.032
+  ],
+  "target_gripper_open": null,
+  "automatic_next_step": false,
+  "maintained_gripper_command": 0.612,
+  "planned_duration_s": 1.6228401046347702,
+  "generator": "host selects ONE next action; robot-only IK and Python exporter",
+  "trajectory": [
+    {
+      "phase": "cartesian_step",
+      "start": {
+        "joints_deg": {
+          "shoulder_pan": 26.348184067937844,
+          "shoulder_lift": 1.028961831550165,
+          "elbow_flex": 0.9858651702412693,
+          "wrist_flex": 88.03231033956989,
+          "wrist_roll": -3.1332608387624727e-07
+        },
+        "gripper_open": 0.612
+      },
+      "target": {
+        "joints_deg": {
+          "shoulder_pan": 26.348184067939666,
+          "shoulder_lift": 3.518878235143323,
+          "elbow_flex": 14.159972438631545,
+          "wrist_flex": 72.32114932622497,
+          "wrist_roll": -3.061626945133707e-15
+        },
+        "gripper_open": 0.612
+      },
+      "duration_s": 1.6228401046347702
+    }
+  ],
+  "validation": [
+    "fresh RGB",
+    "workspace",
+    "step displacement",
+    "joint limits",
+    "speed",
+    "duration",
+    "separate arm/gripper"
+  ],
+  "not_validated": [
+    "general obstacle avoidance",
+    "vision correctness",
+    "contact",
+    "task success"
+  ],
+  "script_sha256": "495e237383f7c9d0f67faa8d8f914fbb50ae4a1bf2263bfd0c1513580e54070f"
+}

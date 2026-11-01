@@ -1,0 +1,5 @@
+case_id,host_outcome,commands,commands_completed,trajectory_s,measurements
+camera_front_01,target_in_box_after_uncontrolled_drop,18,18,30.24,3
+camera_side_01,measured_no_motion,0,0,0,2
+camera_low_01,measured_no_motion,0,0,0,2
+camera_top_01,unobservable_no_motion,0,0,0,0

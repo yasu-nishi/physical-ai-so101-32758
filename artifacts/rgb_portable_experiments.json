@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-01",
+  "scope": "RGB + joints + known camera calibration / known object height; no depth or sim-only tool pose",
+  "attempts": 1,
+  "successes": 1,
+  "real_camera_calibration": "tooling prepared; hardware calibration not performed",
+  "real_motion": "unverified; disconnected",
+  "trials": [
+    {
+      "trial": "rgb_portable_01",
+      "instruction": "赤いブロックを箱に入れて",
+      "target": "red",
+      "pixel_xy": [
+        495.0,
+        428.0
+      ],
+      "estimated_xy_m": [
+        0.2504213094214421,
+        0.038671975124559874
+      ],
+      "height_source": "known 30 mm task geometry; not measured",
+      "depth_returned": false,
+      "sim_only_end_effector_returned": false,
+      "command_status": "completed",
+      "ai_visual_verdict": "success",
+      "visual_reason": "RGBの再撮影画像で赤いブロックが緑の箱の内側にあり、元の腕の右下の場所は空いている。青いブロックは左側に残り、指は箱から退避している。深度や物体の内部位置を使わず、画像から搬送成功と判断した。",
+      "independent_success": true,
+      "trajectory_s": 22.0,
+      "wall_s": 8.483,
+      "failure": null,
+      "before_image": "artifacts/runs/rgb_portable_01/observe_eec438f6c4f6.png",
+      "after_image": "artifacts/runs/rgb_portable_01/observe_167236fc56b4.png",
+      "preview_image": "artifacts/runs/rgb_portable_01/programs/11e09ad24d82_preview.png",
+      "video": "artifacts/runs/rgb_portable_01/simulation.mp4",
+      "physical_evidence": {
+        "position_m": [
+          0.1771242222939353,
+          0.14676689328466563,
+          0.018938798431985378
+        ],
+        "inside_box": true,
+        "contact_steps": 4747,
+        "max_height_m": 0.06544884041136412,
+        "gripper_contact_at_end": false
+      }
+    }
+  ]
+}

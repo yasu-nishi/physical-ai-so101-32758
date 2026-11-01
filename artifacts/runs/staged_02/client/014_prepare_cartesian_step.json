@@ -1,0 +1,75 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "program_id": "780a005357b5",
+      "execution_skill": "prepared_cartesian_step",
+      "observation_id": "73aa677e01ca",
+      "instruction": "青を空いている机の場所へ移し、赤を青の上に積んで。その後、赤だけを隣へ降ろして。各段階で画像を確認して進める。",
+      "visual_reason": "青は新しい置き場で机上に残り、指が開いている。垂直退避して上面を観測し直し、積む対象として位置を測り直す。",
+      "expected_visual_change": "指だけが上がり、青の上面と底辺が見える。",
+      "target_xyz_m": [
+        0.2652,
+        0.0629,
+        0.07
+      ],
+      "target_gripper_open": null,
+      "automatic_next_step": false,
+      "maintained_gripper_command": 0.612,
+      "planned_duration_s": 2.0676337943319654,
+      "generator": "host selects ONE next action; robot-only IK and Python exporter",
+      "trajectory": [
+        {
+          "phase": "cartesian_step",
+          "start": {
+            "joints_deg": {
+              "shoulder_pan": -15.768074700675287,
+              "shoulder_lift": 18.270323989072878,
+              "elbow_flex": -1.5992788089471932,
+              "wrist_flex": 73.40785838287245,
+              "wrist_roll": 5.050964876284042e-06
+            },
+            "gripper_open": 0.612
+          },
+          "target": {
+            "joints_deg": {
+              "shoulder_pan": -15.767891535814679,
+              "shoulder_lift": 16.100755644323247,
+              "elbow_flex": -19.094223892132014,
+              "wrist_flex": 92.99346824780585,
+              "wrist_roll": 9.633439122106306e-14
+            },
+            "gripper_open": 0.612
+          },
+          "duration_s": 2.0676337943319654
+        }
+      ],
+      "validation": [
+        "fresh RGB",
+        "workspace",
+        "step displacement",
+        "joint limits",
+        "speed",
+        "duration",
+        "separate arm/gripper"
+      ],
+      "not_validated": [
+        "general obstacle avoidance",
+        "vision correctness",
+        "contact",
+        "task success"
+      ],
+      "script_sha256": "a3dbb37c941ff794bd94916ca92408414d262398fdb3ffaf0c7803b56d0c6ea1",
+      "files_relative_to_run_dir": {
+        "script": "programs/780a005357b5.py",
+        "plan": "programs/780a005357b5.json",
+        "preview": "programs/780a005357b5_preview.png",
+        "script_sha256": "a3dbb37c941ff794bd94916ca92408414d262398fdb3ffaf0c7803b56d0c6ea1",
+        "plan_sha256": "401c6ae1b0780a61ed56094ec6264e8aa5305bd458f01785c182541c9e459c0e"
+      }
+    }
+  ],
+  "images": [
+    "artifacts/runs/staged_02/client/014_prepare_cartesian_step_0.png"
+  ]
+}

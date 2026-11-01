@@ -1,0 +1,7 @@
+{
+  "local_stop_observed_s": 0.017952415975742042,
+  "scope": "single sim measurement including MCP status polling; not a real emergency-stop specification",
+  "command_status": "stopped",
+  "trajectory_s_before_stop": 0.3,
+  "subsequent_command_rejected": true
+}

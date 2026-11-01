@@ -1,0 +1,132 @@
+{
+  "backend": "real",
+  "control_hz": 20,
+  "speed_deg_s": 10,
+  "gripper_speed_s": 0.25,
+  "max_skill_s": 90,
+  "tracking_tolerance_deg": 6,
+  "port_env": "SO101_FOLLOWER_PORT",
+  "robot_id_env": "SO101_FOLLOWER_ID",
+  "camera_index_env": "SO101_CAMERA_INDEX",
+  "camera_width_env": "SO101_CAMERA_WIDTH",
+  "camera_height_env": "SO101_CAMERA_HEIGHT",
+  "camera_fps_env": "SO101_CAMERA_FPS",
+  "camera_width": 640,
+  "camera_height": 480,
+  "camera_fps": 30,
+  "camera_role": "unverified",
+  "rgb_calibration_file": "config/physical_ai/camera_calibration.local.json",
+  "mapping_verified": false,
+  "workspace_verified": false,
+  "taught_skills_file": "config/physical_ai/real_taught.local.json",
+  "mapping": {
+    "sign": {
+      "shoulder_pan": 1,
+      "shoulder_lift": 1,
+      "elbow_flex": 1,
+      "wrist_flex": 1,
+      "wrist_roll": 1
+    },
+    "offset_deg": {
+      "shoulder_pan": 0,
+      "shoulder_lift": 0,
+      "elbow_flex": 0,
+      "wrist_flex": 0,
+      "wrist_roll": 0
+    },
+    "gripper_closed": 0,
+    "gripper_open": 100
+  },
+  "limits_deg": {
+    "shoulder_pan": [
+      -90,
+      90
+    ],
+    "shoulder_lift": [
+      -98,
+      98
+    ],
+    "elbow_flex": [
+      -97,
+      97
+    ],
+    "wrist_flex": [
+      -95,
+      95
+    ],
+    "wrist_roll": [
+      -150,
+      150
+    ]
+  },
+  "incremental_steps": {
+    "enabled": true,
+    "max_joint_delta_deg": 2.0,
+    "max_total_joint_delta_deg": 4.0,
+    "max_gripper_delta": 0.1,
+    "minimum_duration_s": 0.6,
+    "max_duration_s": 3.0,
+    "real_motion_verified": false
+  },
+  "observation_max_age_s": 120,
+  "cartesian_steps": {
+    "enabled": true,
+    "real_kinematics_verified": false,
+    "workspace_xyz_m": [
+      [
+        0.1,
+        0.29
+      ],
+      [
+        -0.14,
+        0.22
+      ],
+      [
+        0.008,
+        0.16
+      ]
+    ],
+    "max_translation_m": 0.02,
+    "max_joint_change_deg": 5.0,
+    "max_gripper_change": 0.1,
+    "minimum_duration_s": 0.8,
+    "max_duration_s": 5.0,
+    "speed_m_s": 0.01,
+    "tracking_tolerance_m": 0.003,
+    "reverse_tolerance_m": 0.001,
+    "model_offset_deg": {
+      "shoulder_pan": 0.0,
+      "shoulder_lift": 0.0,
+      "elbow_flex": 0.0,
+      "wrist_flex": 0.0,
+      "wrist_roll": 0.0
+    },
+    "model_to_work": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "configuration_note": "Unverified placeholders. Measure joint mapping, robot model offsets, tool/work frame, camera and workspace locally. No sim trajectories may be sent unchanged."
+}

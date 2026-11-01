@@ -1,0 +1,48 @@
+{
+  "isError": false,
+  "text": [
+    {
+      "measurement_id": "ed116b8e7d20",
+      "observation_id": "c371543893a1",
+      "visual_reason": "低い斜め視点。青いブロックの手前中央の同じ縦辺の上下端を選択した。",
+      "bottom_pixel": [
+        406.0,
+        484.0
+      ],
+      "top_pixel": [
+        405.0,
+        427.0
+      ],
+      "center_pixel": [
+        408.0,
+        413.0
+      ],
+      "support_z_m": 0.0,
+      "estimated_height_m": 0.03950230251282527,
+      "estimated_top_z_m": 0.03950230251282527,
+      "estimated_top_center_m": [
+        0.23064256027051067,
+        -0.09273025317667016,
+        0.03950230251282527
+      ],
+      "height_interval_m": [
+        0.03678857697099175,
+        0.04219484583629929
+      ],
+      "vertical_edge_residual_m": 0.000720690718309098,
+      "pixel_error_allowance_px": 2.0,
+      "height_source": "RGB vertical-edge geometry; object height was not supplied",
+      "depth_sensor_used": false,
+      "assumptions": [
+        "upright vertical edge",
+        "visible corresponding endpoints",
+        "calibrated camera and known support plane",
+        "selected centre lies on horizontal top face"
+      ],
+      "uncertainty_note": "Pixel allowance only; calibration error, support-plane uncertainty and wrong edge correspondence are not covered"
+    }
+  ],
+  "images": [
+    "artifacts/runs/camera_low_01/client/002_measure_height_0.png"
+  ]
+}
